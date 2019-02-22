@@ -19,7 +19,7 @@ app.prepare()
     return handle(req, res)
   })
 
-  server.listen(3004, (err) => {
+  server.listen(3008, (err) => {
     if (err) throw err
     console.log('> Ready on http://localhost:3004')
   })
