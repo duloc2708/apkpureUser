@@ -27,6 +27,7 @@ export default class SiteDocument extends Document {
             <Main />
           </div>
           <NextScript />
+          
           <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
           <script src="/static/js/popper.min.js"></script>
           <script src="/static/js/vendor/bootstrap.min.js"></script>
