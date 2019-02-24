@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     "use strict";
 
     var window_width = $(window).width(),
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     //------- Accordion  js --------//  
 
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
 
         if (document.getElementById("accordion") && document.getElementById("accordion2")) {
 
@@ -63,13 +63,13 @@ $(document).ready(function() {
 
     var allPanels = $(".accordion > dd").hide();
     allPanels.first().slideDown("easeOutExpo");
-    $(".accordion").each(function() {
+    $(".accordion").each(function () {
         $(this).find("dt > a").first().addClass("active").parent().next().css({
             display: "block"
         });
     });
 
-    $(document).on('click', '.accordion > dt > a', function(e) {
+    $(document).on('click', '.accordion > dt > a', function (e) {
         var current = $(this).parent().next("dd");
         $(this).parents(".accordion").find("dt > a").removeClass("active");
         $(this).addClass("active");
@@ -86,13 +86,13 @@ $(document).ready(function() {
 
     var allToggles = $(".toggle > dd").hide();
     allPanels.first().slideDown("easeOutExpo");
-    $(".toggle").each(function() {
+    $(".toggle").each(function () {
         $(this).find("dt > a").first().addClass("active").parent().next().css({
             display: "block"
         });
     });
 
-    $(document).on('click', '.toggle > dt > a', function(e) {    
+    $(document).on('click', '.toggle > dt > a', function (e) {
         if ($(this).hasClass("active")) {
             $(this).parent().next().slideUp("easeOutExpo");
             $(this).removeClass("active");
@@ -118,7 +118,7 @@ $(document).ready(function() {
         duration: 200
     });
 
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
         // Get current path and find target link
         var path = window.location.pathname.split("/").pop();
 
@@ -132,7 +132,7 @@ $(document).ready(function() {
         target.addClass('menu-active');
     });
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         if ($('.menu-has-children ul>li a').hasClass('menu-active')) {
             $('.menu-active').closest("ul").parentsUntil("a").addClass('parent-active');
         }
@@ -140,9 +140,9 @@ $(document).ready(function() {
 
     //------- Login and register form toggle --------//  
 
-    $(document).ready(function(){
-        $(document).on('click','.hs-btn',function(e){
-            $( ".forms" ).toggle();
+    $(document).ready(function () {
+        $(document).on('click', '.hs-btn', function (e) {
+            $(".forms").toggle();
         });
     });
 
@@ -162,19 +162,19 @@ $(document).ready(function() {
         $('body').append('<div id="mobile-body-overly"></div>');
         $('#mobile-nav').find('.menu-has-children').prepend('<i class="lnr lnr-chevron-down"></i>');
 
-        $(document).on('click', '.menu-has-children i', function(e) {
+        $(document).on('click', '.menu-has-children i', function (e) {
             $(this).next().toggleClass('menu-item-active');
             $(this).nextAll('ul').eq(0).slideToggle();
             $(this).toggleClass("lnr-chevron-up lnr-chevron-down");
         });
 
-        $(document).on('click', '#mobile-nav-toggle', function(e) {
+        $(document).on('click', '#mobile-nav-toggle', function (e) {
             $('body').toggleClass('mobile-nav-active');
             $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
             $('#mobile-body-overly').toggle();
         });
 
-        $(document).on('click',function(e){
+        $(document).on('click', function (e) {
             var container = $("#mobile-nav, #mobile-nav-toggle");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
                 if ($('body').hasClass('mobile-nav-active')) {
@@ -182,17 +182,17 @@ $(document).ready(function() {
                     $('#mobile-nav-toggle i').toggleClass('lnr-menu');
                     $('#mobile-body-overly').fadeOut();
                 }
-            }else{
+            } else {
                 $('#mobile-nav-toggle i').addClass('lnr-cross');
             }
-        });    
+        });
 
     } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
         $("#mobile-nav, #mobile-nav-toggle").hide();
     }
 
     // Smooth scroll for the menu and links with .scrollto classes
-    $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function() {
+    $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
         if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
             var target = $(this.hash);
             if (target.length) {
@@ -225,13 +225,13 @@ $(document).ready(function() {
         }
     });
 
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         $('html, body').hide();
 
         if (window.location.hash) {
 
-            setTimeout(function() {
+            setTimeout(function () {
 
                 $('html, body').scrollTop(0).show();
 
@@ -255,15 +255,16 @@ $(document).ready(function() {
 
 
 
-    $(".scroll-down").on('click',function() {
+    $(".scroll-down").on('click', function () {
         $('html,body').animate({
-            scrollTop: $(".feature-area").offset().top},
+            scrollTop: $(".feature-area").offset().top
+        },
             'slow');
         return false;
     });
 
-    
-    $(window).scroll(function() {
+
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('#header').addClass('header-scrolled');
         } else {
@@ -272,18 +273,20 @@ $(document).ready(function() {
     });
 
     //------- Owl Carusel js --------//   
+    if ($('.active-slider-carusel').length) {
+        $('.active-slider-carusel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 30,
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            smartSpeed: 600,
+            autoplay: true,
+            animateOut: 'fadeOut',
+            dots: true,
+        });
+    }
 
-    $('.active-slider-carusel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 30,
-        autoplayTimeout: 4500,
-        autoplayHoverPause: true,        
-        smartSpeed: 600,
-        autoplay: true,
-        animateOut: 'fadeOut',
-        dots: true,
-    });
 
     $('.active-review-carusel').owlCarousel({
         items: 3,
@@ -364,48 +367,48 @@ $(document).ready(function() {
     });
 
 
-     //------- Map js  --------//   
+    //------- Map js  --------//   
 
-            // When the window has finished loading create our google map below
+    // When the window has finished loading create our google map below
 
-            if(document.getElementById("map")){
-            
-            google.maps.event.addDomListener(window, 'load', init);
-        
-            function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 11,
+    if (document.getElementById("map")) {
 
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        google.maps.event.addDomListener(window, 'load', init);
 
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
-                };
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 11,
 
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map');
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(40.6700, -73.9400), // New York
 
-                // Create the Google Map using our element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
+                // How you would like to style the map. 
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{ "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#e9e9e9" }, { "lightness": 17 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 20 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#ffffff" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 16 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 21 }] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#dedede" }, { "lightness": 21 }] }, { "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#ffffff" }, { "lightness": 16 }] }, { "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#333333" }, { "lightness": 40 }] }, { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#f2f2f2" }, { "lightness": 19 }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#fefefe" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#fefefe" }, { "lightness": 17 }, { "weight": 1.2 }] }]
+            };
 
-                // Let's also add a marker while we're at it
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(40.6700, -73.9400),
-                    map: map,
-                    title: 'Snazzy!'
-                });
-            }
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.6700, -73.9400),
+                map: map,
+                title: 'Snazzy!'
+            });
+        }
     }
 
     //------- MailChimp js  --------//   
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#mc_embed_signup').find('form').ajaxChimp();
         $('#footer_mc_embed_signup').find('form').ajaxChimp();
     });
