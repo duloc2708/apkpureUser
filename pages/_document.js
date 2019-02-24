@@ -69,12 +69,12 @@ export default class SiteDocument extends Document {
           <script src="http://apksafety.com/static/js/superfish.min.js"></script>
           <script src="http://apksafety.com/static/js/jquery.ajaxchimp.min.js"></script>
           <script src="http://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
-          <script src="http://apksafety.com/static/js/owl.carousel.min.js"  defer async>></script>
+          <script src="http://apksafety.com/static/js/owl.carousel.min.js" defer async>></script>
           <script src="http://apksafety.com/static/js/jquery.tabs.min.js"></script>
           <script src="http://apksafety.com/static/js/mn-accordion.js"></script>
           <script src="http://apksafety.com/static/js/jquery.nice-select.min.js"></script>
           <script src="http://apksafety.com/static/js/mail-script.js"></script>
-          {/* <script async src="http://apksafety.com/static/js/main.js"></script> */}
+          {/* <script src="http://apksafety.com/static/js/main.js"></script> */}
         </body>
       </html>
     )

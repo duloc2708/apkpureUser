@@ -5,7 +5,9 @@ class PopularFormView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            data: [
+                { id: 0, title: 'test', type_name: 'a', type: 'b', thumbnail: 'https://image.winudf.com/v2/image1/a3IuY28uYWxsbS5kaWNlb2ZsZWdlbmRzX2Jhbm5lcl8xNTUwNzQyOTAyXzAzMg/banner.jpg?w=850&fakeurl=1&type=.jpg', title_slug: '...' }
+            ]
         }
     }
     componentDidMount() {
@@ -428,7 +430,7 @@ class PopularFormView extends React.Component {
                 });
 
             });
-        }, 100)
+        }, 400)
     }
     componentDidUpdate() {
 
