@@ -15,3 +15,24 @@ export const getImage = (data) => {
         return `${API_IMAGE + data}`
     }
 }
+
+export const APP_ID_FACEBOOK = "1496370120424382";
+export const CONSTANT_NUMBER_2 = 'hello I am also a constant';
+export const OG_LOCATION = 'vi_VN';
+export const PROPERTY_OG_URL = 'apksafety.com';
+export const PROPERTY_OG_SITENAME = 'Download APK free online downloader';
+
+export const TITLE = 'Download APK free online downloader | Apksafety.com';
+export const PROPERTY_OG_TITLE = 'apk download, apk downloader, android apk download';
+export const NAME_TWITTER_TITLE = 'apk download, apk downloader, android apk download';
+export const NAME_DESCRIPTION = 'apk download, apk downloader, android apk download';
+export const PROPERTY_OG_DESCRIPTION = 'apk download, apk downloader, android apk download';
+export const NAME_TWITTER_DESCRIPTION = 'apk download, apk downloader, android apk download';;
+export const NAME_KEYWORD = 'apk download, apk downloader, android apk download';
+export const OG_KEYWORD = 'apk download, apk downloader, android apk download';
+export const OG_PROPERTY_IMAGE = '';
+export const NAME_TWITTER_IMAGE_SRC = '';
+export const PROPERTY_OG_TYPE = 'apksafety.com';
+export const ORG_SITENAME = 'apksafety.com';
+export const ORG_IMAGE = 'http://apksafety.com/static/img/logo-d.png';
+
