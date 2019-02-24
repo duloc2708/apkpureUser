@@ -291,85 +291,94 @@ $(document).ready(function () {
             dots: true,
         });
     }
-
-
-    $('.active-review-carusel').owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 30,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        autoplay: true,
-        nav: true,
-        navText: ["<i class='ti-shift-left'></i>", "<i class='ti-shift-right'></i>"],
-        responsive: {
-            0: {
-                items: 1
-            },
-            992: {
-                items: 3,
+    if ($('.active-review-carusel').length) {
+        $('.active-review-carusel').owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 30,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            autoplay: true,
+            nav: true,
+            navText: ["<i class='ti-shift-left'></i>", "<i class='ti-shift-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                992: {
+                    items: 3,
+                }
             }
-        }
-    });
+        });
+    }
 
-    $('.active-latest-post-carusel').owlCarousel({
-        items: 2,
-        loop: true,
-        margin: 30,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        autoplay: true,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            992: {
-                items: 2,
+    if ($('.active-latest-post-carusel').length) {
+        $('.active-latest-post-carusel').owlCarousel({
+            items: 2,
+            loop: true,
+            margin: 30,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            autoplay: true,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                992: {
+                    items: 2,
+                }
             }
-        }
-    });
+        });
 
-    $('.active-popular-post-carusel').owlCarousel({
-        items: 4,
-        loop: true,
-        margin: 30,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            991: {
-                items: 3,
-            },
-            1024: {
-                items: 3,
-            },
-            1025: {
-                items: 4,
+    }
+
+    if ($('.active-popular-post-carusel').length > 0) {
+        $('.active-popular-post-carusel').owlCarousel({
+            items: 4,
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
+                991: {
+                    items: 3,
+                },
+                1024: {
+                    items: 3,
+                },
+                1025: {
+                    items: 4,
+                }
             }
-        }
-    });
+        });
+    }
 
-    $('.active-latest-widget-carusel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 30,
-        autoplayTimeout: 4500,
-        autoplayHoverPause: true,
-        smartSpeed: 600,
-        autoplay: true,
-        dots: true,
-    });
+
+    if ($('.active-latest-widget-carusel').length > 0) {
+        $('.active-latest-widget-carusel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 30,
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            smartSpeed: 600,
+            autoplay: true,
+            dots: true,
+        });
+    }
+
 
 
     //------- Map js  --------//   
