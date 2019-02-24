@@ -10,13 +10,19 @@ const bodyParser = require('body-parser')
 app.prepare()
   .then(() => {
     const server = express()
+    
+    server.use(function (req, res, next) {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      next();
+    });
 
     // parse application/x-www-form-urlencoded
     server.use(bodyParser.urlencoded({ extended: false }))
 
     // parse application/json
     server.use(bodyParser.json())
-  
+
     fs.readFile('./data.json', 'utf8', function (err, data) {
       if (err) throw err;
       const listRoute = JSON.parse(data);
@@ -29,7 +35,7 @@ app.prepare()
           app.render(req, res, actualPage, queryParams)
         })
 
-        server.get(`/${item}`, (req, res) => {     
+        server.get(`/${item}`, (req, res) => {
           console.log('type>>>>>>>');
           const actualPage = '/type'
           const queryParams = { id: 900 }
