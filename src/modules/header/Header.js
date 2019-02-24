@@ -21,11 +21,11 @@ const Header = () => (
                 </div>
               </div>
             </li>
-            <li><a href="#">Home</a>
+            <li><a href="/">Home</a>
             </li>
-            <li><a href="#">Blog</a>
+            <li><a href="/">Blog</a>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/">Contact</a></li>
           </ul>
         </nav>
         {/*  */}
