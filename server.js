@@ -10,7 +10,7 @@ const bodyParser = require('body-parser')
 app.prepare()
   .then(() => {
     const server = express()
-    
+
     server.use(function (req, res, next) {
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -27,10 +27,14 @@ app.prepare()
       if (err) throw err;
       const listRoute = JSON.parse(data);
       listRoute.listType.map(item => {
+
+        server.get(`/blog`, (req, res) => {
+          const actualPage = '/blog'
+          app.render(req, res, actualPage, {})
+        })
+
         server.get(`/${item}/:id`, (req, res) => {
           const actualPage = '/post'
-          console.log('post>>>>>>>');
-
           const queryParams = { id: req.params.id }
           app.render(req, res, actualPage, queryParams)
         })
