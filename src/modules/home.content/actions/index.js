@@ -1,4 +1,7 @@
 import getData from './getData'
+import getBlogBySection from './getBlogBySection'
+
 export {
-    getData
+    getData,
+    getBlogBySection
 }
