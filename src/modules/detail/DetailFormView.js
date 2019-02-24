@@ -6,7 +6,7 @@ class DetailFormView extends React.Component {
         super(props);
     }
     render() {
-        let { title, type_name, type, thumbnail } = this.props.data
+        let { title, type_name, type, thumbnail, content_long } = this.props.data
         return (
             <section className="popular-post-area pt-120">
                 <div className="container">
@@ -66,24 +66,9 @@ class DetailFormView extends React.Component {
                                     </dd>
                                 </dl>
                                 <div className="blog__detail__description">
-                                    <h2>The description of PUBG MOBILE</h2>
-                                    <div className="blog__detail__description__contain">
-                                        <p>
-                                            PLAYERUNKNOWN'S BATTLEGROUNDS goes mobile - the original Battle Royale game is now available on your device!
-                                  </p>
-                                        <p>
-                                            1. Official PUBG on Mobile
-                                            100 players parachute onto a remote 8x8 km island for a winner-takes-all showdown. Players have to locate and scavenge their own weapons, vehicles and supplies, and defeat every player in a graphically and tactically rich battleground that forces players into a shrinking play zone. Get ready to land, loot, and do whatever it takes to survive and be the last man standing!
-                                  </p>
-                                        <p>
-                                            2. High-quality Graphics and HD Audio
-                                            The powerful Unreal Engine 4 creates a jaw-dropping visual experience with rich detail, realistic gameplay effects and a massive HD map for Battle Royale. Feel like you’re in the thick of the action as you play with high-quality audio, immersive 3D sound effects and 7.1 channel surround sound.
-                                  </p>
-                                        <p>
-                                            3. High-quality Graphics and HD Audio
-                     itemProp                       The powerful Unreal Engine 4 creates a jaw-dropping visual experience with rich detail, realistic gameplay effects and a massive HD map for Battle Royale. Feel like you’re in the thick of the action as you play with high-quality audio, immersive 3D sound effects and 7.1 channel surround sound.
-                                  </p>
-                                    </div>
+                                    <div dangerouslySetInnerHTML={{ __html: content_long }} />
+
+
                                 </div>
                             </div>
                         </div>
