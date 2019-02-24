@@ -16,20 +16,25 @@ $(document).ready(function () {
 
     //------- Lightbox js --------//
 
-    $('.img-pop-up').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
+    if ($('.img-pop-up').length) {
+        $('.img-pop-up').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    }
 
-    $('.play-btn').magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
+    if ($('.play-btn').length) {
+        $('.play-btn').magnificPopup({
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+        });
+
+    }
 
     //------- Initiate superfish on nav menu --------//
 
