@@ -428,7 +428,7 @@ class PopularFormView extends React.Component {
                 });
 
             });
-        }, 500)
+        }, 100)
     }
     componentDidUpdate() {
 
