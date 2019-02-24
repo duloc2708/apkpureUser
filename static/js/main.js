@@ -37,13 +37,15 @@ $(document).ready(function () {
     }
 
     //------- Initiate superfish on nav menu --------//
+    if ($('.nav-menu').length) {
+        $('.nav-menu').superfish({
+            animation: {
+                opacity: 'show'
+            },
+            speed: 400
+        });
+    }
 
-    $('.nav-menu').superfish({
-        animation: {
-            opacity: 'show'
-        },
-        speed: 400
-    });
 
     //------- Accordion  js --------//  
 
