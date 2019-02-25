@@ -37,7 +37,8 @@ $(document).ready(function () {
     }
 
     //------- Initiate superfish on nav menu --------//
-    if ($('.nav-menu').length) {
+
+    if ($('.nav-menu')[0]) {
         $('.nav-menu').superfish({
             animation: {
                 opacity: 'show'
