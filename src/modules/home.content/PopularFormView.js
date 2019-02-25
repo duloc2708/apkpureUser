@@ -50,7 +50,7 @@ class PopularFormView extends React.Component {
                             <div className="active-popular-post-carusel pt-50">
                                 {
                                     data.map((item, i) => {
-                                        let { id, title, type_name, type, thumbnail, title_slug } = item
+                                        let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
                                         return (
                                             <div key={id} className="single-popular-carusel">
                                                 <p className="newgame"> <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link></p>
@@ -59,7 +59,7 @@ class PopularFormView extends React.Component {
                                                 </h4>
                                                 <p className="newgame_subtitle">{title}</p>
                                                 <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                    <img className="img-fluid" src={Config.getImage(thumbnail)} alt={title} />
+                                                    <img className="img-fluid" src={Config.getImage(atr4)} alt={title} />
                                                 </Link>
                                                 <a href="blog-single.html">
                                                 </a>
