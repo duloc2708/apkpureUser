@@ -6,7 +6,7 @@ class DetailFormView extends React.Component {
         super(props);
     }
     render() {
-        let { title, type_name, type, thumbnail, content_long, title_slug } = this.props.data
+        let { title, type_name, type, thumbnail, content_long, title_slug, atr3 } = this.props.data
         return (
             <section className="popular-post-area pt-120">
                 <div className="container">
@@ -53,7 +53,7 @@ class DetailFormView extends React.Component {
                                             </p>
                                         </div>
                                         <div className="ny-down blue-stack">
-                                            <a className=" da" title="Download PUBG MOBILE latest version xapk" href={`${Config.API_URL}articles/getfileapk?namefile=${title_slug}`}>Download APK
+                                            <a className=" da" title="Download PUBG MOBILE latest version xapk" href={`${Config.API_URL}articles/getfileapk?namefile=${title_slug}${atr3}`}>Download APK
                                           <span className="fsize">(<span>1.7 GB</span>)</span>
                                             </a>
                                             <a title="PUBG MOBILE Previous Versions" href="#" className="ny-versions">Versions</a>
