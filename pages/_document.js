@@ -55,6 +55,8 @@ export default class SiteDocument extends Document {
           <link rel="stylesheet" href="http://apksafety.com/static/styles/animate.min.css"></link>
           <link rel="stylesheet" href="http://apksafety.com/static/styles/style.css"></link>
           <script src="http://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
+          <script src="http://apksafety.com/static/js/easing.min.js"></script>
+
 
         </Head>
         <body className="blog-class">
@@ -65,7 +67,6 @@ export default class SiteDocument extends Document {
           <script src="http://apksafety.com/static/js/vendor/bootstrap.min.js"></script>
           <script src="http://apksafety.com/static/js/popper.min.js"></script>
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-          <script src="http://apksafety.com/static/js/easing.min.js"></script>
           <script src="http://apksafety.com/static/js/superfish.min.js"></script>
           <script src="http://apksafety.com/static/js/jquery.ajaxchimp.min.js"></script>
           <script src="http://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
