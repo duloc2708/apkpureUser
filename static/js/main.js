@@ -38,14 +38,14 @@ $(document).ready(function () {
 
     //------- Initiate superfish on nav menu --------//
 
-    // if ($('.nav-menu')[0]) {
-    //     $('.nav-menu').superfish({
-    //         animation: {
-    //             opacity: 'show'
-    //         },
-    //         speed: 400
-    //     });
-    // }
+    if ($('.nav-menu')[0]) {
+        $('.nav-menu').superfish({
+            animation: {
+                opacity: 'show'
+            },
+            speed: 400
+        });
+    }
 
 
     //------- Accordion  js --------//  
