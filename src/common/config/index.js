@@ -5,6 +5,7 @@
 export const API_URL = 'http://api.apksafety.com/api/'  //PROD
 export const API_IMAGE = 'http://api.apksafety.com/images/'  //PROD
 export const API_LOCAL_IMAGE = 'http://apksafety.com/static/'  //DEV
+export const API_DOWNLOAD_FILE = 'http://apkverified.com/api/'  //DEV
 
 export const DEFAULT_FOLDER = '/';
 
