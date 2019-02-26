@@ -53,7 +53,7 @@ class DetailFormView extends React.Component {
                                             </p>
                                         </div>
                                         <div className="ny-down blue-stack">
-                                            <a className=" da" title="Download PUBG MOBILE latest version xapk" href={`${Config.API_URL}articles/getfileapk?namefile=${title_slug}&mineType=${atr3}`}>Download APK
+                                            <a className=" da" title="Download PUBG MOBILE latest version xapk" href={`${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${title_slug}&mineType=${atr3}`}>Download APK
                                           <span className="fsize">(<span>1.7 GB</span>)</span>
                                             </a>
                                             <a title="PUBG MOBILE Previous Versions" href="#" className="ny-versions">Versions</a>
