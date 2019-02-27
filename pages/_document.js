@@ -57,6 +57,7 @@ export default class SiteDocument extends Document {
           <link rel="stylesheet" href="http://apksafety.com/static/styles/style.css"></link>
           <script src="http://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
           <script src="http://apksafety.com/static/js/easing.min.js"></script>
+          <script src="http://apksafety.com/static/js/jquery.matchHeight-min.js"></script>
 
 
         </Head>
@@ -76,7 +77,6 @@ export default class SiteDocument extends Document {
           <script src="http://apksafety.com/static/js/mn-accordion.js"></script>
           <script src="http://apksafety.com/static/js/jquery.nice-select.min.js"></script>
           <script src="http://apksafety.com/static/js/mail-script.js"></script>
-          <script src="http://apksafety.com/static/js/jquery.matchHeight-min.js"></script>
           {/* <script src="http://apksafety.com/static/js/main.js"></script> */}
         </body>
       </html>
