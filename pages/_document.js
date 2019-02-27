@@ -33,7 +33,8 @@ export default class SiteDocument extends Document {
           <meta name="Googlebot" content="index,follow,NOODP" />
 
           <meta property="fb:app_id" content={APP_ID_FACEBOOK} />
-          <link rel="alternate" href={PROPERTY_OG_URL} hreflang="vi-vn" />
+          <link rel="alternate" href="https://apksafety.com/" hreflang="en" />
+          <link rel="alternate" href="https://apksafety.com/" hreflang="x-default" />
           <meta property="og:url" content={PROPERTY_OG_URL} />
           <meta property="og:site_name" content={TITLE} />
           <meta name="twitter:domain" content={TITLE} />
