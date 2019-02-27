@@ -53,11 +53,13 @@ class PopularFormView extends React.Component {
                                         let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
                                         return (
                                             <div key={id} className="single-popular-carusel">
-                                                <p className="newgame"> <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link></p>
-                                                <h4 className="newgame__title">
-                                                    <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
-                                                </h4>
-                                                <p className="newgame_subtitle">{title}</p>
+                                                <div className="wrap__content">
+                                                    <p className="newgame"> <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link></p>
+                                                    <h4 className="newgame__title">
+                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
+                                                    </h4>
+                                                    <p className="newgame_subtitle">{title}</p>
+                                                </div>
                                                 <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                                     <img className="img-fluid" src={Config.getImage(atr4)} alt={title} />
                                                 </Link>
