@@ -18,8 +18,13 @@ class PopularFormView extends React.Component {
             var div = document.getElementById('target');
             div.appendChild(myscript);
         })
-
-
+        // $(function() {
+        //     /*$('.column').matchHeight();*/
+        //   $('.wrap__content').matchHeight();
+        // });
+        $(document).ready(function () {
+            console.log("ready!");
+        });
     }
     componentDidUpdate() {
 
@@ -75,7 +80,13 @@ class PopularFormView extends React.Component {
                                 }
                             </div>
                             :
-                            ''
+                            <div className="active-popular-post-carusel pt-50">
+                                <div className="single-popular-carusel">
+                                    <div className="wrap__content">
+                                    </div>
+                                </div>
+                            </div>
+
                         }
                     </div>
                     <div id="target"></div>

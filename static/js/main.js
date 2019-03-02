@@ -412,7 +412,3 @@ $(document).ready(function() {
 
 });
 
-$(function() {
-    /*$('.column').matchHeight();*/
-  $('.wrap__content').matchHeight();
-});
