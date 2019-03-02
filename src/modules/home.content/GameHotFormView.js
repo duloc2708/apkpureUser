@@ -12,6 +12,10 @@ class GameHotFormView extends React.Component {
         getBlogBySection('popular').then(Response => {
             let { Data } = Response
             this.setState({ data: Data })
+            // var myscript = document.createElement('script');
+            // myscript.setAttribute('src', 'http://apksafety.com/static/js/main.js');
+            // var div = document.getElementById('target');
+            // div.appendChild(myscript);
         })
 
 
