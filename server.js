@@ -32,7 +32,10 @@ app.prepare()
           const actualPage = '/blog'
           app.render(req, res, actualPage, {})
         })
-
+        server.get(`/download`, (req, res) => {
+          const actualPage = '/download'
+          app.render(req, res, actualPage, {})
+        })
         server.get(`/${item}/:id`, (req, res) => {
           const actualPage = '/post'
           const queryParams = { id: req.params.id }
