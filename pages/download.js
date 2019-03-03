@@ -13,10 +13,13 @@ const Download = (props) => (
 )
 
 Download.getInitialProps = async function (context) {
-  const { id } = context.query
-  const res = await axios(`${Config.API_URL}articles/get_blog_detail`, { params: { title_slug: id } })
-  const { Data } = await res.data
-  return { data: Data && Data[0] || {} }
+  const { name, mineType } = context.query
+  return {
+    data: {
+      name: name,
+      mineType: mineType
+    }
+  }
 }
 
 export default Download
