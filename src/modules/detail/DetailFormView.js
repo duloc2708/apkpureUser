@@ -53,9 +53,20 @@ class DetailFormView extends React.Component {
                                             </p>
                                         </div>
                                         <div className="ny-down blue-stack">
+                                            {/* <a className=" da" title="Download PUBG MOBILE latest version xapk" href={`${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${title_slug}&mineType=${atr3}`}>Download APK
+                                                <span className="fsize">(<span>1.7 GB</span>)</span>
+                                            </a> */}
+                                            <Link as={`/download?name=${title_slug}&mineType=${atr3}`} href={`/download?name=${title_slug}&mineType=${atr3}`}>
+                                                <a className=" da" title="Download PUBG MOBILE latest version xapk"
+                                                //href={`${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${title_slug}&mineType=${atr3}`}
+                                                >Download APK
+                                                <span className="fsize">(<span>1.7 GB</span>)</span>
+                                                </a>
+                                            </Link>
+{/* 
                                             <a className=" da" title="Download PUBG MOBILE latest version xapk" href={`${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${title_slug}&mineType=${atr3}`}>Download APK
-                                          <span className="fsize">(<span>1.7 GB</span>)</span>
-                                            </a>
+                                                <span className="fsize">(<span>1.7 GB</span>)</span>
+                                            </a> */}
                                             <a title="PUBG MOBILE Previous Versions" href="#" className="ny-versions">Versions</a>
                                             <a rel="nofollow" title="PUBG MOBILE safe verified" href="#" className="safe popsafe-open">
                                                 <img alt="PUBG MOBILE safe verified" src={`${Config.API_LOCAL_IMAGE}img/blog/icon-verified_v2.png`} width="16" /></a>
