@@ -34,7 +34,8 @@ app.prepare()
         })
         server.get(`/download`, (req, res) => {
           const actualPage = '/download'
-          app.render(req, res, actualPage, {})
+          const queryParams = { name: req.params.name, mineType: req.params.mineType }
+          app.render(req, res, actualPage, queryParams)
         })
         server.get(`/${item}/:id`, (req, res) => {
           const actualPage = '/post'
