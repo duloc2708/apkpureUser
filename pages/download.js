@@ -13,7 +13,7 @@ const Download = (props) => (
 )
 
 Download.getInitialProps = async function (context) {
-  const { name, mineType } = context.query
+  const { name, mineType } = context.query  
   return {
     data: {
       name: name,
