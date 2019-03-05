@@ -55,6 +55,8 @@ export default class SiteDocument extends Document {
           <link rel="stylesheet" href="http://apksafety.com/static/styles/font-awesome.min.css"></link>
           <link rel="stylesheet" href="http://apksafety.com/static/styles/animate.min.css"></link>
           <link rel="stylesheet" href="http://apksafety.com/static/styles/style.css"></link>
+          <link rel="stylesheet" href="http://apksafety.com/static/styles/custom.css"></link>
+
           <script src="http://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
           <script src="http://apksafety.com/static/js/easing.min.js"></script>
         </Head>
