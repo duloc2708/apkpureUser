@@ -9,7 +9,7 @@ class FeaturedGame extends React.Component {
         }
     }
     componentDidMount() {
-        getBlogBySection('popular').then(Response => {
+        getBlogBySection('featured_games').then(Response => {
             let { Data } = Response
             this.setState({ data: Data })
             // var myscript = document.createElement('script');

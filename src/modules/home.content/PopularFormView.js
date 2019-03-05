@@ -10,7 +10,7 @@ class PopularFormView extends React.Component {
         }
     }
     componentDidMount() {
-        getBlogBySection('popular').then(Response => {
+        getBlogBySection('slide').then(Response => {
             let { Data } = Response
             this.setState({ data: Data })
             var myscript = document.createElement('script');
