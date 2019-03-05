@@ -27,7 +27,7 @@ class FeaturedApp extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="title d-flex flex-column col-lg-12">
-                            <h4>FEATURED GAMES</h4>
+                            <h4>FEATURED APPS</h4>
                             <span></span>
                         </div>
                         <ul className="gamehot__list">
