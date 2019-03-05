@@ -20,14 +20,13 @@ class DowloadFormView extends React.Component {
         }, 3000)
     }
     render() {
-        let { title, type_name, type, thumbnail, content_long, title_slug, atr3 } = this.props.data
-        const { name, mineType } = this.props.data
+        const { name, mineType, title } = this.props.data
 
         return (
             <React.Fragment>
                 <section className="popular-post-area download__time pt-120">
                     <div className="container bg__time">
-                        <h3>{name}</h3>
+                        <h3>Downloading {title}</h3>
                         <div className="spinner">
                             <div className="bounce1"></div>
                             <div className="bounce2"></div>
