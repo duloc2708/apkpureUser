@@ -46,6 +46,10 @@ class PopularFormView extends React.Component {
             <section className="popular-post-area pt-120">
                 <div className="container">
                     <div className="row">
+                        <div className="title d-flex flex-column col-lg-12">
+                            <h4>New Games</h4>
+                            <span></span>
+                        </div>
                         {data.length > 0
                             ?
                             <div className="active-popular-post-carusel pt-50">

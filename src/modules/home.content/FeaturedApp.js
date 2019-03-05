@@ -1,6 +1,6 @@
 import { getBlogBySection } from 'modules/home.content/actions/'
 import Link from 'next/link'
-class GameHotFormView extends React.Component {
+class FeaturedApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,7 +27,7 @@ class GameHotFormView extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="title d-flex flex-column col-lg-12">
-                            <h4>NEW GAMES</h4>
+                            <h4>FEATURED GAMES</h4>
                             <span></span>
                         </div>
                         <ul className="gamehot__list">
@@ -54,22 +54,6 @@ class GameHotFormView extends React.Component {
                                             </dl>
                                         </li>
 
-                                        // <ul key={`i_${id}`} className="gamehot__list">
-                                        //     <li className="gamehot__img">
-                                        //         <img width="75px" height="50px" src={Config.getImage(thumbnail)} alt={title} />
-                                        //     </li>
-                                        //     <li className="gamehot__title">
-                                        //         <div>
-                                        //             <p>
-                                        //                 <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a href="#">{title && title.substring(0, 10) + '...' || ''}</a></Link>
-                                        //             </p>
-                                        //             <span>{type_name}</span>
-                                        //         </div>
-                                        //     </li>
-                                        //     <li className="gamehot__buttom">
-                                        //         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a className="btn btn-primary"> Nhận</a></Link>
-                                        //     </li>
-                                        // </ul>
                                     )
 
                                 })
@@ -83,4 +67,4 @@ class GameHotFormView extends React.Component {
         )
     }
 }
-export default GameHotFormView
+export default FeaturedApp
