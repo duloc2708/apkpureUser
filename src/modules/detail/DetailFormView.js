@@ -48,7 +48,7 @@ class DetailFormView extends React.Component {
                                             </div>
                                         </div>
                                         <div className="details-author">
-                                            <p itemProp="publisher">
+                                            <p className="publisher">
                                                 <a title="Get more from Tencent Games" href="#">Tencent Games</a>
                                             </p>
                                         </div>
