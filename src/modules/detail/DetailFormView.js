@@ -6,7 +6,7 @@ class DetailFormView extends React.Component {
         super(props);
     }
     render() {
-        let { title, type_name, type, thumbnail, content_long, title_slug, atr3 } = this.props.data
+        let { title, type_name, type, thumbnail, content_long, title_slug, atr3, atr5, atr6 } = this.props.data
         return (
             <section className="popular-post-area pt-120">
                 <div className="container">
@@ -29,7 +29,7 @@ class DetailFormView extends React.Component {
                                             <h1>{title}</h1>
                                         </div>
                                         <div className="details-sdk">
-                                            <span itemProp="version">0.11.0 </span>for Android
+                                            <span itemProp="version">{atr6} </span>for Android
                                   </div>
                                         <div className="details-rating">
                                             <div className="stars" title="average: 8.8 out of 10">
@@ -60,10 +60,10 @@ class DetailFormView extends React.Component {
                                                 <a className=" da" title="Download PUBG MOBILE latest version xapk"
                                                 //href={`${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${title_slug}&mineType=${atr3}`}
                                                 >Download APK
-                                                <span className="fsize">(<span>1.7 GB</span>)</span>
+                                                <span className="fsize">(<span>{atr5}</span>)</span>
                                                 </a>
                                             </Link>
-{/* 
+                                            {/* 
                                             <a className=" da" title="Download PUBG MOBILE latest version xapk" href={`${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${title_slug}&mineType=${atr3}`}>Download APK
                                                 <span className="fsize">(<span>1.7 GB</span>)</span>
                                             </a> */}
