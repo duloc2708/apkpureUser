@@ -5,7 +5,7 @@ class ListTypeGame extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="title d-flex flex-column col-lg-12">
-                            <h4>danh mục trả phí</h4>
+                            <h4>Category Games</h4>
                             <span></span>
                         </div>
                         <div className="col-lg-12 gamehot__contain">
