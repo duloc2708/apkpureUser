@@ -32,9 +32,9 @@ app.prepare()
           const actualPage = '/blog'
           app.render(req, res, actualPage, {})
         })
-        server.get(`/download/:name&:mineType`, (req, res) => {
+        server.get(`/download/:name&:mineType&:title`, (req, res) => {
           const actualPage = '/download'
-          const queryParams = { name: req.params.name, mineType: req.params.mineType }
+          const queryParams = { name: req.params.name, mineType: req.params.mineType, title: req.params.title }
           app.render(req, res, actualPage, queryParams)
         })
         server.get(`/${item}/:id`, (req, res) => {
