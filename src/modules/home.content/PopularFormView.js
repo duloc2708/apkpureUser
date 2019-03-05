@@ -18,13 +18,6 @@ class PopularFormView extends React.Component {
             var div = document.getElementById('target');
             div.appendChild(myscript);
         })
-        // $(function() {
-        //     /*$('.column').matchHeight();*/
-        //   $('.wrap__content').matchHeight();
-        // });
-        $(document).ready(function () {
-            console.log("ready!");
-        });
     }
     componentDidUpdate() {
 

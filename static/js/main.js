@@ -410,5 +410,8 @@ $(document).ready(function() {
         $('#footer_mc_embed_signup').find('form').ajaxChimp();
     });
 
+    /*$('.column').matchHeight();*/
+    $('.wrap__content').matchHeight();
+
 });
 
