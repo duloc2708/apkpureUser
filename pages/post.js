@@ -2,6 +2,9 @@ import $ from 'jquery';
 import DetailFormView from 'modules/detail/DetailFormView.js'
 import Layout from 'modules/layouts/Main';
 import Head from 'next/head';
+import NextSeo from 'next-seo';
+
+
 if (typeof window !== 'undefined') {
   window.$ = $;
   window.jQuery = $;
@@ -57,7 +60,7 @@ const addJSONLD3 = (type) => {
 
 const Post = (props) => (
   <Layout>
-    <Head>
+    {/* <Head>
       <title>
         {props.data.title}
       </title>
@@ -67,7 +70,14 @@ const Post = (props) => (
       <meta property="og:url" content={`http://apksafety.com/${props.data.type}/${props.data.title_slug}`} />
       <meta property="og:image" content={Config.getImage(props.data.thumbnail)} />
       <meta property="og:description" content={props.data.title} />
-    </Head>
+    </Head> */}
+    <NextSeo
+      config={{
+        title: props.data.title || 'About us',
+        description: props.data.title + 'afawfwafwafa',
+        image: Config.getImage(props.data.thumbnail)
+      }}
+    />
     <DetailFormView data={props.data} />
     <script
       type="application/ld+json"
