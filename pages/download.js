@@ -1,4 +1,4 @@
-import Layout from 'modules/Layout/Layout.js'
+import Layout from 'modules/layouts/Main';
 import $ from 'jquery';
 import DowloadFormView from 'modules/down/DowloadFormView.js'
 

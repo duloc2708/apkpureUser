@@ -1,13 +1,19 @@
-import Layout from 'modules/Layout/Layout.js'
 import $ from 'jquery';
 import DetailFormView from 'modules/detail/DetailFormView.js'
-
+import Layout from 'modules/layouts/Main';
+import Head from 'next/head';
 if (typeof window !== 'undefined') {
   window.$ = $;
   window.jQuery = $;
 }
 const Post = (props) => (
   <Layout>
+    <Head>
+      <title>
+        {props.data.title}
+      </title>
+      <meta name="description" content={props.data.title} />
+    </Head>
     <DetailFormView data={props.data} />
   </Layout>
 )
