@@ -2,9 +2,6 @@ import $ from 'jquery';
 import DetailFormView from 'modules/detail/DetailFormView.js'
 import Layout from 'modules/layouts/Main';
 import Head from 'next/head';
-import NextSeo from 'next-seo';
-
-
 if (typeof window !== 'undefined') {
   window.$ = $;
   window.jQuery = $;
@@ -61,28 +58,33 @@ const addJSONLD3 = (type) => {
 const Post = (props) => (
   <Layout>
     <Head>
-      <title>
-        {props.data.title}
-      </title>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      {/* <title>Đài truyền hình Hàn Quốc làm tin hội nghị thượng đỉnh như thế nào? | Tinhte.vn</title> */}
+      <title>{props.data.title}</title>
+      <link rel="apple-touch-icon" href="https://tinhte.vn/styles/uiflex/dimota/logo.og.png" />
+      <link rel="alternate" type="application/rss+xml" title="RSS của Tinhte.vn" href="https://tinhte.vn/rss/" />
+      <link rel="next" href="threads/dai-truyen-hinh-han-quoc-lam-tin-hoi-nghi-thuong-dinh-nhu-the-nao.2920754/page-2" />
+      <link rel="canonical" href="https://tinhte.vn/threads/dai-truyen-hinh-han-quoc-lam-tin-hoi-nghi-thuong-dinh-nhu-the-nao.2920754/" />
+      <meta name="description" content="Trong thời gian này, khi mà cuộc họp thượng đỉnh Hoa Kỳ - Triều Tiên đang chuẩn bị diễn ra tại Hà Nội thì việc đưa tin nhanh nhất, hiệu quả nhất được..." /><meta property="author" content="kevin_pump" /><meta property="article:author" content="https://facebook.com/10208889536421702" />
       <meta property="og:site_name" content="Tinhte.vn" />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content="https://tinhte.vn/threads/gms19-audi-q4-e-tron-sac-30-phut-day-80-pin-chay-hon-450-km-san-xuat-tu-2020.2923794/" />
-      <meta property="og:title" content="#GMS19 - Audi Q4 E-Tron: sạc 30 phút đầy 80% pin, chạy hơn 450 km, sản xuất từ 2020" />
-      <meta property="og:description" content="Audi Q4 E-Tron Concept được nhà sản xuất ô tô Đức mang đến triển lãm Geneva Motor Show lần này có thể xem như một bản thu nhỏ của chiếc E-Tron được..." />
-      {/* <meta name="description" content={props.data.title} />
-      <meta property="og:title" content={props.data.title} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={`http://apksafety.com/${props.data.type}/${props.data.title_slug}`} />
-      <meta property="og:image" content={Config.getImage(props.data.thumbnail)} />
-      <meta property="og:description" content={props.data.title} /> */}
+      <meta property="og:url" content="https://tinhte.vn/threads/dai-truyen-hinh-han-quoc-lam-tin-hoi-nghi-thuong-dinh-nhu-the-nao.2920754/" />
+      <meta property="og:title" content="Đài truyền hình Hàn Quốc làm tin hội nghị thượng đỉnh như thế nào?" />
+      <meta property="og:description" content="Trong thời gian này, khi mà cuộc họp thượng đỉnh Hoa Kỳ - Triều Tiên đang chuẩn bị diễn ra tại Hà Nội thì việc đưa tin nhanh nhất, hiệu quả nhất được..." />
+      <meta property="fb:app_id" content="145923738846814" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:title" content="Đài truyền hình Hàn Quốc làm tin hội nghị thượng đỉnh như thế nào?" />
+      <meta property="twitter:description" content="Trong thời gian này, khi mà cuộc họp thượng đỉnh Hoa Kỳ - Triều Tiên đang chuẩn bị diễn ra tại Hà Nội thì việc đưa tin nhanh nhất, hiệu quả nhất được..." />
+      <meta property="twitter:url" content="https://tinhte.vn/threads/dai-truyen-hinh-han-quoc-lam-tin-hoi-nghi-thuong-dinh-nhu-the-nao.2920754/" />
+      <meta property="og:image" content="https://photo2.tinhte.vn/data/attachment-files/2019/02/4576910_Cover.jpg" />
+      <meta property="twitter:image" content="https://photo2.tinhte.vn/data/attachment-files/2019/02/4576910_Cover.jpg" />
+      <meta property="og:image:width" content="2048" />
+      <meta property="og:image:height" content="1268" />
+      <meta property="twitter:image:width" content="2048" />
+      <meta property="twitter:image:height" content="1268" />
     </Head>
-    {/* <NextSeo
-      config={{
-        title: props.data.title || 'About us',
-        description: props.data.title + 'afawfwafwafa',
-        image: Config.getImage(props.data.thumbnail)
-      }}
-    /> */}
     <DetailFormView data={props.data} />
     <script
       type="application/ld+json"
