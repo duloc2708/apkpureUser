@@ -55,14 +55,12 @@ export default ({
         <meta name="twitter:card" content="summary" />
         <link rel="canonical" href={PROPERTY_OG_URL} />
         <title >{title}</title>
-        {/* <meta property="og:title" content={title} /> */}
+        
         <meta name="twitter:title" content={title} />
         <meta name="description" content={description} />
-        <meta property="og:description" content={description} />
         <meta name="twitter:description" content={description} />
         <meta name="keywords" content={tags_keywords} />
         <meta property="og:type" content={og_type} />
-        <meta property="og:image" content={og_image} />
         <link rel="image_src" href={image_src} />
         <meta name="twitter:image:src" content={twitter_image_src} />
 
