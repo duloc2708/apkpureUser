@@ -1,4 +1,4 @@
-import Layout from 'modules/Layout/Layout.js'
+import Layout from 'modules/layouts/Main';
 import BlogFormView from 'modules/blog/BlogFormView.js'
 
 import $ from 'jquery';
