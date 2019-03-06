@@ -60,24 +60,29 @@ const addJSONLD3 = (type) => {
 
 const Post = (props) => (
   <Layout>
-    {/* <Head>
+    <Head>
       <title>
         {props.data.title}
       </title>
-      <meta name="description" content={props.data.title} />
+      <meta property="og:site_name" content="Tinhte.vn" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://tinhte.vn/threads/gms19-audi-q4-e-tron-sac-30-phut-day-80-pin-chay-hon-450-km-san-xuat-tu-2020.2923794/" />
+      <meta property="og:title" content="#GMS19 - Audi Q4 E-Tron: sạc 30 phút đầy 80% pin, chạy hơn 450 km, sản xuất từ 2020" />
+      <meta property="og:description" content="Audi Q4 E-Tron Concept được nhà sản xuất ô tô Đức mang đến triển lãm Geneva Motor Show lần này có thể xem như một bản thu nhỏ của chiếc E-Tron được..." />
+      {/* <meta name="description" content={props.data.title} />
       <meta property="og:title" content={props.data.title} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`http://apksafety.com/${props.data.type}/${props.data.title_slug}`} />
       <meta property="og:image" content={Config.getImage(props.data.thumbnail)} />
-      <meta property="og:description" content={props.data.title} />
-    </Head> */}
-    <NextSeo
+      <meta property="og:description" content={props.data.title} /> */}
+    </Head>
+    {/* <NextSeo
       config={{
         title: props.data.title || 'About us',
         description: props.data.title + 'afawfwafwafa',
         image: Config.getImage(props.data.thumbnail)
       }}
-    />
+    /> */}
     <DetailFormView data={props.data} />
     <script
       type="application/ld+json"
