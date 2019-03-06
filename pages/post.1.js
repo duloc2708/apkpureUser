@@ -38,7 +38,7 @@ const addJSONLD2 = () => {
     ]`
   };
 };
-const addJSONLD3 = (type) => {
+const addJSONLD3 = () => {
   return {
     __html: `
     "@context": "http://schema.org",
@@ -46,13 +46,24 @@ const addJSONLD3 = (type) => {
     "itemListElement": [
             {
           "@type": "ListItem",
-          "position": 1,
-                      "Item": {
-                "@id": "http://apksafety.com/${type}",
-          "name": ${type}
+    "position": 1,
+                "Item": {
+          "@id": "http://apksafety.com/game",
+    "name": "Games"
+    }
+    },
+            {
+          "@type": "ListItem",
+    "position": 2,
+                "Item": {
+          "@id": "http://apksafety.com/game_role_playing",
+          "name": "Role Playing"
           }}]`
   };
 };
+
+
+
 
 
 const Post = (props) => (
@@ -76,7 +87,7 @@ const Post = (props) => (
     />
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={addJSONLD3(props.data.type)}
+      dangerouslySetInnerHTML={addJSONLD3()}
     />
   </Layout>
 )
