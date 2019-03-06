@@ -61,9 +61,9 @@ const Post = (props) => (
       <title>
         {props.data.title}
       </title>
+      <meta name="description" content={props.data.title} />
       <meta property="og:title" content={props.data.title} />
       <meta property="og:type" content="website" />
-      
       <meta property="og:url" content={`http://apksafety.com/${props.data.type}/${props.data.title_slug}`} />
       <meta property="og:image" content={Config.getImage(props.data.thumbnail)} />
       <meta property="og:description" content={props.data.title} />
