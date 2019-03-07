@@ -40,3 +40,6 @@
       transform: scale(1.0);
     }
   }
+  .noneSlide{
+    display:none;
+  }

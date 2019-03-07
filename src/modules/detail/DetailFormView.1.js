@@ -1,16 +1,12 @@
 
 import Link from 'next/link'
-let cheerio = require('cheerio');
+
 class DetailFormView extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
-        let { title, type_name, type, thumbnail, content_long, title_slug, atr3, atr5, atr6, atr7 } = this.props.data
-        let arrSlide = []
-        if (atr7) {
-            arrSlide = atr7.split(',')
-        }
+        let { title, type_name, type, thumbnail, content_long, title_slug, atr3, atr5, atr6 } = this.props.data
         return (
             <section className="popular-post-area pt-120">
                 <div className="container">
@@ -34,7 +30,7 @@ class DetailFormView extends React.Component {
                                         </div>
                                         <div className="details-sdk">
                                             <span itemProp="version">{atr6} </span>for Android
-                                                 </div>
+                                  </div>
                                         <div className="details-rating">
                                             <div className="stars" title="average: 8.8 out of 10">
                                             </div>
@@ -80,24 +76,42 @@ class DetailFormView extends React.Component {
                                         </div>
                                     </dd>
                                 </dl>
-
                                 <div className="gallery-carousel popup-gallery">
-                                    {
-                                        arrSlide.map((item, i) => {
-                                            return (
-                                                <div key={`slide_${i}`} className="gallery-item">
-                                                    <a data-effect="mfp-zoom-in" title="">
-                                                        <img src={item} />
-                                                    </a>
-                                                </div>
-                                            )
-                                        })
-                                    }
+                                    <div className="gallery-item">
+                                        <a href="http://randomsite.zzz.com.ua/cabel/img/gallery/1.jpg" data-effect="mfp-zoom-in" title="">
+                                            <img src="http://randomsite.zzz.com.ua/cabel/img/gallery/1m.jpg" />
+                                        </a>
+                                    </div>
 
+                                    <div className="gallery-item">
+                                        <a href="http://randomsite.zzz.com.ua/cabel/img/gallery/2.jpg" data-effect="mfp-zoom-in" title="">
+                                            <img src="http://randomsite.zzz.com.ua/cabel/img/gallery/2m.jpg" />
+                                        </a>
+                                    </div>
+
+                                    <div className="gallery-item">
+                                        <a href="http://randomsite.zzz.com.ua/cabel/img/gallery/3.jpg" data-effect="mfp-zoom-in" title="">
+                                            <img src="http://randomsite.zzz.com.ua/cabel/img/gallery/3m.jpg" />
+                                        </a>
+                                    </div>
+
+                                    <div className="gallery-item">
+                                        <a href="http://randomsite.zzz.com.ua/cabel/img/gallery/4.jpg" data-effect="mfp-zoom-in" title="">
+                                            <img src="http://randomsite.zzz.com.ua/cabel/img/gallery/4m.jpg" />
+                                        </a>
+                                    </div>
+
+                                    <div className="gallery-item">
+                                        <a href="http://randomsite.zzz.com.ua/cabel/img/gallery/5.jpg" data-effect="mfp-zoom-in" title="">
+                                            <img src="http://randomsite.zzz.com.ua/cabel/img/gallery/5m.jpg" />
+                                        </a>
+                                    </div>
                                 </div>
 
                                 <div className="blog__detail__description">
                                     <div dangerouslySetInnerHTML={{ __html: content_long }} />
+
+
                                 </div>
                             </div>
                         </div>
