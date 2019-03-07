@@ -31,6 +31,8 @@ export default class SiteDocument extends Document {
           <script src="http://apksafety.com/static/js/mn-accordion.js"></script>
           <script src="http://apksafety.com/static/js/jquery.nice-select.min.js"></script>
           <script src="http://apksafety.com/static/js/mail-script.js"></script>
+          <script id="slideIndex">
+          </script>
         </body>
       </html>
     )

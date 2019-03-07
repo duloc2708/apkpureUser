@@ -80,8 +80,9 @@ class DetailFormView extends React.Component {
                                         </div>
                                     </dd>
                                 </dl>
-                                <SLideImageFormView arrSlide={arrSlide} />
-                                <div id="targetSlide"></div>
+                                {arrSlide.length > 0 ?
+                                    <SLideImageFormView arrSlide={arrSlide} />
+                                    : ''}
                                 <div className="blog__detail__description">
                                     <div dangerouslySetInnerHTML={{ __html: content_long }} />
                                 </div>

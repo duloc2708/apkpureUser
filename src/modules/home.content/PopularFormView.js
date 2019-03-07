@@ -13,26 +13,13 @@ class PopularFormView extends React.Component {
         getBlogBySection('slide').then(Response => {
             let { Data } = Response
             this.setState({ data: Data })
-            var myscript = document.createElement('script');
-            myscript.setAttribute('src', 'http://apksafety.com/static/js/main.js');
-            var div = document.getElementById('target');
-            div.appendChild(myscript);
+            setTimeout(() => {
+                window.onload = function () {
+                    $.getScript('http://apksafety.com/static/js/main.js')
+                }();
+            }, 100);
         })
     }
-    componentDidUpdate() {
-
-    }
-    loadScripts(scripts) {
-
-        scripts.forEach(s => {
-            const script = document.createElement('script');
-            script.src = `${process.env.PUBLIC_URL}${s}`;
-            script.async = false;
-            document.body.appendChild(script);
-        });
-    };
-
-
     render() {
         let { data } = this.state
         return (
