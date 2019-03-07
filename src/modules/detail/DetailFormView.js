@@ -1,6 +1,6 @@
 
 import Link from 'next/link'
-let cheerio = require('cheerio');
+import SLideImageFormView from './SLideImageFormView'
 class DetailFormView extends React.Component {
     constructor(props) {
         super(props);
@@ -80,22 +80,8 @@ class DetailFormView extends React.Component {
                                         </div>
                                     </dd>
                                 </dl>
-
-                                <div className="gallery-carousel popup-gallery">
-                                    {
-                                        arrSlide.map((item, i) => {
-                                            return (
-                                                <div key={`slide_${i}`} className="gallery-item">
-                                                    <a data-effect="mfp-zoom-in" title="">
-                                                        <img src={item} />
-                                                    </a>
-                                                </div>
-                                            )
-                                        })
-                                    }
-
-                                </div>
-
+                                <SLideImageFormView arrSlide={arrSlide} />
+                                <div id="targetSlide"></div>
                                 <div className="blog__detail__description">
                                     <div dangerouslySetInnerHTML={{ __html: content_long }} />
                                 </div>
