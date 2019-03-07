@@ -1,3 +1,4 @@
+import { setTimeout } from "timers";
 
 class SLideImageFormView extends React.Component {
     constructor(props) {
@@ -9,18 +10,14 @@ class SLideImageFormView extends React.Component {
     }
     componentDidMount() {
         setTimeout(() => {
-            let { arrSlide } = this.props
-            this.setState({ data: arrSlide || [] })
-            var myscript = document.createElement('script');
-            myscript.setAttribute('src', 'http://apksafety.com/static/js/vendor/slider_blog_detail.js');
-            var div = document.getElementById('targetSlide');
-            div.appendChild(myscript);
-        }, 200)
-
+            window.onload = function () {
+                $.getScript('http://apksafety.com/static/js/vendor/slider_blog_detail.js')
+            }();
+        }, 100)
 
     }
     render() {
-        let arrSlide = this.state.data
+        let arrSlide = this.props.arrSlide
         return (
             <div className="gallery-carousel popup-gallery">
                 {
