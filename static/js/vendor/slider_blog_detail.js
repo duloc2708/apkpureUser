@@ -1,6 +1,6 @@
 $('.gallery-carousel').owlCarousel({
 		nav:      true,
-		navText:  ['<img src="http://randomsite.zzz.com.ua/cabel/img/s8_al.png">','<img src="http://randomsite.zzz.com.ua/cabel/img/s8_ar.png">'],
+		navText:  [],
 		margin:   10,
 		loop:     true,
 		autoplay: true,
