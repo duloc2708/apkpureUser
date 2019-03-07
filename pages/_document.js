@@ -20,7 +20,6 @@ export default class SiteDocument extends Document {
             {main}
           </div>
           <NextScript />
-
           <script src="http://apksafety.com/static/js/vendor/bootstrap.min.js"></script>
           <script src="http://apksafety.com/static/js/popper.min.js"></script>
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
@@ -32,7 +31,6 @@ export default class SiteDocument extends Document {
           <script src="http://apksafety.com/static/js/mn-accordion.js"></script>
           <script src="http://apksafety.com/static/js/jquery.nice-select.min.js"></script>
           <script src="http://apksafety.com/static/js/mail-script.js"></script>
-          <script src="http://apksafety.com/static/js/vendor/slider_blog_detail.js"></script>
         </body>
       </html>
     )
