@@ -74,9 +74,6 @@ class DetailFormView extends React.Component {
                                             <a title="PUBG MOBILE Previous Versions" href="#" className="ny-versions">Versions</a>
                                             <a rel="nofollow" title="PUBG MOBILE safe verified" href="#" className="safe popsafe-open">
                                                 <img alt="PUBG MOBILE safe verified" src={`${Config.API_LOCAL_IMAGE}img/blog/icon-verified_v2.png`} width="16" /></a>
-                                            <a className="play-on r" href="#" target="_blank" rel="nofollow">
-                                                Play on BlueStacks
-                                      </a>
                                         </div>
                                     </dd>
                                 </dl>
