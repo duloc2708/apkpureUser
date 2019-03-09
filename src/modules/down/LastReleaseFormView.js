@@ -31,8 +31,7 @@ class LastReleaseFormView extends React.Component {
                                 return (
                                     <li key={`last_${id}`} className="item">
                                         <div className="row">
-                                            <div className="col-md-7">
-
+                                            <div className="col-md-7 col-sm-7">
                                                 <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                                     <a className="img-item" title={title}>
                                                         <img className="lazy loaded" alt={title} src={Config.getImage(thumbnail)} alt={title} />
@@ -45,17 +44,21 @@ class LastReleaseFormView extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-md-3">
+                                            <div className="col-md-3 col-sm-3">
                                                 <div className="vol-chap ver text-left">
                                                     <p>3.2.13</p>
                                                     <p className="new-chap">27.02.2019</p>
                                                 </div>
                                             </div>
-                                            <div className="col-md-2">
+                                            <div className="col-md-2 col-sm-2">
                                                 <div className="btn-download">
-                                                    <a href="#">
-                                                        <i className="fa fa-download" aria-hidden="true"></i>
-                                                    </a>
+                                                    <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                        <a>
+                                                            <i className="fa fa-download" aria-hidden="true"></i>
+                                                        </a>
+                                                    </Link>
+
+
                                                 </div>
                                             </div>
                                         </div>
