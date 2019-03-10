@@ -26,7 +26,7 @@ class DetailFormView extends React.Component {
                             <div className="row">
                                 <dl className="ny-dl ny-dl-n">
                                     <dt>
-                                        <div className="icon"><img title="PUBG MOBILE icon" alt="PUBG MOBILE icon" src={Config.getImage(thumbnail)} /></div>
+                                        <div className="icon"><img title={title} alt={title} src={Config.getImage(thumbnail)} /></div>
                                     </dt>
                                     <dd>
                                         <div className="title-like">
@@ -73,7 +73,7 @@ class DetailFormView extends React.Component {
                                             </a> */}
                                             <a title="PUBG MOBILE Previous Versions" href="#" className="ny-versions">Versions</a>
                                             <a rel="nofollow" title="PUBG MOBILE safe verified" href="#" className="safe popsafe-open">
-                                                <img alt="PUBG MOBILE safe verified" src={`${Config.API_LOCAL_IMAGE}img/blog/icon-verified_v2.png`} width="16" /></a>
+                                                <img alt={title} title={title} src={`${Config.API_LOCAL_IMAGE}img/blog/icon-verified_v2.png`} width="16" /></a>
                                         </div>
                                     </dd>
                                 </dl>

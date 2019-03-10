@@ -39,14 +39,14 @@ const Index = (props) => (
       <meta property="og:site_name" content="Apksafety.com" />
       <meta property="og:image" content='http://apksafety.com/static/img/logo-d.png' />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content="https://Apksafety.com/" />
+      <meta property="og:url" content="http://Apksafety.com/" />
       <meta property="og:title" content={TITLE} />
       <meta property="og:description" content={TITLE} />
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:title" content={TITLE} />
       <meta property="twitter:description" content={TITLE} />
       <meta property="twitter:image" content='http://apksafety.com/static/img/logo-d.png' />
-      <meta property="twitter:url" content="https://Apksafety.com/" />
+      <meta property="twitter:url" content="http://Apksafety.com/" />
       {/* <meta name="theme-color" content="#192433" /> */}
     </Head>
     <ContentFormView />
