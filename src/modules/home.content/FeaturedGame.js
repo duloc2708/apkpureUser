@@ -36,11 +36,12 @@ class FeaturedGame extends React.Component {
                                     let { id, title, type_name, type, thumbnail, title_slug } = item
 
                                     return (
-                                        <li  key={`i_${id}`} className="gamehot__list__items">
+                                        <li key={`i_${id}`} className="gamehot__list__items">
                                             <dl>
                                                 <dt className="gamehot__img">
-                                                    <img width="75px" height="50px" src={Config.getImage(thumbnail)} alt={title} />
-                                                </dt>
+                                                    <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                        <img alt={title} title={title} width="75px" height="50px" src={Config.getImage(thumbnail)} />
+                                                    </Link>                                                </dt>
                                                 <dd className="gamehot__title">
                                                     <div>
                                                         <p>

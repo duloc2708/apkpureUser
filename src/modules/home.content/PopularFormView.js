@@ -42,7 +42,7 @@ class PopularFormView extends React.Component {
                                                     <p className="newgame_subtitle">{title}</p>
                                                 </div>
                                                 <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                    <img className="img-fluid" src={Config.getImage(atr4)} alt={title} />
+                                                    <img title={title} className="img-fluid" src={Config.getImage(atr4)} alt={title} />
                                                 </Link>
                                                 <a href="blog-single.html">
                                                 </a>
