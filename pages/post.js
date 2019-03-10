@@ -86,6 +86,7 @@ const Post = (props) => (
       <meta property="og:image:height" content="1268" />
       <meta property="twitter:image:width" content="2048" />
       <meta property="twitter:image:height" content="1268" />
+      <link rel="canonical" href={`${Config.API_DOMAIN_CURRENT}${props.data.type}/${props.data.title_slug}`} />
     </Head>
     <DetailFormView data={props.data} />
     <script
