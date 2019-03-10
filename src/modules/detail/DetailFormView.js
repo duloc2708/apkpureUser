@@ -46,9 +46,9 @@ class DetailFormView extends React.Component {
                                               <meta itemProp="worstRating" content="1"> */}
                                                 </span>
                                                 <span className="details-delimiter"> | </span>
-                                                <a href="#comment" className="details-to-bottom" data-type="reviews">7.5k Reviews</a>
+                                                <a className="details-to-bottom" data-type="reviews">7.5k Reviews</a>
                                                 <span className="details-delimiter"> | </span>
-                                                <a href="#comment" className="details-to-bottom" data-type="posts">3.8k Posts</a>
+                                                <a className="details-to-bottom" data-type="posts">3.8k Posts</a>
                                             </div>
                                         </div>
                                         <div className="details-author">
