@@ -17,9 +17,7 @@ class DetailFormView extends React.Component {
                     <div className="row">
                         <div className="box">
                             <div className="box__title bread-crumbs">
-                                <a href="/game">blog</a> »
-                          <a href="/game_action">blog_detail</a> »
-                          <span itemProp="name">{type_name}</span>
+                                <a href="/">Home</a> » <a href={`/${type}`}>{type_name}</a>
                             </div>
                         </div>
                         <div className="col-lg-12 blog_detail">

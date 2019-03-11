@@ -13,24 +13,24 @@ class ListTypeGame extends React.Component {
                                 <div className="col-lg-4 col-md-4 col-sm-4">
                                     <ul className="index-category cicon">
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="adventure">
                                                 </i>Phiêu lưu</a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="arcade"></i>
                                                 Trò chơi điện tử
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="puzzle"></i>
                                                 Câu đố
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="simulation"></i>
                                                 Mô phỏng
                                         </a>
@@ -40,25 +40,25 @@ class ListTypeGame extends React.Component {
                                 <div className="col-lg-4 col-md-4 col-sm-4">
                                     <ul className="index-category cicon">
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="role-playing"></i>
                                                 Nhập vai
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="sports"></i>
                                                 Thể thao
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="/vn/game_word">
+                                            <a href="/">
                                                 <i className="word"></i>
                                                 Tìm ô chữ
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="strategy"></i>
                                                 Chiến thuật
                                         </a>
@@ -68,19 +68,19 @@ class ListTypeGame extends React.Component {
                                 <div className="col-lg-4 col-md-4 col-sm-4">
                                     <ul className="index-category cicon">
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="trivia"></i>
                                                 Trắc nghiệm kiến thức
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="entertainment"></i>
                                                 Giải trí
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="racing"></i>
                                                 Ô tô và xe cộ
                                         </a>
