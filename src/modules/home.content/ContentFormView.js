@@ -32,8 +32,6 @@ class ContentFormView extends React.Component {
                             <SlideMobileFormView />
                         </MobileView>
                 }
-
-
                 <GameHotFormView />
                 <TopDownFormView />
                 <FeaturedGame />
@@ -41,9 +39,23 @@ class ContentFormView extends React.Component {
                 <BrowserView>
                     <VideoFormView />
                 </BrowserView>
-                <MobileView>
-                    <VideoMobileFormView />
-                </MobileView>
+                {
+                    isTablet ?
+                        <TabletView>
+                            <VideoFormView />
+                        </TabletView>
+                        :
+                        <div>
+                            {!isMobile ?
+                                ''
+                                :
+                                <MobileView>
+                                    <VideoMobileFormView />
+                                </MobileView>
+                            }
+                        </div>
+
+                }
                 <ListTypeGame />
             </React.Fragment>
         )
