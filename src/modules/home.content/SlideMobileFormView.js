@@ -12,15 +12,13 @@ class SlideMobileFormView extends React.Component {
             end: 0,
             total: 0,
             dots_default: 1,
-            list_dots: [
-                { "key": 1 }, { "key": 2 }, { "key": 3 }
-            ]
+            list_dots: 0
         }
     }
     componentDidMount() {
         getBlogBySection('slide').then(Response => {
             let { Data } = Response
-            this.setState({ data: Data, total: Data.length })
+            this.setState({ data: Data, total: Data.length, list_dots: Data.length - 1 })
         })
         this.interval = setInterval(() => this.autoRun(), 5000);
     }
@@ -53,20 +51,21 @@ class SlideMobileFormView extends React.Component {
         clearInterval(this.interval);
     }
     _onChangeDots(key) {
-        switch (key) {
-            case 1:
-                this.setState({ start: 0, end: 3, dots_default: key })
-                break;
-            case 2:
-                this.setState({ start: 4, end: 7, dots_default: key })
-                break;
-            case 3:
-                this.setState({ start: 8, end: 11, dots_default: key })
-                break;
-            default:
-                this.setState({ start: 0, end: 3, dots_default: key })
-                break;
+        this.setState({ start: key, end: key, dots_default: key })
+    }
+    _renderListDots() {
+        let i;
+        let { dots_default } = this.state
+        let arr = []
+        for (i = 0; i < 5; i++) {
+            arr.push(
+                <div onClick={() =>
+                    this._onChangeDots(i)} key={`dots_${i}`} className={`owl-dot ${i == dots_default ? 'active' : ''}`} >
+                    <span></span>
+                </div>
+            )
         }
+        return arr
     }
     render() {
         let { data, start, end, list_dots, dots_default } = this.state
@@ -129,15 +128,7 @@ class SlideMobileFormView extends React.Component {
                             </div>
                             <div className="owl-controls">
                                 <div className="owl-dots">
-                                    {
-                                        list_dots.map(item => {
-                                            return (
-                                                <div onClick={() => this._onChangeDots(item.key)} key={`dots_${item.key}`} className={`owl-dot ${item.key == dots_default ? 'active' : ''}`} >
-                                                    <span></span>
-                                                </div>
-                                            )
-                                        })
-                                    }
+                                    {this._renderListDots()}
                                 </div>
                             </div>
                         </div>
