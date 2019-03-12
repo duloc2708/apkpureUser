@@ -11,7 +11,10 @@ class PopularFormView extends React.Component {
             start: 0,
             end: 3,
             total: 0,
-            num: 0
+            dots_default: 1,
+            list_dots: [
+                { "key": 1 }, { "key": 2 }, { "key": 3 }
+            ]
         }
     }
     componentDidMount() {
@@ -38,40 +41,64 @@ class PopularFormView extends React.Component {
     }
 
     autoRun() {
-        let { total, start, end, num } = this.state
+        let { total, start, end } = this.state
         let endNew = end + 1
         if (endNew < total) {
             this.setState({ start: start + 1, end: end + 1 })
         } else {
             this.setState({ start: 0, end: 3 })
         }
-        if (num >= 2) {
-            this.setState({ num: 0 })
-        } else {
-            this.setState({ num: num + 1 })
-        }
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
     }
+    _onChangeDots(key) {
+        switch (key) {
+            case 1:
+                this.setState({ start: 0, end: 3, dots_default: key })
+                break;
+            case 2:
+                this.setState({ start: 4, end: 7, dots_default: key })
+                break;
+            case 3:
+                this.setState({ start: 8, end: 11, dots_default: key })
+                break;
+            default:
+                this.setState({ start: 0, end: 3, dots_default: key })
+                break;
+        }
+    }
     render() {
-        let { data, start, end } = this.state
+        let { data, start, end, list_dots, dots_default } = this.state
         return (
             <section className="popular-post-area pt-120">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12 slide__game owl-carousel">
+
+                        <div className="col-lg-12 slide__game">
                             <div className="row">
                                 {
                                     data.map((item, i) => {
                                         let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
                                         if (i >= start && i <= end) {
-                                            console.log('item',item);
-                                            
                                             return (
                                                 <div key={`slide_${i}`} className="col-md-3 col-sm-4">
-                                                    <div className="items__slide__block__content match">
+                                                    <div className="items__slide__block__content">
+                                                        <p className="newgame">
+                                                            <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
+                                                        </p>
+                                                        <h4 className="newgame__title">
+                                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
+                                                        </h4>
+                                                    </div>
+                                                    <div className="items__slide__block__img">
+                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                            <img title={title} className="img-fluid" src={Config.getImage(atr4)} alt={title} />
+                                                        </Link>
+                                                    </div>
+                                                </div> , <div key={`slide_${i}`} className="col-md-3 col-sm-4">
+                                                    <div className="items__slide__block__content">
                                                         <p className="newgame">
                                                             <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
                                                         </p>
@@ -85,32 +112,33 @@ class PopularFormView extends React.Component {
                                                         </Link>
                                                     </div>
                                                 </div>
+
                                             )
                                         }
                                     })
                                 }
                                 <div className="button_prev">
-                                    <a href="#">
+                                    <a onClick={() => this._onPrev()}>
                                         <i className="fa fa-chevron-circle-left" aria-hidden="true"></i>
                                     </a>
                                 </div>
                                 <div className="button_next">
-                                    <a href="#">
+                                    <a onClick={() => this._onNext()}>
                                         <i className="fa fa-chevron-circle-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
                             <div className="owl-controls">
                                 <div className="owl-dots">
-                                    <div className="owl-dot active">
-                                        <span></span>
-                                    </div>
-                                    <div className="owl-dot">
-                                        <span></span>
-                                    </div>
-                                    <div className="owl-dot">
-                                        <span></span>
-                                    </div>
+                                    {
+                                        list_dots.map(item => {
+                                            return (
+                                                <div onClick={() => this._onChangeDots(item.key)} key={`dots_${item.key}`} className={`owl-dot ${item.key == dots_default ? 'active' : ''}`} >
+                                                    <span></span>
+                                                </div>
+                                            )
+                                        })
+                                    }
                                 </div>
                             </div>
                         </div>
