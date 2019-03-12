@@ -2,7 +2,7 @@ import { getBlogBySection } from 'modules/home.content/actions/'
 import Link from 'next/link'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 
-class PopularFormView extends React.Component {
+class SlideFormView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -149,4 +149,4 @@ class PopularFormView extends React.Component {
         )
     }
 }
-export default PopularFormView
+export default SlideFormView
