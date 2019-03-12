@@ -10,7 +10,7 @@ class VideoMobileFormView extends React.Component {
                         </div>
                         <div className="col-lg-12 slide__video">
                             <div className="row">
-                                <div className="col-md-6 col-sm-6">
+                                <div className="col-md-12 col-sm-12">
                                     <div className="single-post-carusel item videoWrapper">
                                         <div className="feature-image relative videoWrapper">
                                             <iframe width="560" height="315" src="https://www.youtube.com/embed/KI0MHwGzl6U" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
