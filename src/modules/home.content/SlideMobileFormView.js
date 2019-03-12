@@ -22,10 +22,7 @@ class SlideMobileFormView extends React.Component {
             let { Data } = Response
             this.setState({ data: Data, total: Data.length })
         })
-
         this.interval = setInterval(() => this.autoRun(), 5000);
-
-        alert('mobile')
     }
     _onNext() {
         let { total, start, end } = this.state
