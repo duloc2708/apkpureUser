@@ -7,31 +7,37 @@ import TopDownFormView from 'modules/home.content/TopDownFormView.js'
 import FeaturedGame from 'modules/home.content/FeaturedGame.js'
 import FeaturedApp from 'modules/home.content/FeaturedApp.js'
 import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
+import SlideTabletFormView from 'modules/home.content/SlideTabletFormView.js'
 import {
+    TabletView,
     BrowserView,
     MobileView,
     isBrowser,
-    isMobile
+    isMobile,
+    isTablet
 } from "react-device-detect";
 class ContentFormView extends React.Component {
     render() {
         return (
             <React.Fragment>
                 <BrowserView>
-                   <SlideFormView />
+                    <SlideFormView />
                 </BrowserView>
+                <TabletView>
+                    <SlideTabletFormView />
+                </TabletView>
                 <MobileView>
-                   <SlideMobileFormView />
+                    <SlideMobileFormView />
                 </MobileView>
                 <GameHotFormView />
                 <TopDownFormView />
                 <FeaturedGame />
                 <FeaturedApp />
                 <BrowserView>
-                   <VideoFormView />
+                    <VideoFormView />
                 </BrowserView>
                 <MobileView>
-                   <VideoMobileFormView />
+                    <VideoMobileFormView />
                 </MobileView>
                 <ListTypeGame />
             </React.Fragment>

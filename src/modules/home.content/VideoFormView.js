@@ -1,4 +1,5 @@
 class VideoFormView extends React.Component {
+    
     render() {
         return (
             <section className="latest-post-carusel-area popular-post-area pt-40">
