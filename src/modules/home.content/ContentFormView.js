@@ -23,12 +23,17 @@ class ContentFormView extends React.Component {
                 <BrowserView>
                     <SlideFormView />
                 </BrowserView>
-                <TabletView>
-                    <SlideTabletFormView />
-                </TabletView>
-                <MobileView>
-                    <SlideMobileFormView />
-                </MobileView>
+                {
+                    isTablet ?
+                        <TabletView>
+                            <SlideTabletFormView />
+                        </TabletView>
+                        : <MobileView>
+                            <SlideMobileFormView />
+                        </MobileView>
+                }
+
+
                 <GameHotFormView />
                 <TopDownFormView />
                 <FeaturedGame />
