@@ -34,7 +34,7 @@ class LastReleaseFormView extends React.Component {
                                             <div className="col-md-7 col-sm-7">
                                                 <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                                     <a className="img-item" title={title}>
-                                                        <img className="lazy loaded" alt={title} src={Config.getImage(thumbnail, 75, 50)} alt={title} />
+                                                        <img className="lazy loaded" alt={title} src={Config.getImageIndex(thumbnail, 75, 50)} alt={title} />
                                                     </a>
                                                 </Link>
                                                 <div className="info">

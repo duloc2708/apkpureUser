@@ -31,7 +31,7 @@ class HotUpdateFormView extends React.Component {
                                 <div key={id} className="items">
                                     <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                         <a className="favicon" title={title}>
-                                            <img alt={title} title={title} className="img-fluid" src={Config.getImage(thumbnail, 75, 50)}  />
+                                            <img alt={title} title={title} className="img-fluid" src={Config.getImageIndex(thumbnail, 75, 50)}  />
                                         </a>
                                     </Link>
                                     <div className="name">

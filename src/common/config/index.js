@@ -15,12 +15,18 @@ export const getImage = (data, width = 10, height = 10) => {
     if (data.indexOf('http') != -1) {
         return data
     } else {
+        return `${API_IMAGE + data}`
+    }
+}
+export const getImageIndex = (data, width = 10, height = 10) => {
+    if (data.indexOf('http') != -1) {
+        return data
+    } else {
         let filename = data.split('\\').pop().split('/').pop();
         filename = filename.substring(0, filename.lastIndexOf('.'));
         return `${API_IMAGE + width + '-' + height + '/' + filename+'.jpeg'}`
     }
 }
-
 export const APP_ID_FACEBOOK = "1496370120424382";
 export const CONSTANT_NUMBER_2 = 'hello I am also a constant';
 export const OG_LOCATION = 'vi_VN';
