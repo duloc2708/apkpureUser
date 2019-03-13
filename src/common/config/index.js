@@ -4,7 +4,7 @@
 //export const API_DOMAIN_CURRENT = 'http://www.apksafety.com/'  //DEV
 
 export const API_URL = 'http://api.apksafety.com/api/'  //PROD
-export const API_IMAGE = 'http://api.apksafety.com/api/image'  //PROD
+export const API_IMAGE = 'http://api.apksafety.com/images/'  //PROD
 export const API_LOCAL_IMAGE = 'http://apksafety.com/static/'  //DEV
 export const API_DOWNLOAD_FILE = 'http://apkverified.com/api/'  //DEV
 export const API_DOMAIN_CURRENT = 'http://www.apksafety.com/'  //DEV
@@ -15,7 +15,7 @@ export const getImage = (data, width = 10, height = 10) => {
     if (data.indexOf('http') != -1) {
         return data
     } else {
-        return `${API_IMAGE}?name=${data}&width=${width}&height=${height}`
+        return `${API_IMAGE + data}`
     }
 }
 
