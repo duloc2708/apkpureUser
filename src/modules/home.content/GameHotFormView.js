@@ -40,7 +40,7 @@ class GameHotFormView extends React.Component {
                                             <dl>
                                                 <dt className="gamehot__img">
                                                     <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                        <img alt={title} title={title} width="75px" height="50px" src={Config.getImage(thumbnail, 75, 75)} />
+                                                        <img alt={title} title={title} width="75px" height="50px" src={Config.getImage(thumbnail, 75, 50)} />
                                                     </Link>
                                                 </dt>
                                                 <dd className="gamehot__title">
