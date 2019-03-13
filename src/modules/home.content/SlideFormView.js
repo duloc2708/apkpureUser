@@ -7,10 +7,14 @@ class SlideFormView extends React.Component {
         super(props);
         this.state = {
             data: [
+                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'http://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'http://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'http://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'http://api.apksafety.com/images/image-not-found.jpg' }
             ],
             start: 0,
             end: 3,
-            total: 0,
+            total: 4,
             dots_default: 1,
             list_dots: [
                 { "key": 1 }, { "key": 2 }, { "key": 3 }
@@ -94,7 +98,7 @@ class SlideFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 255,135)} alt={title} />
+                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 255, 135)} alt={title} />
                                                         </Link>
                                                     </div>
                                                 </div> , <div key={`slide_${i}`} className="col-md-3 col-sm-4">
@@ -108,7 +112,7 @@ class SlideFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 255,135)} alt={title} />
+                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 255, 135)} alt={title} />
                                                         </Link>
                                                     </div>
                                                 </div>

@@ -5,10 +5,14 @@ class SlideTabletFormView extends React.Component {
         super(props);
         this.state = {
             data: [
+                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'http://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'http://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'http://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'http://api.apksafety.com/images/image-not-found.jpg' }
             ],
             start: 0,
             end: 2,
-            total: 0,
+            total: 4,
             dots_default: 1,
             list_dots: [
                 { "key": 1 }, { "key": 2 }, { "key": 3 }
