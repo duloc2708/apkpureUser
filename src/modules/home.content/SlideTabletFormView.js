@@ -92,7 +92,7 @@ class SlideTabletFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 500, 300)} alt={title} />
+                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 300,200)} alt={title} />
                                                         </Link>
                                                     </div>
                                                 </div>
