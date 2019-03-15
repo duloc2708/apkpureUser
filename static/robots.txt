@@ -1,2 +1,2 @@
-Sitemap: http://apksafety.com/sitemap.xml
+Sitemap: https://apksafety.com/sitemap.xml
 User-agent: * 

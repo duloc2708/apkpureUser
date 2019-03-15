@@ -5,7 +5,7 @@
 
 export const API_URL = 'http://api.apksafety.com/api/'  //PROD
 export const API_IMAGE = 'http://api.apksafety.com/api/image'  //PROD
-export const API_LOCAL_IMAGE = 'http://apksafety.com/static/'  //DEV
+export const API_LOCAL_IMAGE = 'https://apksafety.com/static/'  //DEV
 export const API_DOWNLOAD_FILE = 'http://apkverified.com/api/'  //DEV
 export const API_DOMAIN_CURRENT = 'http://www.apksafety.com/'  //DEV
 
@@ -37,5 +37,5 @@ export const OG_PROPERTY_IMAGE = '';
 export const NAME_TWITTER_IMAGE_SRC = '';
 export const PROPERTY_OG_TYPE = 'apksafety.com';
 export const ORG_SITENAME = 'apksafety.com';
-export const ORG_IMAGE = 'http://apksafety.com/static/img/logo-d.png';
+export const ORG_IMAGE = 'https://apksafety.com/static/img/logo-d.png';
 
