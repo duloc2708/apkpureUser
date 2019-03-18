@@ -37,7 +37,7 @@ class DetailFormView extends React.Component {
                                             <div className="stars" title="average: 8.8 out of 10">
                                             </div>
                                             <div className="rating-info">
-                                                <span className="rating" itemProp="aggregateRating" itemScope="" itemType="http://schema.org/AggregateRating">
+                                                <span className="rating" itemProp="aggregateRating" itemScope="" itemType="https://schema.org/AggregateRating">
                                                     <span className="average" itemProp="ratingValue">8.8</span>
                                                     {/* <meta itemProp="ratingCount" content="31865">
                                               <meta itemProp="bestRating" content="10">

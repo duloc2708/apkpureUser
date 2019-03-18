@@ -9,7 +9,7 @@ if (typeof window !== 'undefined') {
 const addJSONLD1 = () => {
   return {
     __html: `
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "apksafety",
     "url": "https://apksafety.com/",
@@ -24,7 +24,7 @@ const addJSONLD1 = () => {
 const addJSONLD2 = () => {
   return {
     __html: `
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Corporation",
     "name": "apksafety",
     "url": "https://apksafety.com/",
@@ -41,7 +41,7 @@ const addJSONLD2 = () => {
 const addJSONLD3 = (type) => {
   return {
     __html: `
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
             {
