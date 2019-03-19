@@ -96,7 +96,7 @@ class SlideMobileFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 500, 300)} alt={title} />
+                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} />
                                                         </Link>
                                                     </div>
                                                 </div> , <div key={`slide_${i}`} className="col-md-3 col-sm-4">
@@ -110,7 +110,7 @@ class SlideMobileFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 500, 300)} alt={title} />
+                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} />
                                                         </Link>
                                                     </div>
                                                 </div>

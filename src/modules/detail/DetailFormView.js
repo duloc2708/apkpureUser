@@ -24,7 +24,7 @@ class DetailFormView extends React.Component {
                             <div className="row">
                                 <dl className="ny-dl ny-dl-n">
                                     <dt>
-                                        <div className="icon"><img title={title} alt={title} src={Config.getImage(thumbnail, 175, 175)} /></div>
+                                        <div className="icon"><img title={title} alt={title} src={Config.getImageIndex(thumbnail, 175, 175)} /></div>
                                     </dt>
                                     <dd>
                                         <div className="title-like">

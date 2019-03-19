@@ -80,8 +80,8 @@ const Post = (props) => (
       <meta property="twitter:title" content={props.data.title} />
       <meta property="twitter:description" content={props.data.title} />
       <meta property="twitter:url" content={props.data.title} />
-      <meta property="og:image" content={Config.getImage(props.data.thumbnail)} />
-      <meta property="twitter:image" content={Config.getImage(props.data.thumbnail)} />
+      <meta property="og:image" content={Config.getImageIndex(props.data.thumbnail, 300, 250)} />
+      <meta property="twitter:image" content={Config.getImageIndex(props.data.thumbnail, 300, 250)} />
       <meta property="og:image:width" content="2048" />
       <meta property="og:image:height" content="1268" />
       <meta property="twitter:image:width" content="2048" />

@@ -85,6 +85,7 @@ class SlideFormView extends React.Component {
                                 {
                                     data.map((item, i) => {
                                         let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
+                                        atr4='brawl-smash-unreleased-apk7.jpg'
                                         if (i >= start && i <= end) {
                                             return (
                                                 <div key={`slide_${i}`} className="col-md-3 col-sm-4">
@@ -98,7 +99,7 @@ class SlideFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 255, 135)} alt={title} />
+                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} />
                                                         </Link>
                                                     </div>
                                                 </div> , <div key={`slide_${i}`} className="col-md-3 col-sm-4">
@@ -112,7 +113,7 @@ class SlideFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 255, 135)} alt={title} />
+                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} />
                                                         </Link>
                                                     </div>
                                                 </div>

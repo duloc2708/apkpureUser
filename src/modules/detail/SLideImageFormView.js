@@ -24,8 +24,8 @@ class SLideImageFormView extends React.Component {
                     arrSlide.map((item, i) => {
                         return (
                             <div key={`slide_${i}`} className="gallery-item">
-                                <a alt={item} href={Config.getImage(item, 255, 135)} data-effect="mfp-zoom-in" title={item}>
-                                    <img src={Config.getImage(item, 255, 135)} />
+                                <a alt={item} href={Config.getImageIndex(item, 350, 200)} data-effect="mfp-zoom-in" title={item}>
+                                    <img src={Config.getImageIndex(item, 350, 200)} />
                                 </a>
                             </div>
                         )
