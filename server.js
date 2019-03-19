@@ -52,7 +52,7 @@ app.prepare()
           })
 
           const sitemap = sm.createSitemap({
-            hostname: 'https://apksafety.com',
+            hostname: 'https://www.apksafety.com',
             cacheTime: 600000,        // 600 sec - cache purge period
             urls: listURL
           });

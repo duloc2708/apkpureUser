@@ -11,7 +11,7 @@ class SLideImageFormView extends React.Component {
     componentDidMount() {
         setTimeout(() => {
             window.onload = function () {
-                $.getScript('https://apksafety.com/static/js/vendor/slider_blog_detail.js')
+                $.getScript('https://www.apksafety.com/static/js/vendor/slider_blog_detail.js')
             }();
         }, 100)
 

@@ -64,13 +64,13 @@ export default ({
         <link rel="image_src" href={image_src} />
         <meta name="twitter:image:src" content={twitter_image_src} /> */}
 
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/font-awesome.min.css"></link>
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/animate.min.css"></link>
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/style.min.css"></link>
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/custom.min.css"></link>
+        <link rel="stylesheet" href="https://www.apksafety.com/static/styles/font-awesome.min.css"></link>
+        <link rel="stylesheet" href="https://www.apksafety.com/static/styles/animate.min.css"></link>
+        <link rel="stylesheet" href="https://www.apksafety.com/static/styles/style.min.css"></link>
+        <link rel="stylesheet" href="https://www.apksafety.com/static/styles/custom.min.css"></link>
 
-        <script src="https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
-        <script src="https://apksafety.com/static/js/easing.min.js"></script>
+        <script src="https://www.apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="https://www.apksafety.com/static/js/easing.min.js"></script>
 
       </Head>
       <div>

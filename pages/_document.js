@@ -21,11 +21,11 @@ export default class SiteDocument extends Document {
             {main}
           </div>
           <NextScript />
-          <script src="https://apksafety.com/static/js/vendor/bootstrap.min.js"></script>
-          <script src="https://apksafety.com/static/js/superfish.min.js"></script>
-          <script src="https://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
-          <script src="https://apksafety.com/static/js/owl.carousel.min.js" defer async>></script>
-          <script src="https://apksafety.com/static/js/jquery.tabs.min.js"></script>
+          <script src="https://www.apksafety.com/static/js/vendor/bootstrap.min.js"></script>
+          <script src="https://www.apksafety.com/static/js/superfish.min.js"></script>
+          <script src="https://www.apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
+          <script src="https://www.apksafety.com/static/js/owl.carousel.min.js" defer async>></script>
+          <script src="https://www.apksafety.com/static/js/jquery.tabs.min.js"></script>
 
         </body>
       </html>

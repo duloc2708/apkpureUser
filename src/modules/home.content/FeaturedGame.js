@@ -17,7 +17,7 @@ class FeaturedGame extends React.Component {
             let { Data } = Response
             this.setState({ data: Data })
             // var myscript = document.createElement('script');
-            // myscript.setAttribute('src', 'https://apksafety.com/static/js/main.js');
+            // myscript.setAttribute('src', 'https://www.apksafety.com/static/js/main.js');
             // var div = document.getElementById('target');
             // div.appendChild(myscript);
         })
