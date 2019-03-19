@@ -15,6 +15,9 @@ export default class SiteDocument extends Document {
         <Head>
           {styleTags}
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`}/>
+          <meta http-equiv="Content-Security-Policy" content="default-src *;
+   img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+   style-src  'self' 'unsafe-inline' *"/>
         </Head>
         <body>
           <div className="root">
