@@ -1,11 +1,11 @@
 // export const API_URL = 'https://localhost:1337/api/'  //DEV
 // export const API_IMAGE = 'https://localhost:1337/api/image'  //DEV
 // export const API_LOCAL_IMAGE = 'https://localhost:3004/static/'  //DEV
-//export const API_DOMAIN_CURRENT = 'https://www.apksafety.com/'  //DEV
+//export const API_DOMAIN_CURRENT = 'https://apksafety.com/'  //DEV
 
 export const API_URL = 'https://api.apksafety.com/api/'  //PROD
 export const API_IMAGE = 'https://api.apksafety.com/images/'  //PROD
-export const API_LOCAL_IMAGE = 'https://www.apksafety.com/static/'  //DEV
+export const API_LOCAL_IMAGE = 'https://apksafety.com/static/'  //DEV
 export const API_DOWNLOAD_FILE = 'http://apkverified.com/api/'  //DEV
 export const API_DOMAIN_CURRENT = 'http://www.apksafety.com/'  //DEV
 
@@ -45,5 +45,5 @@ export const OG_PROPERTY_IMAGE = '';
 export const NAME_TWITTER_IMAGE_SRC = '';
 export const PROPERTY_OG_TYPE = 'apksafety.com';
 export const ORG_SITENAME = 'apksafety.com';
-export const ORG_IMAGE = 'https://www.apksafety.com/static/img/logo-d.png';
+export const ORG_IMAGE = 'https://apksafety.com/static/img/logo-d.png';
 
