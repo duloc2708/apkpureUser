@@ -85,7 +85,6 @@ class SlideFormView extends React.Component {
                                 {
                                     data.map((item, i) => {
                                         let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
-                                        atr4='brawl-smash-unreleased-apk7.jpg'
                                         if (i >= start && i <= end) {
                                             return (
                                                 <div key={`slide_${i}`} className="col-md-3 col-sm-4">
