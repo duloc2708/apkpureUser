@@ -3,6 +3,7 @@ const glob = require('glob')
 const webpack = require('webpack');
 module.exports = {
   webpack: (config, { dev }) => {
+    // config.output.filename = '[name][chunkhash]'
     config.resolve.alias = {
       Config$: path.resolve(__dirname, 'src/common/config/index.js')
     };
