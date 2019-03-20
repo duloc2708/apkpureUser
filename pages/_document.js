@@ -15,6 +15,7 @@ export default class SiteDocument extends Document {
         <Head>
           {styleTags}
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`}/>
+          <meta name="referrer" content="origin"/>
         </Head>
         <body>
           <div className="root">
