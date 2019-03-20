@@ -5,6 +5,7 @@ class SLideImageFormView extends React.Component {
         super(props);
         this.state = {
             data: [
+                'https://api.apksafety.com/images/image-not-found.jpg'
             ]
         }
     }
