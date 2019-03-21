@@ -17,7 +17,6 @@ export default class SiteDocument extends Document {
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`} />
           <meta name="referrer" content="origin" />
           <script src="https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
-
         </Head>
         <body>
           <div className="root">
@@ -28,7 +27,6 @@ export default class SiteDocument extends Document {
           <script src="https://apksafety.com/static/js/vendor/bootstrap.min.js"></script>
           <script src="https://apksafety.com/static/js/superfish.min.js"></script>
           <script src="https://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
-          <script src="https://apksafety.com/static/js/owl.carousel.min.js" defer async>></script>
           <script src="https://apksafety.com/static/js/jquery.tabs.min.js"></script>
 
           <script dangerouslySetInnerHTML={{

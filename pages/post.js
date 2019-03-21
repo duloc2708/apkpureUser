@@ -87,6 +87,8 @@ const Post = (props) => (
       <meta property="twitter:image:width" content="2048" />
       <meta property="twitter:image:height" content="1268" />
       <link rel="canonical" href={`${Config.API_DOMAIN_CURRENT}${props.data.type}/${props.data.title_slug}`} />
+      {/* <script src="https://apksafety.com/static/js/owl.carousel.min.js"></script> */}
+
     </Head>
     <DetailFormView data={props.data} />
     {/* <script
