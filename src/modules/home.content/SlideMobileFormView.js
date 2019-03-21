@@ -78,7 +78,7 @@ class SlideMobileFormView extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="title d-flex flex-column col-lg-12">
-                            <h4>Trò Chơi</h4>
+                            <h4>HOME</h4>
                             <span></span>
                         </div>
                         <div className="col-lg-12 slide__game">
