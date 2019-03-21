@@ -19,8 +19,8 @@ class SlideMobileFormView extends React.Component {
     componentDidMount() {
         getBlogBySection('slide').then(Response => {
             let { Data } = Response
-            let dataTemp = Data
-            // dataTemp.push(Data[0])
+            let dataTemp = []
+            dataTemp.push(Data[0])
             this.setState({ data: dataTemp, total: dataTemp.length, list_dots: dataTemp.length - 1 })
         })
         this.interval = setInterval(() => this.autoRun(), 5000);
@@ -75,19 +75,20 @@ class SlideMobileFormView extends React.Component {
         return (
             <section className="popular-post-area pt-120">
                 <div className="container">
-                    <div className="row" >
+                    <div className="row">
                         <div className="title d-flex flex-column col-lg-12">
-                            <h4>GAME HOME</h4>
+                            <h4>HOME</h4>
                             <span></span>
                         </div>
                         <div className="col-lg-12 slide__game">
-                            <div id="container" >
-                                <div id="imageContainer" className="row ul_imageContainer">
-                                    {
-                                        data.map((item, i) => {
-                                            let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
+                            <div className="row">
+
+                                {
+                                    data.map((item, i) => {
+                                        let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
+                                        if (i >= start && i <= end) {
                                             return (
-                                                <div key={`slide_${i}`} className="li_imageContainer col-md-4 col-sm-4">
+                                                <div key={`slide_${i}`} className="col-md-4 col-sm-4">
                                                     <div className="items__slide__block__content">
                                                         <p className="newgame">
                                                             <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
@@ -98,27 +99,35 @@ class SlideMobileFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="slImg img-fluid" src={Config.getImageIndex(atr4, 300, 200)} alt={title} />
+                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 255, 135)} alt={title} />
                                                         </Link>
                                                     </div>
                                                 </div>
-
-                                                // <div className="li_imageContainer" key={i}>
-                                                //     <img className="slImg" src={Config.getImageIndex(atr4, 300, 200)} />
-                                                // </div>
                                             )
-                                        })
-
-                                    }
-                                    <div className="button_prev" id="back">
-                                        <a>
-                                            <i className="fa fa-chevron-circle-left" aria-hidden="true"></i>
-                                        </a>
+                                        }
+                                    })
+                                }
+                                <div className="button_prev">
+                                    <a onClick={() => this._onPrev()}>
+                                        <i className="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div className="button_next">
+                                    <a onClick={() => this._onNext()}>
+                                        <i className="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="owl-controls">
+                                <div className="owl-dots">
+                                    <div className="owl-dot active">
+                                        <span></span>
                                     </div>
-                                    <div className="button_next" id="next">
-                                        <a>
-                                            <i className="fa fa-chevron-circle-right" aria-hidden="true"></i>
-                                        </a>
+                                    <div className="owl-dot">
+                                        <span></span>
+                                    </div>
+                                    <div className="owl-dot">
+                                        <span></span>
                                     </div>
                                 </div>
                             </div>
@@ -126,9 +135,6 @@ class SlideMobileFormView extends React.Component {
                     </div>
                 </div>
             </section>
-
-
-
         )
     }
 }
