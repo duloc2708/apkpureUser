@@ -74,7 +74,6 @@ app.prepare()
       if (err) throw err;
       const listRoute = JSON.parse(data);
       listRoute.listType.map(item => {
-
         server.get(`/blog`, (req, res) => {
           const actualPage = '/blog'
           app.render(req, res, actualPage, {})

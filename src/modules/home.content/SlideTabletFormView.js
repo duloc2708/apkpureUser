@@ -77,7 +77,6 @@ class SlideTabletFormView extends React.Component {
             <section className="popular-post-area pt-120">
                 <div className="container">
                     <div className="row">
-
                         <div className="col-lg-12 slide__game">
                             <div className="row">
                                 {
