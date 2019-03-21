@@ -89,6 +89,9 @@ const Post = (props) => (
       <link rel="canonical" href={`${Config.API_DOMAIN_CURRENT}${props.data.type}/${props.data.title_slug}`} />
     </Head>
     <DetailFormView data={props.data} />
+    {/* <script
+      dangerouslySetInnerHTML={addJSONLD3(props.data.type)}
+    />
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={addJSONLD1()}
@@ -100,7 +103,8 @@ const Post = (props) => (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={addJSONLD3(props.data.type)}
-    />
+    /> */}
+
   </Layout>
 )
 
