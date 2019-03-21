@@ -32,7 +32,7 @@ class SLideImageFormView extends React.Component {
     render() {
         let arrSlide = this.state.data
         return (
-            <div className={`gallery-carousel popup-gallery ${arrSlide.length > 1 ? 'owl-carousel' : ''}`}>
+            <div className={`gallery-carousel popup-gallery`}>
                 {
                     arrSlide.map((item, i) => {
                         return (
