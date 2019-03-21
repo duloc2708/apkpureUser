@@ -1,5 +1,22 @@
+import { getListType } from 'modules/home.content/actions/'
+import Link from 'next/link'
 class ListTypeGame extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: [
+            ]
+        }
+    }
+    componentDidMount() {
+        getListType().then(Response => {
+            let { Data } = Response
+            this.setState({ data: Data })
+        })
+
+    }
     render() {
+        let { data } = this.state
         return (
             <section className="popular-post-area gamehot pt-40">
                 <div className="container">
@@ -11,80 +28,59 @@ class ListTypeGame extends React.Component {
                         <div className="col-lg-12 gamehot__contain">
                             <div className="row">
                                 <div className="col-lg-4 col-md-4 col-sm-4">
-                                    <ul className="index-category cicon">
-                                        <li>
-                                            <a href="/">
-                                                <i className="adventure">
-                                                </i>Phiêu lưu</a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="arcade"></i>
-                                                Trò chơi điện tử
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="puzzle"></i>
-                                                Câu đố
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="simulation"></i>
-                                                Mô phỏng
-                                        </a>
-                                        </li>
+                                    <ul className="index-category">
+                                        {
+                                            data.map((item, i) => {
+                                                if (i <= 5)
+                                                    return (
+                                                        <li key={i}>
+                                                            <Link as={`/${item.code}`} href={`/type`}>
+                                                                <a>
+                                                                    <i className="adventure">
+                                                                    </i>{item.name}</a>
+                                                            </Link>
+
+
+                                                        </li>
+                                                    )
+                                            })
+                                        }
                                     </ul>
                                 </div>
                                 <div className="col-lg-4 col-md-4 col-sm-4">
-                                    <ul className="index-category cicon">
-                                        <li>
-                                            <a href="/">
-                                                <i className="role-playing"></i>
-                                                Nhập vai
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="sports"></i>
-                                                Thể thao
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="word"></i>
-                                                Tìm ô chữ
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="strategy"></i>
-                                                Chiến thuật
-                                        </a>
-                                        </li>
+                                    <ul className="index-category">
+                                        {
+                                            data.map((item, i) => {
+                                                if (i > 5 && i <= 11)
+                                                    return (
+                                                        <li key={i}>
+                                                            <Link as={`/${item.code}`} href={`/type`}>
+                                                                <a>
+                                                                    <i className="adventure">
+                                                                    </i>{item.name}</a>
+                                                            </Link>
+                                                        </li>
+                                                    )
+                                            })
+                                        }
                                     </ul>
                                 </div>
                                 <div className="col-lg-4 col-md-4 col-sm-4">
-                                    <ul className="index-category cicon">
-                                        <li>
-                                            <a href="/">
-                                                <i className="trivia"></i>
-                                                Trắc nghiệm kiến thức
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="entertainment"></i>
-                                                Giải trí
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="racing"></i>
-                                                Ô tô và xe cộ
-                                        </a>
-                                        </li>
+                                    <ul className="index-category">
+                                        {
+                                            data.map((item, i) => {
+                                                if (i > 11 && i <= 17)
+                                                    return (
+                                                        <li key={i}>
+                                                            <Link as={`/${item.code}`} href={`/type`}>
+                                                                <a>
+                                                                    <i className="adventure">
+                                                                    </i>{item.name}</a>
+                                                            </Link>
+                                                        </li>
+                                                    )
+                                            })
+                                        }
                                     </ul>
                                 </div>
                             </div>

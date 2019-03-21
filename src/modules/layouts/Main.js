@@ -69,7 +69,6 @@ export default ({
         <link rel="stylesheet" href="https://apksafety.com/static/styles/animate.min.css"></link>
         <link rel="stylesheet" href="https://apksafety.com/static/styles/style.min.css"></link>
         <link rel="stylesheet" href="https://apksafety.com/static/styles/custom.min.css"></link>
-        <script src="https://apksafety.com/static/js/easing.min.js"></script>
 
       </Head>
       <div>
