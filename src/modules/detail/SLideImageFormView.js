@@ -12,8 +12,8 @@ class SLideImageFormView extends React.Component {
     }
     componentDidMount() {
         window.onload = function () {
-            console.log('componentWillMount');
             $.getScript('https://apksafety.com/static/js/owl.carousel.min.js')
+            $.getScript('https://apksafety.com/static/js/jquery.magnific-popup.min.js')
         }();
         let datTemp = []
         let { arrSlide } = this.props
@@ -36,15 +36,13 @@ class SLideImageFormView extends React.Component {
     componentDidUpdate() {
         setTimeout(() => {
             window.onload = function () {
-                console.log('componentDidUpdate');
                 $.getScript('https://apksafety.com/static/js/vendor/slider_blog_detail.js')
             }();
         }, 100)
     }
+
     render() {
         let arrSlide = this.state.data
-        console.log('render');
-
         return (
             <div className={`gallery-carousel popup-gallery ${arrSlide.length > 1 ? 'owl-carousel' : ''}`}>
                 {

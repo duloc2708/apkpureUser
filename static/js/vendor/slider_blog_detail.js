@@ -1,4 +1,25 @@
 if ($(".gallery-item")[0] && $('.gallery-carousel')[0]) {
+	$('.gallery-carousel').owlCarousel({
+		nav: true,
+		navText: [],
+		margin: 10,
+		loop: true,
+		autoplay: true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			480: {
+				items: 2
+			},
+			768: {
+				items: 3
+			},
+			992: {
+				items: 2
+			}
+		}
+	});
 	$('.popup-gallery').magnificPopup({
 		delegate: '.owl-item:not(.cloned) a',
 		type: 'image',
