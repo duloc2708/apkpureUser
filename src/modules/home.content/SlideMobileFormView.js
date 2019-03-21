@@ -7,10 +7,10 @@ class SlideMobileFormView extends React.Component {
         super(props);
         this.state = {
             data: [
-                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' }
+                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' }
             ],
             start: 0,
             end: 0,
@@ -77,69 +77,56 @@ class SlideMobileFormView extends React.Component {
             <section className="popular-post-area pt-120">
                 <div className="container">
                     <div className="row">
-
+                        <div className="title d-flex flex-column col-lg-12">
+                            <h4>Trò Chơi</h4>
+                            <span></span>
+                        </div>
                         <div className="col-lg-12 slide__game">
                             <div className="row">
-                                {
-                                    data.map((item, i) => {
-                                        let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
-                                        if (i >= start && i <= end) {
-                                            return (
-                                                <div key={`slide_${i}`} className="col-md-3 col-sm-4">
-                                                    <div className="items__slide__block__content">
-                                                        <p className="newgame">
-                                                            <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
-                                                        </p>
-                                                        <h4 className="newgame__title">
-                                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
-                                                        </h4>
-                                                    </div>
-                                                    <div className="items__slide__block__img">
-                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} />
-                                                        </Link>
-                                                    </div>
-                                                </div> , <div key={`slide_${i}`} className="col-md-3 col-sm-4">
-                                                    <div className="items__slide__block__content">
-                                                        <p className="newgame">
-                                                            <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
-                                                        </p>
-                                                        <h4 className="newgame__title">
-                                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
-                                                        </h4>
-                                                    </div>
-                                                    <div className="items__slide__block__img">
-                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} />
-                                                        </Link>
-                                                    </div>
-                                                </div>
 
-                                            )
-                                        }
-                                    })
-                                }
+                                <div className="col-md-3 col-sm-4">
+                                    <div className="items__slide__block__content match">
+                                        <p className="newgame">
+                                            <a href="#">game_strategy</a>
+                                        </p>
+                                        <h4 className="newgame__title">
+                                            <a href="#">ShelterGirls APK</a>
+                                        </h4>
+                                    </div>
+                                    <div className="items__slide__block__img">
+                                        <a href="#">
+                                            <img src='https://api.apksafety.com/api/image?name=imageSlide_venom.jpeg&width=350&height=200' />
+                                        </a>
+                                    </div>
+                                </div>
                                 <div className="button_prev">
-                                    <a onClick={() => this._onPrev()}>
+                                    <a href="#">
                                         <i className="fa fa-chevron-circle-left" aria-hidden="true"></i>
                                     </a>
                                 </div>
                                 <div className="button_next">
-                                    <a onClick={() => this._onNext()}>
+                                    <a href="#">
                                         <i className="fa fa-chevron-circle-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
                             <div className="owl-controls">
                                 <div className="owl-dots">
-                                    {this._renderListDots()}
+                                    <div className="owl-dot active">
+                                        <span></span>
+                                    </div>
+                                    <div className="owl-dot">
+                                        <span></span>
+                                    </div>
+                                    <div className="owl-dot">
+                                        <span></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
         )
     }
 }
