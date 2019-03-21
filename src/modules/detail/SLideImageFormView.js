@@ -15,20 +15,7 @@ class SLideImageFormView extends React.Component {
             $.getScript('https://apksafety.com/static/js/owl.carousel.min.js')
             $.getScript('https://apksafety.com/static/js/jquery.magnific-popup.min.js')
         }();
-        let datTemp = []
-        let { arrSlide } = this.props
-
-        if (arrSlide.length > 5) {
-            arrSlide.map((item, i) => {
-                if (i <= 5) {
-                    datTemp.push(item)
-                }
-            })
-        } else {
-            datTemp = arrSlide
-        }
-
-        this.setState({ data: datTemp })
+        this.setState({ data: arrSlide })
     }
     componentWillUnmount() {
         this.setState({ data: ['https://api.apksafety.com/images/image-not-found.jpg'] })
@@ -40,7 +27,6 @@ class SLideImageFormView extends React.Component {
             }();
         }, 100)
     }
-
     render() {
         let arrSlide = this.state.data
         return (
