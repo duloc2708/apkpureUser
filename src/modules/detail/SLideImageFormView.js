@@ -8,21 +8,33 @@ class SLideImageFormView extends React.Component {
         }
     }
     componentDidMount() {
-        this.setState({ data: this.props.arrSlide })
+        let datTemp = []
+        let { arrSlide } = this.props
+
+        if (arrSlide.length > 5) {
+            arrSlide.map((item, i) => {
+                if (i <= 5) {
+                    datTemp.push(item)
+                }
+            })
+        } else {
+            datTemp = arrSlide
+        }
+
+        this.setState({ data: datTemp })
     }
     componentWillUnmount() {
-        this.setState({ data: [] })
+        this.setState({ data: ['https://api.apksafety.com/images/image-not-found.jpg'] })
     }
     componentDidUpdate() {
-        console.log('componentDidUpdate');
+        if ($(".gallery-item")[0]) {
+            window.onload = function () {
+                $.getScript('https://apksafety.com/static/js/vendor/slider_blog_detail.js')
+            }();
+        }
 
-        window.onload = function () {
-            $.getScript('https://apksafety.com/static/js/vendor/slider_blog_detail.js')
-        }();
     }
     render() {
-        console.log('render');
-
         let arrSlide = this.state.data
         return (
             <div className="gallery-carousel popup-gallery">
