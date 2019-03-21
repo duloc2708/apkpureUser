@@ -15,6 +15,7 @@ class SLideImageFormView extends React.Component {
             $.getScript('https://apksafety.com/static/js/owl.carousel.min.js')
             $.getScript('https://apksafety.com/static/js/jquery.magnific-popup.min.js')
         }();
+        let { arrSlide } = this.props
         this.setState({ data: arrSlide })
     }
     componentWillUnmount() {
@@ -27,6 +28,7 @@ class SLideImageFormView extends React.Component {
             }();
         }, 100)
     }
+
     render() {
         let arrSlide = this.state.data
         return (
