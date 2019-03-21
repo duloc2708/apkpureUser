@@ -1,6 +1,6 @@
 if ($(".gallery-item")[0] && $('.gallery-carousel')[0]) {
 	console.log('gallery', $('.gallery-carousel')[0]);
-	if ($.isFunction('owlCarousel')) {
+	if ($('.gallery-carousel').isFunction('owlCarousel')) {
 		$('.gallery-carousel').owlCarousel({
 			nav: true,
 			navText: [],
