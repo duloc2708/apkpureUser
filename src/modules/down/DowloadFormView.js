@@ -2,10 +2,17 @@
 import Link from 'next/link'
 import HotUpdateFormView from 'modules/down/HotUpdateFormView'
 import LastReleaseFormView from 'modules/down/LastReleaseFormView'
-
+let { initGA, logPageView } = Config
 class DowloadFormView extends React.Component {
     constructor(props) {
         super(props);
+    }
+    componentDidMount() {
+        if (!window.GA_INITIALIZED) {
+            initGA()
+            window.GA_INITIALIZED = true
+        }
+        logPageView();
     }
     componentDidMount() {
         setTimeout(() => {

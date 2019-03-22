@@ -1,10 +1,10 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-// import ReactGA from 'react-ga';
+import ReactGA from 'react-ga';
 export default class SiteDocument extends Document {
   componentDidMount() {
-    // ReactGA.initialize('UA-105970056-1')
-    // ReactGA.pageview(document.location.pathname)
+    ReactGA.initialize('UA-136793328-1')
+    ReactGA.pageview(document.location.pathname)
   }
   render() {
     const sheet = new ServerStyleSheet()

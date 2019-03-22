@@ -53,7 +53,7 @@ export const ORG_IMAGE = 'https://apksafety.com/static/img/logo-d.png';
 
 export const initGA = () => {
   console.log('GA init')
-  ReactGA.initialize('UA-105970056-1')
+  ReactGA.initialize('UA-136793328-1')
 }
 
 export const logPageView = () => {

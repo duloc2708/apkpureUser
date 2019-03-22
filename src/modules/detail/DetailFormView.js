@@ -2,9 +2,17 @@
 import Link from 'next/link'
 import SLideImageFormView from './SLideImageFormView'
 import FeaturedGame from 'modules/home.content/FeaturedGame'
+let { initGA, logPageView } = Config
 class DetailFormView extends React.Component {
     constructor(props) {
         super(props);
+    }
+    componentDidMount() {
+        if (!window.GA_INITIALIZED) {
+            initGA()
+            window.GA_INITIALIZED = true
+        }
+        logPageView();
     }
     render() {
         let { title, type_name, type, thumbnail, content_long, title_slug, atr3, atr5, atr6, atr7 } = this.props.data
