@@ -16,8 +16,6 @@ export default class SiteDocument extends Document {
           {styleTags}
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`} />
           <meta name="referrer" content="origin" />
-          <script src="https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
-
           <script dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -30,12 +28,6 @@ export default class SiteDocument extends Document {
             {main}
           </div>
           <NextScript />
-
-          <script src="https://apksafety.com/static/js/vendor/bootstrap.min.js"></script>
-          <script src="https://apksafety.com/static/js/superfish.min.js"></script>
-          <script src="https://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
-          <script src="https://apksafety.com/static/js/jquery.tabs.min.js"></script>
-
           <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9N8KPK"
               height="0" width="0" style={{ "display": "none", "visibility": "hidden" }} ></iframe>

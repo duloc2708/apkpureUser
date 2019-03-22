@@ -74,6 +74,11 @@ export default ({
         <Header />
         {children}
         <FooterFormView />
+        <script src="https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="https://apksafety.com/static/js/vendor/bootstrap.min.js"></script>
+        <script src="https://apksafety.com/static/js/superfish.min.js"></script>
+        <script src="https://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
+        <script src="https://apksafety.com/static/js/jquery.tabs.min.js"></script>
       </div>
     </div>
 
