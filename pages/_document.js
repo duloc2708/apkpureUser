@@ -17,6 +17,13 @@ export default class SiteDocument extends Document {
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`} />
           <meta name="referrer" content="origin" />
           <script src="https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
+
+          <script dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-P9N8KPK');`}} />
         </Head>
         <body>
           <div className="root">
@@ -29,7 +36,10 @@ export default class SiteDocument extends Document {
           <script src="https://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
           <script src="https://apksafety.com/static/js/jquery.tabs.min.js"></script>
 
-  
+          <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9N8KPK"
+              height="0" width="0" style={{ "display": "none", "visibility": "hidden" }} ></iframe>
+          </noscript>
         </body>
       </html>
     )

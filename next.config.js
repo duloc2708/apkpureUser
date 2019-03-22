@@ -1,8 +1,9 @@
 const path = require('path')
 const glob = require('glob')
 const webpack = require('webpack');
+// const withCSS = require('@zeit/next-css')
 module.exports = {
-  webpack: (config, { dev }) => {
+  webpack: (config, { dev, isServer }) => {
     // config.output.filename = '[name][chunkhash]'
     config.resolve.alias = {
       Config$: path.resolve(__dirname, 'src/common/config/index.js')
