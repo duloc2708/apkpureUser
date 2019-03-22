@@ -1,33 +1,38 @@
 
 import ReactGA from 'react-ga'
-
 export const API_URL = 'https://api.apksafety.com/api/'  //PROD
 export const API_IMAGE = 'https://api.apksafety.com/api/image'  //PROD
 export const API_LOCAL_IMAGE = 'https://apksafety.com/static/'  //DEV
 export const API_DOWNLOAD_FILE = 'http://apkverified.com/api/'  //DEV
 export const API_DOMAIN_CURRENT = 'https://apksafety.com/'  //DEV
 
+// export const API_URL = 'http://localhost:1337/api/'  //PROD
+// export const API_IMAGE = 'http://localhost:1337/api/image'  //PROD
+// export const API_LOCAL_IMAGE = 'http://localhost:1337/static/'  //DEV
+// export const API_DOWNLOAD_FILE = 'http://localhost:1337/api/'  //DEV
+// export const API_DOMAIN_CURRENT = 'https://apksafety.com/'  //DEV
+
 export const DEFAULT_FOLDER = '/';
 
 export const getImage = (data, width = 10, height = 10) => {
-    if (data && data.indexOf('http') != -1) {
-        return data
-    } else {
-        return `${API_IMAGE + data}`
-    }
+  if (data && data.indexOf('http') != -1) {
+    return data
+  } else {
+    return `${API_IMAGE + data}`
+  }
 }
 export const getImageIndex = (data, width = 10, height = 10) => {
-    if (data) {
-        if (data && data.indexOf('http') != -1) {
-            return data
-        } else {
-            let filename = data.split('\\').pop().split('/').pop();
-            // filename = filename.substring(0, filename.lastIndexOf('.'));
-            return `${API_IMAGE}?name=${filename}&width=${width}&height=${height}`
-        }
+  if (data) {
+    if (data && data.indexOf('http') != -1) {
+      return data
     } else {
-        return ''
+      let filename = data.split('\\').pop().split('/').pop();
+      // filename = filename.substring(0, filename.lastIndexOf('.'));
+      return `${API_IMAGE}?name=${filename}&width=${width}&height=${height}`
     }
+  } else {
+    return ''
+  }
 
 }
 export const APP_ID_FACEBOOK = "1496370120424382";

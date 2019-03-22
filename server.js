@@ -13,8 +13,9 @@ app.prepare()
     const server = express()
 
     server.use(function (req, res, next) {
+      res.setHeader('Cache-Control', 'public, max-age=31557600'); // 1 year
       res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, cache-control");
       next();
     });
 
@@ -98,6 +99,8 @@ app.prepare()
 
       })
       server.get('*', (req, res) => {
+        res.setHeader("Cache-Control", "public, max-age=31557600");
+        res.setHeader("Expires", new Date(Date.now() + 31557600).toUTCString());
         return handle(req, res)
       })
 
