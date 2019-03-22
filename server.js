@@ -99,7 +99,7 @@ app.prepare()
 
       })
       server.get('*', (req, res) => {
-        res.setHeader("Cache-Control", "public, max-age=31557600");
+        res.setHeader("Cache-Control", "must-revalidate, public, max-age=3600");
         res.setHeader("Expires", new Date(Date.now() + 31557600).toUTCString());
         return handle(req, res)
       })
@@ -108,7 +108,7 @@ app.prepare()
         (_, res, nextHandler) => {
           res.setHeader(
             "Cache-Control",
-            "public, max-age=31536000, immutable",
+            "must-revalidate, public, max-age=3600",
           );
           nextHandler();
         },
