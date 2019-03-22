@@ -103,7 +103,16 @@ app.prepare()
         res.setHeader("Expires", new Date(Date.now() + 31557600).toUTCString());
         return handle(req, res)
       })
-
+      server.get(
+        /^\/_next\/static\/css\/js\//,
+        (_, res, nextHandler) => {
+          res.setHeader(
+            "Cache-Control",
+            "public, max-age=31536000, immutable",
+          );
+          nextHandler();
+        },
+      );
       server.listen(3004, (err) => {
         if (err) throw err
         console.log('> Ready on https://localhost:3004')

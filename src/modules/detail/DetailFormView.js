@@ -8,11 +8,11 @@ class DetailFormView extends React.Component {
         super(props);
     }
     componentDidMount() {
-        if (!window.GA_INITIALIZED) {
-            initGA()
-            window.GA_INITIALIZED = true
-        }
-        logPageView();
+        // if (!window.GA_INITIALIZED) {
+        //     initGA()
+        //     window.GA_INITIALIZED = true
+        // }
+        // logPageView();
     }
     render() {
         let { title, type_name, type, thumbnail, content_long, title_slug, atr3, atr5, atr6, atr7 } = this.props.data
