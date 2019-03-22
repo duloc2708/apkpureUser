@@ -1,4 +1,3 @@
-// import Layout from 'modules/Layout/Layout.js'
 import ContentFormView from 'modules/home.content/ContentFormView.js'
 import Layout from 'modules/layouts/Main';
 import Head from 'next/head';

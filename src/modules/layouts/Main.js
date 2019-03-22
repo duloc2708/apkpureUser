@@ -63,12 +63,11 @@ export default ({
         <meta property="og:type" content={og_type} />
         <link rel="image_src" href={image_src} />
         <meta name="twitter:image:src" content={twitter_image_src} /> */}
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/slide.css"></link>
-
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/font-awesome.min.css"></link>
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/animate.min.css"></link>
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/style.min.css"></link>
-        <link rel="stylesheet" href="https://apksafety.com/static/styles/custom.min.css"></link>
+        {/* <link rel="stylesheet" href="_next/static/static/styles/slide.css"></link>
+        <link rel="stylesheet" href="_next/static/static/styles/font-awesome.min.css"></link>
+        <link rel="stylesheet" href="_next/static/static/styles/animate.min.css"></link>
+        <link rel="stylesheet" href="_next/static/static/styles/style.min.css"></link>
+        <link rel="stylesheet" href="_next/static/static/styles/custom.min.css"></link> */}
 
       </Head>
       <div>

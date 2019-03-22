@@ -2,6 +2,7 @@ import $ from 'jquery';
 import DetailFormView from 'modules/detail/DetailFormView.js'
 import Layout from 'modules/layouts/Main';
 import Head from 'next/head';
+
 if (typeof window !== 'undefined') {
   window.$ = $;
   window.jQuery = $;
