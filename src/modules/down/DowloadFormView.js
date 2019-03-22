@@ -14,6 +14,9 @@ class DowloadFormView extends React.Component {
         }
         logPageView();
     }
+    componentWillMount(){
+        $('head').append('<link rel="stylesheet" type="text/css" href="https://apksafety.com/static/styles/custom.min.css">');
+    }
     componentDidMount() {
         setTimeout(() => {
             const { name, mineType } = this.props.data

@@ -7,9 +7,6 @@ class SLideImageFormView extends React.Component {
             data: ['https://api.apksafety.com/images/image-not-found.jpg']
         }
     }
-    componentWillMount(){
-  
-    }
     componentDidMount() {
         window.onload = function () {
             $.getScript('https://apksafety.com/static/js/owl.carousel.min.js')
