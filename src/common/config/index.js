@@ -1,7 +1,5 @@
-// export const API_URL = 'http://localhost:1337/api/'  //DEV
-// export const API_IMAGE = 'http://localhost:1337/api/image'  //DEV
-// export const API_LOCAL_IMAGE = 'http://localhost:3004/static/'  //DEV
-// export const API_DOMAIN_CURRENT = 'http://apksafety.com/'  //DEV
+
+import ReactGA from 'react-ga'
 
 export const API_URL = 'https://api.apksafety.com/api/'  //PROD
 export const API_IMAGE = 'https://api.apksafety.com/api/image'  //PROD
@@ -52,3 +50,26 @@ export const PROPERTY_OG_TYPE = 'apksafety.com';
 export const ORG_SITENAME = 'apksafety.com';
 export const ORG_IMAGE = 'https://apksafety.com/static/img/logo-d.png';
 
+
+export const initGA = () => {
+  console.log('GA init')
+  ReactGA.initialize('UA-105970056-1')
+}
+
+export const logPageView = () => {
+  console.log('Logging pageview for ${window.location.pathname}')
+  ReactGA.set({ page: window.location.pathname })
+  ReactGA.pageview(window.location.pathname)
+}
+
+export const logEvent = (category = '', action = '') => {
+  if (category && action) {
+    ReactGA.event({ category, action })
+  }
+}
+
+export const logException = (description = '', fatal = false) => {
+  if (description) {
+    ReactGA.exception({ description, fatal })
+  }
+}

@@ -1,7 +1,7 @@
 const path = require('path')
 const glob = require('glob')
 const webpack = require('webpack');
-// const withCSS = require('@zeit/next-css')
+const withCSS = require('@zeit/next-css')
 module.exports = {
   webpack: (config, { dev, isServer }) => {
     // config.output.filename = '[name][chunkhash]'
