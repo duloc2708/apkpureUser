@@ -99,16 +99,17 @@ app.prepare()
 
       })
       server.get('*', (req, res) => {
-        res.setHeader("Cache-Control", "must-revalidate, public, max-age=3600");
-        res.setHeader("Expires", new Date(Date.now() + 31557600).toUTCString());
+        // res.setHeader("Cache-Control", "must-revalidate,public, max-age=31557600");
+        // res.setHeader("Expires", new Date(Date.now() + 31557600).toUTCString());
         return handle(req, res)
       })
       server.get(
         /^\/_next\/static\/css\/js\//,
         (_, res, nextHandler) => {
+          console.log('res>>>>>>', res);
           res.setHeader(
             "Cache-Control",
-            "must-revalidate, public, max-age=3600",
+            "must-revalidate,public, max-age=31320, immutable",
           );
           nextHandler();
         },
