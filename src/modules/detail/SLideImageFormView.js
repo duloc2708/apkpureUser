@@ -21,13 +21,6 @@ class SLideImageFormView extends React.Component {
     componentWillUnmount() {
         this.setState({ data: ['https://api.apksafety.com/images/image-not-found.jpg'] })
     }
-    componentDidUpdate() {
-        setTimeout(() => {
-            window.onload = function () {
-                $.getScript('https://apksafety.com/static/js/vendor/slider_blog_detail.js')
-            }();
-        }, 100)
-    }
 
     render() {
         let arrSlide = this.state.data

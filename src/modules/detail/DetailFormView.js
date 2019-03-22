@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import SLideImageFormView from './SLideImageFormView'
-import FeaturedGame from 'modules/home.content/FeaturedGame'
+import GameRecent from 'modules/home.content/GameRecent'
 let { initGA, logPageView } = Config
 class DetailFormView extends React.Component {
     constructor(props) {
@@ -97,7 +97,7 @@ class DetailFormView extends React.Component {
                     </div>
                 </section>
                 <br />
-                <FeaturedGame />
+                <GameRecent />
             </React.Fragment>
         )
     }
