@@ -17,7 +17,7 @@ class SlideMobileFormView extends React.Component {
         }
     }
     componentWillMount(){
-        $('head').append('<link rel="preload" as="style" type="text/css" href="https://apksafety.com/static/styles/slide.min.css">');
+        $('head').append('<link rel="stylesheet" type="text/css" href="https://apksafety.com/static/styles/slide.min.css">');
     }
     componentDidMount() {
         getBlogBySection('slide').then(Response => {
