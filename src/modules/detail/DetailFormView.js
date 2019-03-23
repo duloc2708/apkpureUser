@@ -3,6 +3,8 @@ import Link from 'next/link'
 import SLideImageFormView from './SLideImageFormView'
 import GameRecent from 'modules/home.content/GameRecent'
 let { initGA, logPageView } = Config
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+
 class DetailFormView extends React.Component {
     constructor(props) {
         super(props);
@@ -85,19 +87,25 @@ class DetailFormView extends React.Component {
                                             </div>
                                         </dd>
                                     </dl>
-                                    {arrSlide.length > 0 ?
-                                        <SLideImageFormView arrSlide={arrSlide} />
-                                        : ''}
-                                    <div className="blog__detail__description">
-                                        <div dangerouslySetInnerHTML={{ __html: content_long }} />
-                                    </div>
+                                    <LazyLoadComponent>
+                                        {arrSlide.length > 0 ?
+                                            <SLideImageFormView arrSlide={arrSlide} />
+                                            : ''}
+                                        <div className="blog__detail__description">
+                                            <div dangerouslySetInnerHTML={{ __html: content_long }} />
+                                        </div>
+                                       <br/>
+                                    </LazyLoadComponent>
+                                    <LazyLoadComponent>
+                                        <GameRecent />
+                                    </LazyLoadComponent>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <br />
-                <GameRecent />
+
             </React.Fragment>
         )
     }
