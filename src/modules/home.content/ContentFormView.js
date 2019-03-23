@@ -1,4 +1,4 @@
-import SlideFormView from 'modules/home.content/SlideFormView.js'
+// import SlideFormView from 'modules/home.content/SlideFormView.js'
 import GameHotFormView from 'modules/home.content/GameHotFormView.js'
 import VideoFormView from 'modules/home.content/VideoFormView.js'
 import VideoMobileFormView from 'modules/home.content/VideoMobileFormView.js'
