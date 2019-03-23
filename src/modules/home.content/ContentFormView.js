@@ -6,8 +6,8 @@ import ListTypeGame from 'modules/home.content/ListTypeGame.js'
 import TopDownFormView from 'modules/home.content/TopDownFormView.js'
 import FeaturedGame from 'modules/home.content/FeaturedGame.js'
 import FeaturedApp from 'modules/home.content/FeaturedApp.js'
-import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
-import SlideTabletFormView from 'modules/home.content/SlideTabletFormView.js'
+// import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
+// import SlideTabletFormView from 'modules/home.content/SlideTabletFormView.js'
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 import {
