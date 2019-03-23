@@ -1,4 +1,4 @@
-// import SlideFormView from 'modules/home.content/SlideFormView.js'
+import SlideFormView from 'modules/home.content/SlideFormView.js'
 import GameHotFormView from 'modules/home.content/GameHotFormView.js'
 import VideoFormView from 'modules/home.content/VideoFormView.js'
 import VideoMobileFormView from 'modules/home.content/VideoMobileFormView.js'
@@ -6,8 +6,8 @@ import ListTypeGame from 'modules/home.content/ListTypeGame.js'
 import TopDownFormView from 'modules/home.content/TopDownFormView.js'
 import FeaturedGame from 'modules/home.content/FeaturedGame.js'
 import FeaturedApp from 'modules/home.content/FeaturedApp.js'
-// import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
-// import SlideTabletFormView from 'modules/home.content/SlideTabletFormView.js'
+import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
+import SlideTabletFormView from 'modules/home.content/SlideTabletFormView.js'
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 import {
@@ -22,10 +22,10 @@ class ContentFormView extends React.Component {
     render() {
         return (
             <React.Fragment>
-                {/* <BrowserView>
+                <BrowserView>
                     <SlideFormView />
-                </BrowserView> */}
-                {/* {
+                </BrowserView>
+                {
                     isTablet ?
                         <TabletView>
                             <SlideTabletFormView />
@@ -33,7 +33,7 @@ class ContentFormView extends React.Component {
                         : <MobileView>
                             <SlideMobileFormView />
                         </MobileView>
-                } */}
+                }
                 <LazyLoadComponent>
                     <GameHotFormView />
                     <TopDownFormView />
