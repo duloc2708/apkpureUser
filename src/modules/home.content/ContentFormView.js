@@ -8,6 +8,8 @@ import FeaturedGame from 'modules/home.content/FeaturedGame.js'
 import FeaturedApp from 'modules/home.content/FeaturedApp.js'
 import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
 import SlideTabletFormView from 'modules/home.content/SlideTabletFormView.js'
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+
 import {
     TabletView,
     BrowserView,
@@ -32,31 +34,34 @@ class ContentFormView extends React.Component {
                             <SlideMobileFormView />
                         </MobileView>
                 }
-                <GameHotFormView />
-                <TopDownFormView />
-                <FeaturedGame />
-                <FeaturedApp />
-                <BrowserView>
-                    <VideoFormView />
-                </BrowserView>
-                {
-                    isTablet ?
-                        <TabletView>
-                            <VideoFormView />
-                        </TabletView>
-                        :
-                        <div>
-                            {!isMobile ?
-                                ''
-                                :
-                                <MobileView>
-                                    <VideoMobileFormView />
-                                </MobileView>
-                            }
-                        </div>
+                <LazyLoadComponent>
+                    <GameHotFormView />
+                    <TopDownFormView />
+                    <FeaturedGame />
+                    <FeaturedApp />
+                    <BrowserView>
+                        <VideoFormView />
+                    </BrowserView>
+                    {
+                        isTablet ?
+                            <TabletView>
+                                <VideoFormView />
+                            </TabletView>
+                            :
+                            <div>
+                                {!isMobile ?
+                                    ''
+                                    :
+                                    <MobileView>
+                                        <VideoMobileFormView />
+                                    </MobileView>
+                                }
+                            </div>
 
-                }
-                <ListTypeGame />
+                    }
+                    <ListTypeGame />
+                </LazyLoadComponent>
+
             </React.Fragment>
         )
     }
