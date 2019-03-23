@@ -22,9 +22,9 @@ class ContentFormView extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <BrowserView>
+                {/* <BrowserView>
                     <SlideFormView />
-                </BrowserView>
+                </BrowserView> */}
                 {/* {
                     isTablet ?
                         <TabletView>
