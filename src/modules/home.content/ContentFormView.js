@@ -25,7 +25,7 @@ class ContentFormView extends React.Component {
                 <BrowserView>
                     <SlideFormView />
                 </BrowserView>
-                {
+                {/* {
                     isTablet ?
                         <TabletView>
                             <SlideTabletFormView />
@@ -33,7 +33,7 @@ class ContentFormView extends React.Component {
                         : <MobileView>
                             <SlideMobileFormView />
                         </MobileView>
-                }
+                } */}
                 <LazyLoadComponent>
                     <GameHotFormView />
                     <TopDownFormView />
