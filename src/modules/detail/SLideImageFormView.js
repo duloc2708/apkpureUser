@@ -1,5 +1,4 @@
-import { setTimeout } from "timers";
-
+import LazyImage from 'common/component/LazyImage'
 class SLideImageFormView extends React.Component {
     constructor(props) {
         super(props);
@@ -28,7 +27,8 @@ class SLideImageFormView extends React.Component {
                         return (
                             <div key={`slide_${i}`} className="gallery-item">
                                 <a alt={item} href={Config.getImageIndex(item, 350, 200)} data-effect="mfp-zoom-in" title={item}>
-                                    <img src={Config.getImageIndex(item, 350, 200)} />
+                                    <LazyImage image={{ src: Config.getImageIndex(item, 350, 200), alt: item, width: 350, height: 200 }} />
+                                    {/* <img src={Config.getImageIndex(item, 350, 200)} /> */}
                                 </a>
                             </div>
                         )

@@ -1,6 +1,6 @@
 import { getBlogBySection } from 'modules/home.content/actions/'
 import Link from 'next/link'
-import LazyImage from './LazyImage'
+import LazyImage from 'common/component/LazyImage'
 class GameHotFormView extends React.Component {
     constructor(props) {
         super(props);

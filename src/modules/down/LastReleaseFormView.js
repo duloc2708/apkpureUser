@@ -1,6 +1,7 @@
 
 import Link from 'next/link'
 import { getBlogBySection } from 'modules/home.content/actions/'
+import LazyImage from 'common/component/LazyImage'
 
 class LastReleaseFormView extends React.Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class LastReleaseFormView extends React.Component {
                                             <div className="col-md-7 col-sm-7">
                                                 <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                                     <a className="img-item" title={title}>
-                                                        <img className="lazy loaded" alt={title} src={Config.getImageIndex(thumbnail, 75, 75)} alt={title} />
+                                                        <LazyImage image={{ src: Config.getImageIndex(thumbnail, 75, 75), alt: title, width: 75, height: 75 }} />
                                                     </a>
                                                 </Link>
                                                 <div className="info">
