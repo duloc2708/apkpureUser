@@ -1,14 +1,16 @@
 import { getBlogBySection } from 'modules/home.content/actions/'
 import Link from 'next/link'
+import LazyImage from './LazyImage'
+
 class FeaturedGame extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             data: [
-                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' }
+                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' }
             ],
         }
     }
@@ -44,7 +46,7 @@ class FeaturedGame extends React.Component {
                                             <dl>
                                                 <dt className="gamehot__img">
                                                     <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                        <img alt={title} title={title} width="75px" height="50px" src={Config.getImageIndex(thumbnail, 75, 75)} />
+                                                        <LazyImage image={{ src: Config.getImageIndex(thumbnail, 75, 75), alt: title, width: 75, height: 75 }} />
                                                     </Link>                                                </dt>
                                                 <dd className="gamehot__title">
                                                     <div>

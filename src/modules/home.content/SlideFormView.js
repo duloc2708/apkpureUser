@@ -1,16 +1,16 @@
 import { getBlogBySection } from 'modules/home.content/actions/'
 import Link from 'next/link'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
+import LazyImage from './LazyImage'
 
 class SlideFormView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             data: [
-                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug:'', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' }
+                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
+                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' }
             ],
             start: 0,
             end: 3,
@@ -98,21 +98,8 @@ class SlideFormView extends React.Component {
                                                     </div>
                                                     <div className="items__slide__block__img">
                                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} />
-                                                        </Link>
-                                                    </div>
-                                                </div> , <div key={`slide_${i}`} className="col-md-3 col-sm-4">
-                                                    <div className="items__slide__block__content">
-                                                        <p className="newgame">
-                                                            <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
-                                                        </p>
-                                                        <h4 className="newgame__title">
-                                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
-                                                        </h4>
-                                                    </div>
-                                                    <div className="items__slide__block__img">
-                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} />
+                                                            <LazyImage image={{ src: Config.getImageIndex(atr4, 350, 200), alt: title, width: 350, height: 200 }} />
+                                                            {/* <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} /> */}
                                                         </Link>
                                                     </div>
                                                 </div>
