@@ -6,30 +6,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   webpack: (config, { dev, isServer }) => {
-    // config.output.filename = '[name][chunkhash]'
-    // config.module.rules.push(
-    //   {
-    //     test: /\.css$/,
-    //     use: [
-    //       {
-    //         // for HMR support.
-    //         loader: (!isServer && dev) ? 'style-loader' : MiniCssExtractPlugin.loader },
-    //       {
-    //         loader: "css-loader",
-    //         options: {
-    //           javascriptEnabled: true
-    //         }
-    //       }
-    //     ]
-    //   },
-    // );
-
-    // config.plugins.push(
-    //   new MiniCssExtractPlugin({
-    //     filename: '[name].css',
-    //   })
-    // );
-
+    config.plugins.push(new webpack.DefinePlugin({
+      "process.env": {
+          build_version: JSON.stringify("121"),
+      }
+  }))
     config.resolve.alias = {
       Config$: path.resolve(__dirname, 'src/common/config/index.js')
     };

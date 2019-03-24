@@ -25,7 +25,7 @@ const {
 import Header from 'modules/header/Header.js'
 import FooterFormView from 'modules/footer/FooterFormView.js'
 
-
+let build_version = process.env.build_version
 export default ({
   children,
   title = TITLE,
@@ -63,10 +63,8 @@ export default ({
         <meta property="og:type" content={og_type} />
         <link rel="image_src" href={image_src} />
         <meta name="twitter:image:src" content={twitter_image_src} /> */}
-        <link  rel="preload stylesheet" href="https://apksafety.com/static/styles/font-awesome.min.css" as="style"/>
-        {/* <link rel="stylesheet" href="https://apksafety.com/static/styles/animate.min.css"></link> */}
-        <link rel="preload stylesheet"  href="https://apksafety.com/static/styles/style.min.css" as="style"/>
-
+        <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/font-awesome.min.css?v=${build_version}`} as="style" />
+        <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/style.min.css?v=${build_version}`} as="style" />
       </Head>
       <div>
         <Header />
