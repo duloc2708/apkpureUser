@@ -87,3 +87,4 @@ export const generateUUIDV4 = () => {
   });
   return uuid;
 }
+export const build_version = process.env.build_version

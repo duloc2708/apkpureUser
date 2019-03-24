@@ -19,13 +19,13 @@ const {
   NAME_TWITTER_IMAGE_SRC,
   PROPERTY_OG_TYPE,
   ORG_SITENAME,
-  ORG_IMAGE
+  ORG_IMAGE,
+  build_version
 } = Config
 
 import Header from 'modules/header/Header.js'
 import FooterFormView from 'modules/footer/FooterFormView.js'
 
-let build_version = process.env.build_version
 export default ({
   children,
   title = TITLE,
@@ -44,25 +44,6 @@ export default ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="robots" content="INDEX, FOLLOW" />
         <meta name="Googlebot" content="index,follow,NOODP" />
-
-        {/* <meta property="fb:app_id" content={APP_ID_FACEBOOK} />
-        <link rel="alternate" href={PROPERTY_OG_URL} hrefLang="vi-vn" />
-        <meta property="og:url" content={og_url} />
-        <meta property="og:site_name" content={TITLE} />
-        <meta name="twitter:domain" content={TITLE} />
-        <meta name="copyright" content={TITLE} />
-        <meta name="revisit-after" content="1 Days" />
-        <meta name="twitter:card" content="summary" />
-        <link rel="canonical" href={PROPERTY_OG_URL} />
-        <title >{title}</title>
-
-        <meta name="twitter:title" content={title} />
-        <meta name="description" content={description} />
-        <meta name="twitter:description" content={description} />
-        <meta name="keywords" content={tags_keywords} />
-        <meta property="og:type" content={og_type} />
-        <link rel="image_src" href={image_src} />
-        <meta name="twitter:image:src" content={twitter_image_src} /> */}
         <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/font-awesome.min.css?v=${build_version}`} as="style" />
         <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/style.min.css?v=${build_version}`} as="style" />
       </Head>
@@ -70,11 +51,11 @@ export default ({
         <Header />
         {children}
         <FooterFormView />
-        <script src="https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js"></script>
-        <script src="https://apksafety.com/static/js/vendor/bootstrap.min.js"></script>
-        <script src="https://apksafety.com/static/js/superfish.min.js"></script>
-        <script src="https://apksafety.com/static/js/jquery.magnific-popup.min.js"></script>
-        <script src="https://apksafety.com/static/js/jquery.tabs.min.js"></script>
+        <script src={`https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js?=${build_version}`}></script>
+        <script src={`https://apksafety.com/static/js/vendor/bootstrap.min.js?=${build_version}`}></script>
+        <script src={`https://apksafety.com/static/js/superfish.min.js?=${build_version}`}></script>
+        <script src={`https://apksafety.com/static/js/jquery.magnific-popup.min.js?=${build_version}`}></script>
+        <script src={`https://apksafety.com/static/js/jquery.tabs.min.js?=${build_version}`}></script>
       </div>
     </div>
 
