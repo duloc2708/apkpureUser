@@ -19,12 +19,19 @@ import {
     isTablet
 } from "react-device-detect";
 class ContentFormView extends React.Component {
+    componentDidMount() {
+        window.onload = function () {
+            $.getScript(`https://apksafety.com/static/js/owl.carousel.min.js?v=${Config.build_version}`)
+            $.getScript(`https://apksafety.com/static/js/jquery.matchHeight-min.js?v=${Config.build_version}`)
+
+        }();
+    }
     render() {
         return (
             <React.Fragment>
                 <SlideFormView />
+                <GameHotFormView />
                 <LazyLoadComponent>
-                    <GameHotFormView />
                     <TopDownFormView />
                     <FeaturedGame />
                     <FeaturedApp />
