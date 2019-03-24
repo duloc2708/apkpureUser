@@ -45,7 +45,9 @@ class TopDownFormView extends React.Component {
                                             <dl>
                                                 <dt className="gamehot__img">
                                                     <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                        <LazyImage image={{ src: Config.getImageIndex(thumbnail, 75, 75), alt: title, width: 75, height: 75 }} />
+                                                        <a>
+                                                            <LazyImage image={{ src: Config.getImageIndex(thumbnail, 75, 75), alt: title, width: 75, height: 75 }} />
+                                                        </a>
                                                     </Link>
                                                 </dt>
                                                 <dd className="gamehot__title">
