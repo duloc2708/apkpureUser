@@ -13,6 +13,10 @@ export default class SiteDocument extends Document {
     return (
       <html>
         <Head>
+          <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" />
+          <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" />
+          <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
+          <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/style.css?v=${Config.build_version}`} as="style" />
           {styleTags}
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`} />
           <meta name="referrer" content="origin" />
