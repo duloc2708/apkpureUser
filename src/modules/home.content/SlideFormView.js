@@ -1,7 +1,6 @@
 import { getBlogBySection } from 'modules/home.content/actions/'
 import Link from 'next/link'
 import LazyImage from 'common/component/LazyImage'
-
 class SlideFormView extends React.Component {
     constructor(props) {
         super(props);
@@ -22,12 +21,24 @@ class SlideFormView extends React.Component {
         }
     }
     componentDidMount() {
+        window.onload = function () {
+            $.getScript(`https://apksafety.com/static/js/owl.carousel.min.js?v=${Config.build_version}`)
+            $.getScript(`https://apksafety.com/static/js/jquery.matchHeight-min.js?v=${Config.build_version}`)
+
+        }();
         getBlogBySection('slide').then(Response => {
             let { Data } = Response
             this.setState({ data: Data, total: Data.length })
         })
 
         this.interval = setInterval(() => this.autoRun(), 5000);
+    }
+    componentDidUpdate() {
+        setTimeout(() => {
+            window.onload = function () {
+                $.getScript(`https://apksafety.com/static/js/index.js?v=${Config.build_version}`)
+            }();
+        }, 100)
     }
     _onNext() {
         let { total, start, end } = this.state
@@ -77,67 +88,98 @@ class SlideFormView extends React.Component {
         let { data, start, end, list_dots, dots_default } = this.state
         return (
             <section className="popular-post-area pt-120">
-                <div className="container">
-                    <div className="row">
+                <div className="owl-carousel wrap__slider">
+                    {
+                        data.map((item, i) => {
+                            let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
 
-                        <div className="col-lg-12 slide__game">
-                            <div className="row">
-                                {
-                                    data.map((item, i) => {
-                                        let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
-                                        if (i >= start && i <= end) {
-                                            return (
-                                                <div key={`slide_${i}`} className="col-md-3 col-sm-4">
-                                                    <div className="items__slide__block__content">
-                                                        <p className="newgame">
-                                                            <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
-                                                        </p>
-                                                        <h4 className="newgame__title">
-                                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
-                                                        </h4>
-                                                    </div>
-                                                    <div className="items__slide__block__img">
-                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <a>
-                                                                <LazyImage image={{ src: Config.getImageIndex(atr4, 350, 200), alt: title, width: 350, height: 200 }} />
-                                                            </a>
-                                                            {/* <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} /> */}
-                                                        </Link>
-                                                    </div>
-                                                </div>
+                            return (
+                                <div key={`slide_${i}`}  className="item">
+                                    <div className="items__slide__block__content match">
+                                        <p className="newgame">
+                                            <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
+                                        </p>
+                                        <h4 className="newgame__title">
+                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
+                                        </h4>
+                                    </div>
+                                    <div className="items__slide__block__img">
+                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                            <a>
+                                                <LazyImage image={{ src: Config.getImageIndex(atr4, 350, 200), alt: title, width: 350, height: 200 }} />
+                                            </a>
+                                        </Link>
+                                    </div>
+                                </div>        
+                            )
 
-                                            )
-                                        }
-                                    })
-                                }
-                                <div className="button_prev">
-                                    <a onClick={() => this._onPrev()}>
-                                        <i className="fa fa-chevron-circle-left" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div className="button_next">
-                                    <a onClick={() => this._onNext()}>
-                                        <i className="fa fa-chevron-circle-right" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="owl-controls">
-                                <div className="owl-dots">
-                                    {
-                                        list_dots.map(item => {
-                                            return (
-                                                <div onClick={() => this._onChangeDots(item.key)} key={`dots_${item.key}`} className={`owl-dot ${item.key == dots_default ? 'active' : ''}`} >
-                                                    <span></span>
-                                                </div>
-                                            )
-                                        })
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        })
+                    }
+
                 </div>
             </section>
+            // <section className="popular-post-area pt-120">
+            //     <div className="container">
+            //         <div className="row">
+
+            //             <div className="col-lg-12 slide__game">
+            //                 <div className="row">
+            //                     {
+            //                         data.map((item, i) => {
+            //                             let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
+            //                             if (i >= start && i <= end) {
+            //                                 return (
+            //                                     <div key={`slide_${i}`} className="col-md-3 col-sm-4">
+            //                                         <div className="items__slide__block__content">
+            //                                             <p className="newgame">
+            //                                                 <Link as={`/${type}`} href={`/type`}><a>{type_name}</a></Link>
+            //                                             </p>
+            //                                             <h4 className="newgame__title">
+            //                                                 <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
+            //                                             </h4>
+            //                                         </div>
+            //                                         <div className="items__slide__block__img">
+            //                                             <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+            //                                                 <a>
+            //                                                     <LazyImage image={{ src: Config.getImageIndex(atr4, 350, 200), alt: title, width: 350, height: 200 }} />
+            //                                                 </a>
+            //                                                 {/* <img title={title} className="img-fluid" src={Config.getImageIndex(atr4, 350, 200)} alt={title} /> */}
+            //                                             </Link>
+            //                                         </div>
+            //                                     </div>
+
+            //                                 )
+            //                             }
+            //                         })
+            //                     }
+            //                     <div className="button_prev">
+            //                         <a onClick={() => this._onPrev()}>
+            //                             <i className="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            //                         </a>
+            //                     </div>
+            //                     <div className="button_next">
+            //                         <a onClick={() => this._onNext()}>
+            //                             <i className="fa fa-chevron-circle-right" aria-hidden="true"></i>
+            //                         </a>
+            //                     </div>
+            //                 </div>
+            //                 <div className="owl-controls">
+            //                     <div className="owl-dots">
+            //                         {
+            //                             list_dots.map(item => {
+            //                                 return (
+            //                                     <div onClick={() => this._onChangeDots(item.key)} key={`dots_${item.key}`} className={`owl-dot ${item.key == dots_default ? 'active' : ''}`} >
+            //                                         <span></span>
+            //                                     </div>
+            //                                 )
+            //                             })
+            //                         }
+            //                     </div>
+            //                 </div>
+            //             </div>
+            //         </div>
+            //     </div>
+            // </section>
 
         )
     }

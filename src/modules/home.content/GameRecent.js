@@ -26,10 +26,12 @@ class GameRecent extends React.Component {
 
 
     }
+
     componentDidUpdate() {
         setTimeout(() => {
             window.onload = function () {
-                $.getScript('https://apksafety.com/static/js/vendor/slider_blog_detail.js')
+                $.getScript(`https://apksafety.com/static/js/index.js?v=${Config.build_version}`)
+                // $.getScript(`static/js/main.js?v=${Config.build_version}`)
             }();
         }, 100)
     }

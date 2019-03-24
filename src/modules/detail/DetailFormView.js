@@ -15,6 +15,11 @@ class DetailFormView extends React.Component {
         //     window.GA_INITIALIZED = true
         // }
         // logPageView();
+        window.onload = function () {
+            $.getScript(`https://apksafety.com/static/js/owl.carousel.min.js?v=${Config.build_version}`)
+            $.getScript(`https://apksafety.com/static/js/jquery.matchHeight-min.js?v=${Config.build_version}`)
+
+        }();
     }
     render() {
         let { title, type_name, type, thumbnail, content_long, title_slug, atr3, atr5, atr6, atr7 } = this.props.data
@@ -94,7 +99,7 @@ class DetailFormView extends React.Component {
                                         <div className="blog__detail__description">
                                             <div dangerouslySetInnerHTML={{ __html: content_long }} />
                                         </div>
-                                       <br/>
+                                        <br />
                                     </LazyLoadComponent>
                                     <LazyLoadComponent>
                                         <GameRecent />

@@ -44,24 +44,16 @@ export default ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="robots" content="INDEX, FOLLOW" />
         <meta name="Googlebot" content="index,follow,NOODP" />
+        <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/owl.carousel.min.css?v=${build_version}`} as="style" />
         <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/font-awesome.min.css?v=${build_version}`} as="style" />
+        <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/animate.min.css?v=${build_version}`} as="style" />
         <link rel="preload stylesheet" href={`https://apksafety.com/static/styles/style.css?v=${build_version}`} as="style" />
       </Head>
       <div>
         <Header />
         {children}
         <FooterFormView />
-        {/* <script src={`https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js?=${build_version}`}></script>
-        <script src={`https://apksafety.com/static/js/vendor/bootstrap.min.js?=${build_version}`}></script>
-        <script src={`https://apksafety.com/static/js/superfish.min.js?=${build_version}`}></script>
-        <script src={`https://apksafety.com/static/js/jquery.magnific-popup.min.js?=${build_version}`}></script>
-        <script src={`https://apksafety.com/static/js/jquery.tabs.min.js?=${build_version}`}></script> */}
-
-
         <script src={`https://apksafety.com/static/js/vendor/jquery-2.2.4.min.js?=${build_version}`}></script>
-        <script src={`https://apksafety.com/static/js/owl.carousel.min.js?=${build_version}`}></script>
-        <script src={`https://apksafety.com/static/js/jquery.matchHeight-min.js?=${build_version}`}></script>
-        <script src={`https://apksafety.com/static/js/index.js?=${build_version}`}></script>
         <script src={`https://apksafety.com/static/js/vendor/bootstrap.min.js?=${build_version}`}></script>
         <script src={`https://apksafety.com/static/js/easing.min.js?=${build_version}`}></script>
         <script src={`https://apksafety.com/static/js/superfish.min.js?=${build_version}`}></script>
