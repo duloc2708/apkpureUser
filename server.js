@@ -104,7 +104,7 @@ app.prepare()
         return handle(req, res)
       })
       server.get(
-        /^\/_next\/static\/css\/js\//,
+        /^\/_next\/static\/js\//,
         (_, res, nextHandler) => {
           console.log('res>>>>>>', res);
           res.setHeader(
