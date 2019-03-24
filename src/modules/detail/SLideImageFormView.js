@@ -10,6 +10,7 @@ class SLideImageFormView extends React.Component {
         window.onload = function () {
             $.getScript('https://apksafety.com/static/js/owl.carousel.min.js')
             $.getScript('https://apksafety.com/static/js/jquery.magnific-popup.min.js')
+            $.getScript('https://apksafety.com/static/js/slick.js')
         }();
         let { arrSlide } = this.props
         this.setState({ data: arrSlide })
