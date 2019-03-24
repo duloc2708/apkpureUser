@@ -3,12 +3,20 @@ const glob = require('glob')
 const webpack = require('webpack');
 const withCSS = require('@zeit/next-css')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const generateUUIDV4 = () => {
+  var seed = Date.now();
+  var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = (seed + Math.random() * 16) % 16 | 0;
+      seed = Math.floor(seed / 16);
+      return (c === 'x' ? r : r & (0x3 | 0x8)).toString(16);
+  });
+  return uuid;
+}
 module.exports = {
   webpack: (config, { dev, isServer }) => {
     config.plugins.push(new webpack.DefinePlugin({
       "process.env": {
-          build_version: JSON.stringify("121"),
+          build_version: JSON.stringify(generateUUIDV4()),
       }
   }))
     config.resolve.alias = {
