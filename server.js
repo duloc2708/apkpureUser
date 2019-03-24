@@ -104,9 +104,8 @@ app.prepare()
         return handle(req, res)
       })
       server.get(
-        /^\/_next\/static\/js\//,
+        /^\/_next\/static\/css\/js\//,
         (_, res, nextHandler) => {
-          console.log('res>>>>>>', res);
           res.setHeader(
             "Cache-Control",
             "must-revalidate,public, max-age=31320, immutable",
