@@ -25,7 +25,7 @@ class SlideFormView extends React.Component {
     componentDidUpdate() {
         setTimeout(() => {
             window.onload = function () {
-                $.getScript(`https://apksafety.com/static/js/index.js?v=${Config.build_version}`)
+                $.getScript(`/static/js/index.js?v=${Config.build_version}`)
             }();
         })
     }

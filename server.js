@@ -7,11 +7,13 @@ const handle = app.getRequestHandler()
 const bodyParser = require('body-parser')
 const sm = require('sitemap');
 var request = require('request-promise');
+const path = require('path');
 
 app.prepare()
   .then(() => {
     const server = express()
-
+    server.use(express.static(path.join(__dirname, '/static')));
+    server.use(express.static(__dirname + '/static'));
     server.use(function (req, res, next) {
       res.setHeader('Cache-Control', 'public, max-age=31557600'); // 1 year
       res.header("Access-Control-Allow-Origin", "*");
@@ -25,7 +27,6 @@ app.prepare()
     // parse application/json
     server.use(bodyParser.json())
 
-    const path = require('path');
     const options = {
       root: path.join(__dirname, '/static'),
       headers: {

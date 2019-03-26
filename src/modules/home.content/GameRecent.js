@@ -19,7 +19,7 @@ class GameRecent extends React.Component {
             let { Data } = Response
             this.setState({ data: Data })
             // var myscript = document.createElement('script');
-            // myscript.setAttribute('src', 'https://apksafety.com/static/js/main.js');
+            // myscript.setAttribute('src', '/static/js/main.js');
             // var div = document.getElementById('target');
             // div.appendChild(myscript);
         })
@@ -30,7 +30,7 @@ class GameRecent extends React.Component {
     componentDidUpdate() {
         setTimeout(() => {
             window.onload = function () {
-                $.getScript(`https://apksafety.com/static/js/index.js?v=${Config.build_version}`)
+                $.getScript(`/static/js/index.js?v=${Config.build_version}`)
                 // $.getScript(`static/js/main.js?v=${Config.build_version}`)
             }();
         }, 100)
