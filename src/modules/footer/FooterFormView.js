@@ -4,7 +4,7 @@ const linkStyle = {
 }
 const FooterFormView = () => (
     <footer className="footer-area">
-        <img className="pattern-right" src={`${Config.API_LOCAL_IMAGE}img/pattern-right.png`} alt="" />
+        <img className="pattern-right" src={`static/img/pattern-right.png`} alt="" />
         <div className="container">
             <div className="row">
                 <div className="col-lg-2  col-md-6 col-sm-6">

@@ -29,7 +29,7 @@ const addJSONLD2 = () => {
     "@type": "Corporation",
     "name": "apksafety",
     "url": "https://apksafety.com/",
-    "logo": "https://apksafety.com/static/img/logo-d.png",
+    "logo": "static/img/logo-d.png",
     "sameAs": [
       "https://www.facebook.com/apkpure",
       "https://www.google.com/+Apkpuredownloader",
@@ -59,12 +59,12 @@ const addJSONLD3 = (type) => {
 const Post = (props) => (
   <Layout>
     <Head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+      <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       {/* <title>Đài truyền hình Hàn Quốc làm tin hội nghị thượng đỉnh như thế nào? | Tinhte.vn</title> */}
       <title>{props.data.atr8}</title>
-      <link rel="apple-touch-icon" href='https://apksafety.com/static/img/logo-d.png' />
+      <link rel="apple-touch-icon" href='static/img/logo-d.png' />
       {/* <link rel="alternate" type="application/rss+xml" title="RSS của Tinhte.vn" href="https://tinhte.vn/rss/" /> */}
       {/* <link rel="next" href="threads/dai-truyen-hinh-han-quoc-lam-tin-hoi-nghi-thuong-dinh-nhu-the-nao.2920754/page-2" /> */}
       <link rel="canonical" href={props.data.atr8} />
