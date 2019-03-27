@@ -9,7 +9,7 @@ class VideoMobileFormView extends React.Component {
                             <span></span>
                         </div>
                         <div className="col-lg-12 slide__video">
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="col-md-12 col-sm-12">
                                     <div className="single-post-carusel item videoWrapper">
                                         <div className="feature-image relative videoWrapper">
@@ -27,7 +27,7 @@ class VideoMobileFormView extends React.Component {
                                         <i className="fa fa-chevron-circle-right" aria-hidden="true"></i>
                                     </a>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
