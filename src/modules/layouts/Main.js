@@ -49,7 +49,6 @@ export default ({
         <Header />
         {children}
         <FooterFormView />
-    
       </div>
     </div>
 
