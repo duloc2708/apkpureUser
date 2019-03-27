@@ -32,12 +32,13 @@ export default class SiteDocument extends Document {
             {main}
           </div>
           <NextScript />
-          <script href={`/static/js/vendor/jquery-2.2.4.min.js?v=${Config.build_version}`} />
-          <script href={`/static/js/vendor/bootstrap.min.js"?v=${Config.build_version}`} />
-          <script href={`/static/js/easing.min.js?v=${Config.build_version}`} />
-          <script href={`/static/js/superfish.min.js?v=${Config.build_version}`} />
-          <script href={`/static/js/jquery.magnific-popup.min.js?v=${Config.build_version}`} />
-          <script href={`/static/js/jquery.tabs.min.js?v=${Config.build_version}`} />
+          <script src={`/static/js/vendor/jquery-2.2.4.min.js?v=${Config.build_version}`} />
+          <script src={`/static/js/vendor/bootstrap.min.js?v=${Config.build_version}`} />
+          <script src={`/static/js/easing.min.js?v=${Config.build_version}`} />
+          <script src={`/static/js/superfish.min.js?v=${Config.build_version}`} />
+          <script src={`/static/js/jquery.magnific-popup.min.js?v=${Config.build_version}`} />
+          <script src={`/static/js/jquery.tabs.min.js?v=${Config.build_version}`} />
+          <script src={`/static/js/main.js?v=${Config.build_version}`} />
           <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9N8KPK"
               height="0" width="0" style={{ "display": "none", "visibility": "hidden" }} ></iframe>
