@@ -35,7 +35,7 @@ class ContentFormView extends React.Component {
                     <TopDownFormView />
                     <FeaturedGame />
                     <FeaturedApp />
-                    <BrowserView>
+                    {/* <BrowserView>
                         <VideoFormView />
                     </BrowserView>
                     {
@@ -54,7 +54,7 @@ class ContentFormView extends React.Component {
                                 }
                             </div>
 
-                    }
+                    } */}
                     <ListTypeGame />
                 </LazyLoadComponent>
 
