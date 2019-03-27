@@ -10,7 +10,7 @@ class VideoFormView extends React.Component {
                             <span></span>
                         </div>
                         <div className="col-lg-12 slide__video">
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="col-md-6 col-sm-6">
                                     <div className="single-post-carusel item videoWrapper">
                                         <div className="feature-image relative videoWrapper">
@@ -36,6 +36,7 @@ class VideoFormView extends React.Component {
                                     </a>
                                 </div>
                             </div>
+                       */}
                         </div>
                     </div>
                 </div>
