@@ -87,6 +87,7 @@ export const generateUUIDV4 = () => {
   });
   return uuid;
 }
+export const build_version = process.env.build_version
 export const getParams= (url_string, key) => {
   const url = new URL(url_string)
   const val = url.searchParams.get(key)
