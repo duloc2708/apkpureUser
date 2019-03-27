@@ -15,6 +15,11 @@ app.prepare()
     server.use(express.static(path.join(__dirname, '/static'), {
       maxAge: "365d"
     }));
+    server.use(express.static(path.join(__dirname, '/img/'), {
+      setHeaders(res) {
+        res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
+      }
+    }));
     // app.use('/img', express.static(__dirname + '/public/img', {  maxAge: '1h'}));
     server.use(function (req, res, next) {
       res.setHeader('Cache-Control', 'public, max-age=31536000, no Etag, no Last-Modified'); // 1 year
