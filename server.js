@@ -13,7 +13,9 @@ app.prepare()
   .then(() => {
     const server = express()
     server.use(express.static(path.join(__dirname, '/static'), {
-      maxAge: "365d"
+      setHeaders(res) {
+        res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
+      }
     }));
     server.use(express.static(path.join(__dirname, '/img/'), {
       setHeaders(res) {
