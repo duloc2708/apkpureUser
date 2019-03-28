@@ -27,11 +27,11 @@ app.prepare()
         res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
       }
     }))
-    server.use('/js', express.static(__dirname + '/js/', {
+    server.use(express.static(path.join(__dirname, '/js/'), {
       setHeaders(res) {
         res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
       }
-    }))
+    }));
     server.use(function (req, res, next) {
       res.setHeader('Cache-Control', 'public, max-age=31536000, no Etag, no Last-Modified'); // 1 year
       res.header("Access-Control-Allow-Origin", "*");
