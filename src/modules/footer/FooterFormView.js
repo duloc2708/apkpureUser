@@ -51,7 +51,7 @@ const FooterFormView = () => (
                                 <div className="input-group add-on align-items-center d-flex">
                                     <input className="form-control" name="EMAIL" placeholder="Your email address" required="" type="email" />
                                     <div className="input-group-btn">
-                                        <button className="genric-btn"><span className="lnr lnr-arrow-right"></span></button>
+                                        {/* <button className="genric-btn"><span className="lnr lnr-arrow-right"></span></button> */}
                                     </div>
                                 </div>
                                 <div className="info mt-20"></div>
