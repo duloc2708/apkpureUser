@@ -32,7 +32,8 @@ module.exports = {
         'ReactRedux': 'react-redux',
         'ReactRouter': 'react-router',
         'Link': 'next/link',
-        'axios': 'axios'
+        'axios': 'axios',
+        'moment': 'moment-timezone'
       })
     ),
       config.module.rules.push({
