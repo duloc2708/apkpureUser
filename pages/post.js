@@ -67,7 +67,6 @@ const Post = (props) => (
       <meta name="description" content={props.data.atr9} />
       {/* <meta property="author" content="kevin_pump" /> */}
       {/* <meta property="article:author" content="https://facebook.com/10208889536421702" /> */}
-      <meta property="og:site_name" content="Apksafety.com" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content={props.data.atr8} />
       <meta property="og:title" content={props.data.atr8} />

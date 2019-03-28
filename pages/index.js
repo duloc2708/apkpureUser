@@ -29,13 +29,9 @@ const {
 const Index = (props) => (
   <Layout>
     <Head>
-      <title>{TITLE}</title>
       {/* <meta property="fb:pages" content="122102927812763" /> */}
-      <meta property="og:site_name" content="Apksafety.com" />
       <meta name="description" content={TITLE} />
-      <meta property="og:site_name" content="Apksafety.com" />
       <meta property="og:image" content='static/img/logo-d2.png' />
-      <meta property="og:type" content="article" />
       <meta property="og:url" content="https://apksafety.com/" />
       <meta property="og:title" content={TITLE} />
       <meta property="og:description" content={TITLE} />
