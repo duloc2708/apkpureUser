@@ -12,6 +12,7 @@ const path = require('path');
 app.prepare()
   .then(() => {
     const server = express()
+    server.use('/fonts', express.static(__dirname + '/static/fonts', {  maxAge: '365d'}));
     server.use(express.static(path.join(__dirname, '/static'), {
       setHeaders(res) {
         res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
@@ -22,12 +23,6 @@ app.prepare()
         res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
       }
     }));
-    server.use(express.static(path.join(__dirname, '/fonts/'), {
-      setHeaders(res) {
-        res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
-      }
-    }));
-    // app.use('/img', express.static(__dirname + '/public/img', {  maxAge: '1h'}));
     server.use(function (req, res, next) {
       res.setHeader('Cache-Control', 'public, max-age=31536000, no Etag, no Last-Modified'); // 1 year
       res.header("Access-Control-Allow-Origin", "*");
