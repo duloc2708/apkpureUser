@@ -12,7 +12,6 @@ const path = require('path');
 app.prepare()
   .then(() => {
     const server = express()
-    server.use('/fonts', express.static(__dirname + '/static/fonts', {  maxAge: '365d'}));
     server.use(express.static(path.join(__dirname, '/static'), {
       setHeaders(res) {
         res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
@@ -29,7 +28,11 @@ app.prepare()
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, cache-control");
       next();
     });
-
+    server.use('/fonts', express.static(__dirname + '/static/fonts', {
+      setHeaders(res) {
+        res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
+      }
+    }))
     // parse application/x-www-form-urlencoded
     server.use(bodyParser.urlencoded({ extended: false }))
 
