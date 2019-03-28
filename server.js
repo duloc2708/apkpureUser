@@ -28,7 +28,7 @@ app.prepare()
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, cache-control");
       next();
     });
-    server.use('/fonts', express.static(__dirname + '/static/fonts', {
+    server.use('/fonts', express.static(__dirname + '/fonts/', {
       setHeaders(res) {
         res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
       }
