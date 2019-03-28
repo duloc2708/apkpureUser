@@ -38,7 +38,7 @@ const Index = (props) => (
       {/* <meta property="twitter:card" content="summary" />
       <meta property="twitter:title" content={TITLE} />
       <meta property="twitter:description" content={TITLE} />
-      <meta property="twitter:image" content='static/img/logo-d2.png' />
+      <meta property="twitter:image" content='static/img/logo-d2-min.png' />
       <meta property="twitter:url" content="https://apksafety.com/" /> */}
       {/* <meta name="theme-color" content="#192433" /> */}
     </Head>

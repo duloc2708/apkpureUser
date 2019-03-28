@@ -27,7 +27,7 @@ export default class SiteDocument extends Document {
           <meta name="referrer" content="origin" />
           <meta property="og:site_name" content="Apksafety.com" />
           <meta property="og:type" content="article" />
-          <meta property="og:image" content='static/img/logo-d2.png' />
+          <meta property="og:image" content='static/img/logo-d2-min.png' />
           <script dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

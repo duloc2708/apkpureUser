@@ -29,7 +29,7 @@ const addJSONLD2 = () => {
     "@type": "Corporation",
     "name": "apksafety",
     "url": "https://apksafety.com/",
-    "logo": "static/img/logo-d2.png",
+    "logo": "static/img/logo-d2-min.png",
     "sameAs": [
       "https://www.facebook.com/apkpure",
       "https://www.google.com/+Apkpuredownloader",
