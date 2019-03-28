@@ -16,7 +16,6 @@ export default class SiteDocument extends Document {
     return (
       <html>
         <Head>
-          <title>{TITLE}</title>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="preload stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" />
@@ -41,13 +40,13 @@ export default class SiteDocument extends Document {
             {main}
           </div>
           <NextScript />
-          <script src={`/static/js/vendor/jquery-2.2.4.min.js?v=${Config.build_version}`} />
-          <script src={`/static/js/vendor/bootstrap.min.js?v=${Config.build_version}`} />
-          <script src={`/static/js/easing.min.js?v=${Config.build_version}`} />
-          <script src={`/static/js/superfish.min.js?v=${Config.build_version}`} />
-          <script src={`/static/js/jquery.magnific-popup.min.js?v=${Config.build_version}`} />
-          <script src={`/static/js/jquery.tabs.min.js?v=${Config.build_version}`} />
-          <script src={`/static/js/main.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/vendor/jquery-2.2.4.min.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/vendor/bootstrap.min.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/easing.min.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/superfish.min.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/jquery.magnific-popup.min.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/jquery.tabs.min.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/main.js?v=${Config.build_version}`} />
           <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9N8KPK"
               height="0" width="0" style={{ "display": "none", "visibility": "hidden" }} ></iframe>
