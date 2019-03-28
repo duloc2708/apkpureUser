@@ -22,17 +22,18 @@ app.prepare()
         res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
       }
     }));
+    server.use('/fonts', express.static(__dirname + '/fonts/', {
+      setHeaders(res) {
+        res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
+      }
+    }))
     server.use(function (req, res, next) {
       res.setHeader('Cache-Control', 'public, max-age=31536000, no Etag, no Last-Modified'); // 1 year
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, cache-control");
       next();
     });
-    server.use('/fonts', express.static(__dirname + '/fonts/', {
-      setHeaders(res) {
-        res.setHeader("Cache-Control", "public,max-age=31536000,immutable");
-      }
-    }))
+
     // parse application/x-www-form-urlencoded
     server.use(bodyParser.urlencoded({ extended: false }))
 
