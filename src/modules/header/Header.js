@@ -19,15 +19,7 @@ class Header extends React.Component {
   _onSearch() {
     window.location.href = "/search?q=" + this.state.search;
   }
-  componentDidMount() {
-    let that = this
-    $(document).keypress(function (event) {
-      var keycode = (event.keyCode ? event.keyCode : event.which);
-      if (keycode == '13') {
-        that._onSearch()
-      }
-    });
-  }
+
   render() {
     return (
       <header id="header">

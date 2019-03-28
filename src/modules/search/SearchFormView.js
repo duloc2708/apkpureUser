@@ -1,29 +1,46 @@
 import { getDataBySearch } from 'modules/search/actions/'
 import Link from 'next/link'
 import LazyImage from 'common/component/LazyImage'
-// import KeyboardJS from 'keyboardjs'
+// import TopDownFormView from 'modules/home.content/TopDownFormView.js'
 
 class SearchFormView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            data: [],
+            search: ''
         }
+    }
+    _handleInput(e) {
+        this.setState({ search: e.target.value })
+
+    }
+    _onSearch() {
+        let key = this.state.search
+        this._getData(key)
+    }
+    _getData(key) {
+        getDataBySearch(key).then(Response => {
+            let { Data } = Response
+            this.setState({ data: Data })
+        })
     }
     componentDidMount() {
         let { href, search, pathname } = window.location || {}
         let key = Config.getParams(href, 'q')
-        getDataBySearch(key).then(Response => {
-            let { Data } = Response
-            this.setState({ data: Data })
-            // var myscript = document.createElement('script');
-            // myscript.setAttribute('src', '/static/js/main.js');
-            // var div = document.getElementById('target');
-            // div.appendChild(myscript);
-        })
-        // KeyboardJS.bind('enter', (event) => {
-        //     this._onSearch()
-        // })
+        this._getData(key)
+        $('#searchMain').focus();
+
+        let that = this
+        $(document).keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                if ($('#searchMain').is(':focus')) {
+                    that._onSearch()
+                }
+            }
+
+        });
 
     }
 
@@ -35,14 +52,19 @@ class SearchFormView extends React.Component {
                     <div className="col-lg-12">
                         <div className="row">
                             <div className="col-md-12">
-                                {/* <div className="from__search">
+                                <div className="from__search">
                                     <div className="wrap__search clearfix">
-                                        <input type="text" className="searchTerm" placeholder="What are you looking for?" />
-                                        <button type="submit" className="searchButton">
+                                        <input type="text" className="searchTerm" placeholder="What are you looking for?"
+                                            value={this.state.search}
+                                            onChange={(e) => this._handleInput(e)}
+                                            ref="searchMain"
+                                            id="searchMain"
+                                        />
+                                        <button onClick={() => this._onSearch()} type="submit" className="searchButton">
                                             <i className="fa fa-search"></i>
                                         </button>
                                     </div>
-                                </div> */}
+                                </div>
                                 <div className="search__content">
                                     <div className="row">
                                         {
