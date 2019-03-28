@@ -22,7 +22,6 @@ export default class SiteDocument extends Document {
           <link rel="preload stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
           <link rel="preload stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" />
           <link rel="preload stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" />
-
           {styleTags}
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`} />
           <meta name="referrer" content="origin" />
@@ -35,14 +34,14 @@ export default class SiteDocument extends Document {
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-P9N8KPK');`}} />
+          <script defer src={`/static/js/vendor/jquery-2.2.4.min.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/vendor/bootstrap.min.js?v=${Config.build_version}`} />
         </Head>
         <body>
           <div className="root">
             {main}
           </div>
           <NextScript />
-          <script defer src={`/static/js/vendor/jquery-2.2.4.min.js?v=${Config.build_version}`} />
-          <script defer src={`/static/js/vendor/bootstrap.min.js?v=${Config.build_version}`} />
           <script defer src={`/static/js/easing.min.js?v=${Config.build_version}`} />
           <script defer src={`/static/js/superfish.min.js?v=${Config.build_version}`} />
           <script defer src={`/static/js/jquery.magnific-popup.min.js?v=${Config.build_version}`} />
