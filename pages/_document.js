@@ -14,7 +14,7 @@ export default class SiteDocument extends Document {
       <html>
         <Head>
           <link rel="preload stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" />
-          {/* <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" /> */}
+          <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" />
           <link rel="preload stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
           <link rel="preload stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" />
           {styleTags}
