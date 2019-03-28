@@ -7,8 +7,8 @@ class SlideFormView extends React.Component {
         this.state = {
             data: [],
             data2: [
-                { id: -1, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'static/img/no-image.jpg' },
-                // { id: -2, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'static/img/no-image.jpg' }
+                { id: -1, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'static/img/no-image2.jpg' },
+                // { id: -2, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'static/img/no-image2.jpg' }
             ],
             isLoad: false
         }

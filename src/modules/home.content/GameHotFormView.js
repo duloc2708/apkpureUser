@@ -6,10 +6,10 @@ class GameHotFormView extends React.Component {
         super(props);
         this.state = {
             data: [
-                { id: -1, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: 'static/img/no-image.jpg', title_slug: '', atr4: 'static/img/no-image.jpg' },
-                { id: -2, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: 'static/img/no-image.jpg', title_slug: '', atr4: 'static/img/no-image.jpg' },
-                { id: -3, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: 'static/img/no-image.jpg', title_slug: '', atr4: 'static/img/no-image.jpg' },
-                { id: -4, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: 'static/img/no-image.jpg', title_slug: '', atr4: 'static/img/no-image.jpg' }
+                { id: -1, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: 'static/img/no-image2.jpg', title_slug: '', atr4: 'static/img/no-image2.jpg' },
+                { id: -2, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: 'static/img/no-image2.jpg', title_slug: '', atr4: 'static/img/no-image2.jpg' },
+                { id: -3, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: 'static/img/no-image2.jpg', title_slug: '', atr4: 'static/img/no-image2.jpg' },
+                { id: -4, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: 'static/img/no-image2.jpg', title_slug: '', atr4: 'static/img/no-image2.jpg' }
             ],
 
             isLoad: false

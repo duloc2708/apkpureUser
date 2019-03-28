@@ -53,7 +53,7 @@ export const OG_PROPERTY_IMAGE = '';
 export const NAME_TWITTER_IMAGE_SRC = '';
 export const PROPERTY_OG_TYPE = 'apksafety.com';
 export const ORG_SITENAME = 'apksafety.com';
-export const ORG_IMAGE = 'static/img/logo-d.png';
+export const ORG_IMAGE = 'static/img/logo-d2.png';
 
 
 export const initGA = () => {

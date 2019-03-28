@@ -19,14 +19,27 @@ class Header extends React.Component {
   _onSearch() {
     window.location.href = "/search?q=" + this.state.search;
   }
+  componentDidMount() {
+    let that = this
+    // $(document).ready(function () {
+    //   $('#btnSearch').on('click touchstart', function () {
+    //     alert('search')
+    //     window.location.href = "/search?q=" + thatƒ.state.search;
+    //   });
+    // });
 
+    $('#btnSearch').on('click touchstart', function (e) {
+      e.preventDefault();
+      alert("submit");
+    });
+  }
   render() {
     return (
       <header id="header">
         <div className="container-fluid">
           <div className="row align-items-center justify-content-between d-flex">
             <div id="logo">
-              <a href="/"><img src={`${Config.API_DOMAIN_CURRENT}/img/logo-d.png`} alt="logo" title="logo" /></a>
+              <a href="/"><img src={`${Config.API_DOMAIN_CURRENT}/img/logo-d2.png`} alt="logo" title="logo" /></a>
             </div>
             <nav id="nav-menu-container">
               <ul className="nav-menu align-items-center d-flex">
@@ -41,7 +54,7 @@ class Header extends React.Component {
                         ref="search"
                         id="search"
                       />
-                      <button onClick={() => this._onSearch()} type="submit" className="searchButton">
+                      <button id="btnSearch" onClick={() => this._onSearch()}  className="searchButton">
                         <i className="fa fa-search"></i>
                       </button>
                     </div>
