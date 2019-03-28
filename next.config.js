@@ -19,8 +19,12 @@ module.exports = {
           build_version: JSON.stringify(generateUUIDV4()),
       }
   }))
+   
+
     config.resolve.alias = {
+      ...(config.resolve.alias || {}),
       Config$: path.resolve(__dirname, 'src/common/config/index.js')
+      // custom webpack aliases
     };
     config.plugins.push(
       new webpack.ProvidePlugin({
