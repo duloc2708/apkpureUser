@@ -18,10 +18,10 @@ export default class SiteDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="prefetch stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" />
-          <link rel="prefetch stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
-          <link rel="prefetch stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" />
-          <link rel="preload stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" />
+          <link rel="stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" />
+          <link rel="stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
+          <link rel="stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" />
+          <link rel="stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" />
 
           {styleTags}
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`} />
