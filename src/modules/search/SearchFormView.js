@@ -1,7 +1,7 @@
 import { getDataBySearch } from 'modules/search/actions/'
 import Link from 'next/link'
 import LazyImage from 'common/component/LazyImage'
-// import TopDownFormView from 'modules/home.content/TopDownFormView.js'
+import TopGameSearch from 'modules/search/TopGameSearch.js'
 
 class SearchFormView extends React.Component {
     constructor(props) {
@@ -51,16 +51,11 @@ class SearchFormView extends React.Component {
                 <div className="container page__search">
                     <div className="col-lg-12">
                         <div className="row">
-                            <div className="col-md-12">
+                            <div className="col-md-8 col-sm-12">
                                 <div className="from__search">
                                     <div className="wrap__search clearfix">
-                                        <input type="text" className="searchTerm" placeholder="What are you looking for?"
-                                            value={this.state.search}
-                                            onChange={(e) => this._handleInput(e)}
-                                            ref="searchMain"
-                                            id="searchMain"
-                                        />
-                                        <button onClick={() => this._onSearch()} type="submit" className="searchButton">
+                                        <input type="text" className="searchTerm" placeholder="What are you looking for?" />
+                                        <button type="submit" className="searchButton">
                                             <i className="fa fa-search"></i>
                                         </button>
                                     </div>
@@ -113,11 +108,11 @@ class SearchFormView extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                            <TopGameSearch />
                         </div>
                     </div>
                 </div>
             </section>
-
         )
     }
 }
