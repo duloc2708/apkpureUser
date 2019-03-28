@@ -1,6 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import ReactGA from 'react-ga';
+import css from '../static/styles/style.css';
+
 export default class SiteDocument extends Document {
   componentDidMount() {
     ReactGA.initialize('UA-136793328-1')
@@ -16,7 +18,11 @@ export default class SiteDocument extends Document {
           <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" />
           <link rel="preload stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
           <link rel="preload stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" />
-          <link rel="preload stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" />
+          {/* <link rel="preload stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" /> */}
+
+          <style dangerouslySetInnerHTML={{ __html: css }} />
+
+
           {styleTags}
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`} />
           <meta name="referrer" content="origin" />
