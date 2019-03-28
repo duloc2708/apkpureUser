@@ -61,13 +61,11 @@ const Post = (props) => (
     <Head>
       {/* <title>Đài truyền hình Hàn Quốc làm tin hội nghị thượng đỉnh như thế nào? | Tinhte.vn</title> */}
       <title>{props.data.atr8}</title>
-      <link rel="apple-touch-icon" href='static/img/logo-d2.png' />
       {/* <link rel="alternate" type="application/rss+xml" title="RSS của Tinhte.vn" href="https://tinhte.vn/rss/" /> */}
       {/* <link rel="next" href="threads/dai-truyen-hinh-han-quoc-lam-tin-hoi-nghi-thuong-dinh-nhu-the-nao.2920754/page-2" /> */}
       <meta name="description" content={props.data.atr9} />
       {/* <meta property="author" content="kevin_pump" /> */}
       {/* <meta property="article:author" content="https://facebook.com/10208889536421702" /> */}
-      <meta property="og:type" content="article" />
       <meta property="og:url" content={props.data.atr8} />
       <meta property="og:title" content={props.data.atr8} />
       <meta property="og:description" content={props.data.atr9} />
