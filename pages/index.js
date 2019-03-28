@@ -29,8 +29,6 @@ const {
 const Index = (props) => (
   <Layout>
     <Head>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>{TITLE}</title>
       {/* <meta property="fb:pages" content="122102927812763" /> */}
       <meta property="og:site_name" content="Apksafety.com" />
@@ -41,11 +39,11 @@ const Index = (props) => (
       <meta property="og:url" content="https://apksafety.com/" />
       <meta property="og:title" content={TITLE} />
       <meta property="og:description" content={TITLE} />
-      <meta property="twitter:card" content="summary" />
+      {/* <meta property="twitter:card" content="summary" />
       <meta property="twitter:title" content={TITLE} />
       <meta property="twitter:description" content={TITLE} />
       <meta property="twitter:image" content='static/img/logo-d2.png' />
-      <meta property="twitter:url" content="https://apksafety.com/" />
+      <meta property="twitter:url" content="https://apksafety.com/" /> */}
       {/* <meta name="theme-color" content="#192433" /> */}
     </Head>
     <ContentFormView />
