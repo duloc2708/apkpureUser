@@ -21,16 +21,14 @@ class Header extends React.Component {
   }
   componentDidMount() {
     let that = this
-    // $(document).ready(function () {
-    //   $('#btnSearch').on('click touchstart', function () {
-    //     alert('search')
-    //     window.location.href = "/search?q=" + thatƒ.state.search;
-    //   });
-    // });
+    $(document).keypress(function (event) {
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if (keycode == '13') {
+        if ($('#search').is(':focus')) {
+          that._onSearch()
+        }
+      }
 
-    $('#btnSearch').on('click touchstart', function (e) {
-      e.preventDefault();
-      alert("submit");
     });
   }
   render() {
@@ -54,7 +52,7 @@ class Header extends React.Component {
                         ref="search"
                         id="search"
                       />
-                      <button id="btnSearch" onClick={() => this._onSearch()}  className="searchButton">
+                      <button id="btnSearch" onClick={() => this._onSearch()} className="searchButton">
                         <i className="fa fa-search"></i>
                       </button>
                     </div>

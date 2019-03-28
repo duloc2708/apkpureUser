@@ -45,7 +45,7 @@ class SearchFormView extends React.Component {
     }
 
     render() {
-        let { data } = this.state
+        let { data, search } = this.state
         return (
             <section className="popular-post-area pt-120">
                 <div className="container page__search">
@@ -54,8 +54,8 @@ class SearchFormView extends React.Component {
                             <div className="col-md-8 col-sm-12">
                                 <div className="from__search">
                                     <div className="wrap__search clearfix">
-                                        <input type="text" className="searchTerm" placeholder="What are you looking for?" />
-                                        <button type="submit" className="searchButton">
+                                        <input onChange={(e) => this._handleInput(e)} id="searchMain" value={search} type="text" className="searchTerm" placeholder="What are you looking for?" />
+                                        <button onClick={() => this._onSearch()} type="submit" className="searchButton" >
                                             <i className="fa fa-search"></i>
                                         </button>
                                     </div>
