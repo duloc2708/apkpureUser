@@ -31,7 +31,7 @@ class TopGameSearch extends React.Component {
                     <h4 className="title__search">Top Game</h4>
                     <ul className="contain__seach">
                         {data.map((item, i) => {
-                            let { id, title, type_name, type, thumbnail, title_slug } = item
+                            let { atr6, id, title, type_name, type, thumbnail, title_slug } = item
                             return (
                                 <li key={`top_${i}`}>
                                     <dl>
@@ -45,7 +45,7 @@ class TopGameSearch extends React.Component {
                                         <dd className="title-dd">
                                             <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a href="#">{title}</a></Link>
                                         </dd>
-                                        <dd>2.3.1</dd>
+                                        <dd>{atr6}</dd>
                                         <dd>2019-03-07</dd>
                                     </dl>
                                 </li>
