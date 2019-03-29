@@ -52,13 +52,13 @@ const Index = (props) => (
   </Layout>
 )
 Index.getInitialProps = async function (context) {
-  const { id } = context.query
-  const res = await axios(`${Config.API_URL}articles/get_blog_by_section`, { params: { type: 'slide' } })
-  const slide = await res.data.Data
+  // const { id } = context.query
+  // const res = await axios(`${Config.API_URL}articles/get_blog_by_section`, { params: { type: 'slide' } })
+  // const slide = await res.data.Data
   // console.log(`Fetched show a: ${show.name}`)
   return {
     dataInit: {
-      slide: slide
+      slide: []
     }
   }
 }
