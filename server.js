@@ -100,7 +100,7 @@ app.prepare()
         server.get(`/service/:id`, (req, res) => {
           const actualPage = '/service'
           const queryParams = { id: req.params.id }
-          app.render(req, res, actualPage, {})
+          app.render(req, res, actualPage, queryParams)
         })
         server.get(`/download/:name&:mineType&:title`, (req, res) => {
           const actualPage = '/download'
