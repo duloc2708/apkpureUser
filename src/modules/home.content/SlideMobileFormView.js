@@ -29,7 +29,7 @@ class SlideMobileFormView extends React.Component {
     componentDidUpdate() {
         setTimeout(() => {
             window.onload = function () {
-                $.getScript('/static/js/slideMobile.js')
+                $.getScript('/static/js/slideMobile.js', function () {}, true);
             }();
         }, 100)
     }

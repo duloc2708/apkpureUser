@@ -48,7 +48,19 @@ const Index = (props) => (
       <meta property="twitter:url" content="https://apksafety.com/" />
       {/* <meta name="theme-color" content="#192433" /> */}
     </Head>
-    <ContentFormView />
+    <ContentFormView dataInit={props.dataInit} />
   </Layout>
 )
+Index.getInitialProps = async function (context) {
+  const { id } = context.query
+  const res = await axios(`${Config.API_URL}articles/get_blog_by_section`, { params: { type: 'slide' } })
+  const slide = await res.data.Data
+  // console.log(`Fetched show a: ${show.name}`)
+  return {
+    dataInit: {
+      slide: slide
+    }
+  }
+}
+
 export default Index

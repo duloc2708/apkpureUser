@@ -1,63 +1,41 @@
 import SlideFormView from 'modules/home.content/SlideFormView.js'
 import GameHotFormView from 'modules/home.content/GameHotFormView.js'
-import VideoFormView from 'modules/home.content/VideoFormView.js'
-import VideoMobileFormView from 'modules/home.content/VideoMobileFormView.js'
+// import VideoFormView from 'modules/home.content/VideoFormView.js'
+// import VideoMobileFormView from 'modules/home.content/VideoMobileFormView.js'
 import ListTypeGame from 'modules/home.content/ListTypeGame.js'
 import TopDownFormView from 'modules/home.content/TopDownFormView.js'
 import FeaturedGame from 'modules/home.content/FeaturedGame.js'
 import FeaturedApp from 'modules/home.content/FeaturedApp.js'
-import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
-import SlideTabletFormView from 'modules/home.content/SlideTabletFormView.js'
+// import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
+// import SlideTabletFormView from 'modules/home.content/SlideTabletFormView.js'
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
-
-import {
-    TabletView,
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile,
-    isTablet
-} from "react-device-detect";
+// import {
+//     TabletView,
+//     BrowserView,
+//     MobileView,
+//     isBrowser,
+//     isMobile,
+//     isTablet
+// } from "react-device-detect";
 class ContentFormView extends React.Component {
     componentDidMount() {
         window.onload = function () {
-            $.getScript(`/static/js/owl.carousel.min.js?v=${Config.build_version}`)
-            $.getScript(`/static/js/jquery.matchHeight-min.js?v=${Config.build_version}`)
-
+            $.getScript(`/static/js/owl.carousel.min.js?v=${Config.build_version}`, function () { }, true);
+            $.getScript(`/static/js/jquery.matchHeight-min.js?v=${Config.build_version}`, function () { }, true);
         }();
     }
     render() {
+        let { slide } = this.props.dataInit
         return (
             <React.Fragment>
-                <SlideFormView />
+                <SlideFormView slide={slide} />
                 <GameHotFormView />
                 <LazyLoadComponent>
                     <TopDownFormView />
                     <FeaturedGame />
                     <FeaturedApp />
-                    {/* <BrowserView>
-                        <VideoFormView />
-                    </BrowserView>
-                    {
-                        isTablet ?
-                            <TabletView>
-                                <VideoFormView />
-                            </TabletView>
-                            :
-                            <div>
-                                {!isMobile ?
-                                    ''
-                                    :
-                                    <MobileView>
-                                        <VideoMobileFormView />
-                                    </MobileView>
-                                }
-                            </div>
-
-                    } */}
                     <ListTypeGame />
                 </LazyLoadComponent>
-
             </React.Fragment>
         )
     }

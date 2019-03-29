@@ -3,15 +3,16 @@ class SLideImageFormView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: ['https://api.apksafety.com/images/image-not-found.jpg']
+            data: this.props.arrSlide
         }
     }
     componentDidMount() {
-        let { arrSlide } = this.props
-        this.setState({ data: arrSlide })
+        window.onload = function () {
+            $.getScript(`/static/js/index.js?v=${Config.build_version}`, function () {}, true);
+        }();
     }
     componentWillUnmount() {
-        this.setState({ data: ['https://api.apksafety.com/images/image-not-found.jpg'] })
+        this.setState({ data: [] })
     }
     render() {
         let arrSlide = this.state.data

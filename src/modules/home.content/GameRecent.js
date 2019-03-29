@@ -18,22 +18,7 @@ class GameRecent extends React.Component {
         getBlogBySection('featured_games').then(Response => {
             let { Data } = Response
             this.setState({ data: Data })
-            // var myscript = document.createElement('script');
-            // myscript.setAttribute('src', '/static/js/main.js');
-            // var div = document.getElementById('target');
-            // div.appendChild(myscript);
         })
-
-
-    }
-
-    componentDidUpdate() {
-        setTimeout(() => {
-            window.onload = function () {
-                $.getScript(`/static/js/index.js?v=${Config.build_version}`)
-                // $.getScript(`static/js/main.js?v=${Config.build_version}`)
-            }();
-        }, 100)
     }
     render() {
         let { data } = this.state
@@ -48,7 +33,6 @@ class GameRecent extends React.Component {
                             {
                                 data.map((item, i) => {
                                     let { id, title, type_name, type, thumbnail, title_slug } = item
-
                                     return (
                                         <li key={`i_${id}`} className="gamehot__list__items">
                                             <dl>

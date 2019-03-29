@@ -16,29 +16,29 @@ $(document).ready(function() {
 
     //------- Lightbox js --------//
 
-    $('.img-pop-up').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
+    // $('.img-pop-up').magnificPopup({
+    //     type: 'image',
+    //     gallery: {
+    //         enabled: true
+    //     }
+    // });
 
-    $('.play-btn').magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
+    // $('.play-btn').magnificPopup({
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false
+    // });
 
     //------- Initiate superfish on nav menu --------//
 
-    $('.nav-menu').superfish({
-        animation: {
-            opacity: 'show'
-        },
-        speed: 400
-    });
+    // $('.nav-menu').superfish({
+    //     animation: {
+    //         opacity: 'show'
+    //     },
+    //     speed: 400
+    // });
 
     //------- Accordion  js --------//  
 
@@ -108,15 +108,15 @@ $(document).ready(function() {
 
     //------- Tabs Js --------//  
 
-    $('#horizontalTab').jqTabs({
-        direction: 'horizontal',
-        duration: 200
-    });
+    // $('#horizontalTab').jqTabs({
+    //     direction: 'horizontal',
+    //     duration: 200
+    // });
 
-    $('#horizontalTab2').jqTabs({
-        direction: 'horizontal',
-        duration: 200
-    });
+    // $('#horizontalTab2').jqTabs({
+    //     direction: 'horizontal',
+    //     duration: 200
+    // });
 
     jQuery(document).ready(function($) {
         // Get current path and find target link
@@ -273,95 +273,95 @@ $(document).ready(function() {
 
     //------- Owl Carusel js --------//   
 
-    $('.active-slider-carusel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 30,
-        autoplayTimeout: 4500,
-        autoplayHoverPause: true,        
-        smartSpeed: 600,
-        autoplay: true,
-        animateOut: 'fadeOut',
-        dots: true,
-    });
+    // $('.active-slider-carusel').owlCarousel({
+    //     items: 1,
+    //     loop: true,
+    //     margin: 30,
+    //     autoplayTimeout: 4500,
+    //     autoplayHoverPause: true,        
+    //     smartSpeed: 600,
+    //     autoplay: true,
+    //     animateOut: 'fadeOut',
+    //     dots: true,
+    // });
 
-    $('.active-review-carusel').owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 30,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        autoplay: true,
-        nav: true,
-        navText: ["<i class='ti-shift-left'></i>", "<i class='ti-shift-right'></i>"],
-        responsive: {
-            0: {
-                items: 1
-            },
-            992: {
-                items: 3,
-            }
-        }
-    });
+    // $('.active-review-carusel').owlCarousel({
+    //     items: 3,
+    //     loop: true,
+    //     margin: 30,
+    //     autoplayTimeout: 4000,
+    //     autoplayHoverPause: true,
+    //     smartSpeed: 800,
+    //     autoplay: true,
+    //     nav: true,
+    //     navText: ["<i class='ti-shift-left'></i>", "<i class='ti-shift-right'></i>"],
+    //     responsive: {
+    //         0: {
+    //             items: 1
+    //         },
+    //         992: {
+    //             items: 3,
+    //         }
+    //     }
+    // });
 
-    $('.active-latest-post-carusel').owlCarousel({
-        items: 2,
-        loop: true,
-        margin: 30,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        autoplay: true,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            992: {
-                items: 2,
-            }
-        }
-    });
+    // $('.active-latest-post-carusel').owlCarousel({
+    //     items: 2,
+    //     loop: true,
+    //     margin: 30,
+    //     autoplayTimeout: 4000,
+    //     autoplayHoverPause: true,
+    //     smartSpeed: 800,
+    //     autoplay: true,
+    //     dots: true,
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //         },
+    //         992: {
+    //             items: 2,
+    //         }
+    //     }
+    // });
 
-    $('.active-popular-post-carusel').owlCarousel({
-        items: 4,
-        loop: true,
-        margin: 30,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            991: {
-                items: 3,
-            },
-            1024: {
-                items: 3,
-            },
-            1025: {
-                items: 4,
-            }
-        }
-    });
+    // $('.active-popular-post-carusel').owlCarousel({
+    //     items: 4,
+    //     loop: true,
+    //     margin: 30,
+    //     autoplay: true,
+    //     autoplayTimeout: 4000,
+    //     autoplayHoverPause: true,
+    //     smartSpeed: 800,
+    //     dots: true,
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //         },
+    //         768: {
+    //             items: 2,
+    //         },
+    //         991: {
+    //             items: 3,
+    //         },
+    //         1024: {
+    //             items: 3,
+    //         },
+    //         1025: {
+    //             items: 4,
+    //         }
+    //     }
+    // });
 
-    $('.active-latest-widget-carusel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 30,
-        autoplayTimeout: 4500,
-        autoplayHoverPause: true,
-        smartSpeed: 600,
-        autoplay: true,
-        dots: true,
-    });
+    // $('.active-latest-widget-carusel').owlCarousel({
+    //     items: 1,
+    //     loop: true,
+    //     margin: 30,
+    //     autoplayTimeout: 4500,
+    //     autoplayHoverPause: true,
+    //     smartSpeed: 600,
+    //     autoplay: true,
+    //     dots: true,
+    // });
 
 
      //------- Map js  --------//   
