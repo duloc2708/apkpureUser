@@ -31,6 +31,9 @@ class Header extends React.Component {
 
     });
   }
+  _loadHome(){
+    window.location.reload()
+  }
   render() {
     return (
       <header id="header">
@@ -58,7 +61,7 @@ class Header extends React.Component {
                     </div>
                   </div>
                 </li>
-                <li><a href="/">Home</a>
+                <li><a onClick={()=>this._loadHome()}>Home</a>
                 </li>
                 <li>
                   <Link as={`/blog`} href={`/blog`}><a>Blog</a></Link>
