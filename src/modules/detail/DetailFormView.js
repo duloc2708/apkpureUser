@@ -4,12 +4,17 @@ import SLideImageFormView from './SLideImageFormView'
 import GameRecent from 'modules/home.content/GameRecent'
 let { initGA, logPageView } = Config
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { updateView } from 'modules/detail/actions/'
 
 class DetailFormView extends React.Component {
     constructor(props) {
         super(props);
     }
     componentDidMount() {
+        let { data } = this.props
+        let dataTemp = data        
+        dataTemp.view = parseInt(dataTemp.view) + 1
+        updateView(dataTemp)
         // if (!window.GA_INITIALIZED) {
         //     initGA()
         //     window.GA_INITIALIZED = true
@@ -22,7 +27,7 @@ class DetailFormView extends React.Component {
         }();
     }
     render() {
-        let { title, type_name, type, thumbnail, content_long, title_slug, atr3, atr5, atr6, atr7 } = this.props.data
+        let { view, title, type_name, type, thumbnail, content_long, title_slug, atr3, atr5, atr6, atr7 } = this.props.data
         let arrSlide = []
         if (atr7) {
             arrSlide = atr7.split(',')
@@ -61,9 +66,9 @@ class DetailFormView extends React.Component {
                                               <meta itemProp="worstRating" content="1"> */}
                                                     </span>
                                                     <span className="details-delimiter"> | </span>
-                                                    <a className="details-to-bottom" data-type="reviews">7.5k Reviews</a>
-                                                    <span className="details-delimiter"> | </span>
-                                                    <a className="details-to-bottom" data-type="posts">3.8k Posts</a>
+                                                    <a className="details-to-bottom" data-type="reviews">{view} Reviews</a>
+                                                    {/* <span className="details-delimiter"> | </span> */}
+                                                    {/* <a className="details-to-bottom" data-type="posts">3.8k Posts</a> */}
                                                 </div>
                                             </div>
                                             <div className="details-author">
