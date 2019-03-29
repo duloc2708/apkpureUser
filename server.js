@@ -97,6 +97,11 @@ app.prepare()
           const actualPage = '/blog'
           app.render(req, res, actualPage, {})
         })
+        server.get(`/service/:id`, (req, res) => {
+          const actualPage = '/service'
+          const queryParams = { id: req.params.id }
+          app.render(req, res, actualPage, {})
+        })
         server.get(`/download/:name&:mineType&:title`, (req, res) => {
           const actualPage = '/download'
           const queryParams = { name: req.params.name, mineType: req.params.mineType, title: req.params.title }
