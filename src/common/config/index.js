@@ -1,16 +1,16 @@
 
 import ReactGA from 'react-ga'
-// export const API_URL = 'https://api.apksafety.com/api/'  //PROD
-// export const API_IMAGE = 'https://api.apksafety.com/api/image'  //PROD
-// export const API_LOCAL_IMAGE = 'https://apksafety.com/static/'  //DEV
-// export const API_DOWNLOAD_FILE = 'http://apkverified.com/api/'  //DEV
-// export const API_DOMAIN_CURRENT = 'https://apksafety.com/'  //DEV
-
-export const API_URL = 'http://localhost:1337/api/'  //PROD
-export const API_IMAGE = 'http://localhost:1337/api/image'  //PROD
-export const API_LOCAL_IMAGE = 'http://localhost:1337/static/'  //DEV
-export const API_DOWNLOAD_FILE = 'http://localhost:1337/api/'  //DEV
+export const API_URL = 'https://api.apksafety.com/api/'  //PROD
+export const API_IMAGE = 'https://api.apksafety.com/api/image'  //PROD
+export const API_LOCAL_IMAGE = 'https://apksafety.com/static/'  //DEV
+export const API_DOWNLOAD_FILE = 'http://apkverified.com/api/'  //DEV
 export const API_DOMAIN_CURRENT = 'https://apksafety.com/'  //DEV
+
+// export const API_URL = 'http://localhost:1337/api/'  //PROD
+// export const API_IMAGE = 'http://localhost:1337/api/image'  //PROD
+// export const API_LOCAL_IMAGE = 'http://localhost:1337/static/'  //DEV
+// export const API_DOWNLOAD_FILE = 'http://localhost:1337/api/'  //DEV
+// export const API_DOMAIN_CURRENT = 'https://apksafety.com/'  //DEV
 
 export const DEFAULT_FOLDER = '/';
 
