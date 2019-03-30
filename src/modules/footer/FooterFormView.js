@@ -30,7 +30,7 @@ class FooterFormView extends React.Component {
                                             let { id, title, routes } = item
                                             return ([
                                                 <Link key={`link_${item.id}`} as={`/service/${routes}`} href={`/service?id=${routes}`}>
-                                                    <a onClick><span style={{ "color": "rgba(255,255,255,0.6)" }}>{item.title}</span></a>
+                                                    <a><span style={{ "color": "rgba(255,255,255,0.6)" }}>{item.title}</span></a>
                                                 </Link>,
                                                 , <br key={`br_${item.id}`} />]
                                             )
