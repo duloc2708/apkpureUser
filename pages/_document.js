@@ -45,7 +45,7 @@ export default class SiteDocument extends Document {
 
           {/* <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" /> */}
 
-          <script dangerouslySetInnerHTML={{
+          {/* <script dangerouslySetInnerHTML={{
             __html: ` WebFontConfig = {
               google: { families: [ 'Roboto:100,100i,300,400,400i,500,500i,700,700i,900,900i' ] }
           };
@@ -57,7 +57,7 @@ export default class SiteDocument extends Document {
               wf.async = 'true';
               var s = document.getElementsByTagName('script')[0];
               s.parentNode.insertBefore(wf, s);
-          })();`}} />
+          })();`}} /> */}
 
 
           <script defer src={`/static/js/main.js?v=${Config.build_version}`} />
