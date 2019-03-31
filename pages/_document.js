@@ -17,7 +17,6 @@ export default class SiteDocument extends Document {
     return (
       <html>
         <Head>
-          <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
           <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
           {/* <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" /> */}
           {/* <link rel="preload stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
@@ -43,6 +42,24 @@ export default class SiteDocument extends Document {
             {main}
           </div>
           <NextScript />
+
+          {/* <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" /> */}
+
+          <script dangerouslySetInnerHTML={{
+            __html: ` WebFontConfig = {
+              google: { families: [ 'Roboto:100,100i,300,400,400i,500,500i,700,700i,900,900i' ] }
+          };
+      
+          (function() {
+              var wf = document.createElement('script');
+              wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+              wf.type = 'text/javascript';
+              wf.async = 'true';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(wf, s);
+          })();`}} />
+
+
           <script defer src={`/static/js/main.js?v=${Config.build_version}`} />
           <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9N8KPK"
