@@ -66,7 +66,7 @@ class GameHotFormView extends React.Component {
                                                         <dd className="gamehot__buttom">
 
                                                             <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                                <a className="btn btn-primary"> Download</a>
+                                                                <a className="btn btn-primary">  <span>Download</span></a>
                                                             </Link>
                                                         </dd>
                                                     </dl>
@@ -103,7 +103,7 @@ class GameHotFormView extends React.Component {
                                                         <dd className="gamehot__buttom">
 
                                                             <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                                <a className="btn btn-primary"> Download</a>
+                                                                <a className="btn btn-primary">  <span>Download</span></a>
                                                             </Link>
                                                         </dd>
                                                     </dl>
