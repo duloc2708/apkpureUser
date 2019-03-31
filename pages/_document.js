@@ -34,7 +34,7 @@ export default class SiteDocument extends Document {
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-P9N8KPK');`}} />
-          <script defer src={`/static/js/jquery-2.2.4.min.js?v=${Config.build_version}`} />
+          <script defer src={`/static/js/jquery-3.3.1.min.js?v=${Config.build_version}`} />
           <script defer src={`/static/js/bootstrap.min.js?v=${Config.build_version}`} />
         </Head>
         <body>
