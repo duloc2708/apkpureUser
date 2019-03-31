@@ -1,7 +1,5 @@
 
-import { getDataBySearch } from 'modules/search/actions/'
 import Link from 'next/link'
-import LazyImage from 'common/component/LazyImage'
 const linkStyle = {
   marginRight: 15
 }
