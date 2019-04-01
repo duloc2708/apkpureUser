@@ -50,7 +50,7 @@ class SlideFormView extends React.Component {
                                     <div className="items__slide__block__img">
                                         <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                             <a>
-                                                <LazyImage image={{ src: Config.getImageIndex(atr4, 300, 155), alt: title, width: 300, height: 155 }} />
+                                                <LazyImage image={{ src: Config.getImageIndex(atr4, 320, 155), alt: title, width: 320, height: 155 }} />
                                             </a>
                                         </Link>
                                     </div>

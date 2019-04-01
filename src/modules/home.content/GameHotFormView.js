@@ -50,7 +50,7 @@ class GameHotFormView extends React.Component {
                                                         <dt className="gamehot__img">
                                                             <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                                                 <a>
-                                                                    <LazyImage image={{ src: Config.getImageIndex(thumbnail, 75, 75), alt: title, width: 75, height: 75 }} />
+                                                                    <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
 
                                                                 </a>
                                                                 {/* <img alt={title} title={title} width="75px" height="50px" src={Config.getImageIndex(thumbnail, 75, 75)} /> */}

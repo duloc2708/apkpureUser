@@ -32,7 +32,7 @@ class HotUpdateFormView extends React.Component {
                                 <div key={id} className="items">
                                     <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                         <a className="favicon" title={title}>
-                                            <LazyImage image={{ src: Config.getImageIndex(thumbnail, 75, 75), alt: title, width: 75, height: 75 }} />
+                                            <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                         </a>
                                     </Link>
                                     <div className="name">

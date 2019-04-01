@@ -24,8 +24,18 @@ class ContentFormView extends React.Component {
             $.getScript(`/static/js/jquery.matchHeight-min.js?v=${Config.build_version}`, function () { }, true);
         }();
     }
+    getExt(path) {
+        return (path.match(/(?:.+..+[^\/]+$)/ig) != null) ? path.split('.').slice(-1) : 'null';
+    }
     render() {
         let { slide } = this.props.dataInit
+        let str = `png?w=170&fakeurl=1`
+        if (str.indexOf('?') != -1) {
+            str = str.substring(0, str.indexOf("?"));
+        }
+        console.log('matches>>>>', str);
+
+
         return (
             <React.Fragment>
                 <SlideFormView slide={slide} />
