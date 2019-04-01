@@ -1,9 +1,9 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import ReactGA from 'react-ga';
-import carousel from '../static/styles/owl.carousel.min.css';
-import animate from '../static/styles/animate.min.css';
-import css from '../static/styles/style.css';
+import carousel from '../static/css/owl.carousel.min.css';
+import animate from '../static/css/animate.min.css';
+import css from '../static/css/style.css';
 
 export default class SiteDocument extends Document {
   componentDidMount() {
