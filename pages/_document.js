@@ -18,7 +18,8 @@ export default class SiteDocument extends Document {
       <html>
         <Head>
           <link rel='preload stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
-          {/* <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" /> */}
+    
+       {/* <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" /> */}
           {/* <link rel="preload stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
                <link rel="preload stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" /> */}
           {/* <link rel="preload stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" /> */}
@@ -43,7 +44,6 @@ export default class SiteDocument extends Document {
           </div>
           <NextScript />
 
-          {/* <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" /> */}
 
           {/* <script dangerouslySetInnerHTML={{
             __html: ` WebFontConfig = {
