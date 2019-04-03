@@ -13,14 +13,21 @@ const Download = (props) => (
 )
 
 Download.getInitialProps = async function (context) {
-  const { name, mineType, title } = context.query
-  return {
-    data: {
-      title: title,
-      name: name,
-      mineType: mineType
-    }
-  }
+  //// lấy link từ file server
+  // const { name, mineType, title } = context.query
+  // return {
+  //   data: {
+  //     title: title,
+  //     name: name,
+  //     mineType: mineType
+  //   }
+  // }
+
+  // lấy link từ apk nhâp
+  const { name, mineType, title } = context.query  
+  const res = await axios(`${Config.API_URL}articles/get_link_apk`, { params: { title_slug: name } })
+  const { Data } = await res.data  
+  return { data: Data && Data[0] || {} }
 }
 
 export default Download

@@ -14,24 +14,38 @@ class DowloadFormView extends React.Component {
         }
         logPageView();
     }
-    componentWillMount(){
-        $('head').append('<link rel="stylesheet" type="text/css" href="https://apksafety.com/static/styles/custom.min.css">');
+    componentWillMount() {
+        // $('head').append('<link rel="stylesheet" type="text/css" href="https://apksafety.com/static/styles/custom.min.css">');
     }
     componentDidMount() {
+        // setTimeout(() => {
+        //     const { name, mineType } = this.props.data
+        //     const link = document.createElement('a');
+        //     const href = `${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${name}&mineType=${mineType}`
+        //     link.href = href
+        //     document.getElementById("link_down").href = href
+        //     link.setAttribute('download', 'download'); //or any other extension
+        //     document.body.appendChild(link);
+        //     link.click();
+        // }, 3000)
+
+
+        // lấy link apkpure
         setTimeout(() => {
-            const { name, mineType } = this.props.data
-            const link = document.createElement('a');
-            const href = `${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${name}&mineType=${mineType}`
-            link.href = href
-            document.getElementById("link_down").href = href
-            link.setAttribute('download', 'download'); //or any other extension
-            document.body.appendChild(link);
-            link.click();
+            const { atr10 } = this.props.data
+            if (atr10) {
+                const link = document.createElement('a');
+                const href = atr10
+                link.href = href
+                document.getElementById("link_down").href = href
+                link.setAttribute('download', 'download'); //or any other extension
+                document.body.appendChild(link);
+                link.click();
+            }
         }, 3000)
     }
     render() {
-        const { name, mineType, title } = this.props.data
-
+        const { title } = this.props.data
         return (
             <React.Fragment>
                 <section className="popular-post-area download__time pt-120">
