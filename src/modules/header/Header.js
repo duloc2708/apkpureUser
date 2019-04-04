@@ -15,7 +15,6 @@ class Header extends React.Component {
 
   }
   _onSearch() {
-    alert('aaa')
     window.location.href = "/search?q=" + this.state.search;
   }
   componentDidMount() {
