@@ -81,7 +81,7 @@ class DetailFormView extends React.Component {
                                                 <span className="fsize">(<span>1.7 GB</span>)</span>
                                             </a> */}
                                                 <Link as={`/download?name=${title_slug}&mineType=${atr3}`} href={`/download?name=${title_slug}&mineType=${atr3}&title=${title}`}>
-                                                    <a className=" da" title="Download PUBG MOBILE latest version xapk"
+                                                    <a target="_blank" className=" da" title="Download PUBG MOBILE latest version xapk"
                                                     //href={`${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${title_slug}&mineType=${atr3}`}
                                                     >Download APK
                                                 <span className="fsize">(<span>{atr5}</span>)</span>
