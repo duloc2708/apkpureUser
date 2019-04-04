@@ -15,6 +15,7 @@ class Header extends React.Component {
 
   }
   _onSearch() {
+    alert('aaa')
     window.location.href = "/search?q=" + this.state.search;
   }
   componentDidMount() {
@@ -29,7 +30,7 @@ class Header extends React.Component {
 
     });
   }
-  _loadHome(){
+  _loadHome() {
     window.location.reload()
   }
   render() {
@@ -53,9 +54,9 @@ class Header extends React.Component {
                         ref="search"
                         id="search"
                       />
-                      <button id="btnSearch" onClick={() => this._onSearch()} className="searchButton">
+                      <a onClick={() => this._onSearch()} className="searchButton">
                         <i className="fa fa-search"></i>
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </li>

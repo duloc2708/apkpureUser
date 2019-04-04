@@ -55,9 +55,9 @@ class SearchFormView extends React.Component {
                                 <div className="from__search">
                                     <div className="wrap__search clearfix">
                                         <input onChange={(e) => this._handleInput(e)} id="searchMain" value={search} type="text" className="searchTerm" placeholder="What are you looking for?" />
-                                        <button onClick={() => this._onSearch()} type="submit" className="searchButton" >
+                                        <a onClick={() => this._onSearch()} className="searchButton">
                                             <i className="fa fa-search"></i>
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="search__content">
