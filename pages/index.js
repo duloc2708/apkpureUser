@@ -34,16 +34,16 @@ const Index = (props) => (
       <title>{TITLE}</title>
       {/* <meta property="fb:pages" content="122102927812763" /> */}
       <meta property="og:site_name" content="Apksafety.com" />
-      <meta name="description" content={TITLE} />
+      <meta name="description" content={NAME_DESCRIPTION} />
       <meta property="og:site_name" content="Apksafety.com" />
       <meta property="og:image" content='static/img/logo-d.png' />
       <meta property="og:type" content="article" />
       <meta property="og:url" content="https://apksafety.com/" />
       <meta property="og:title" content={TITLE} />
-      <meta property="og:description" content={TITLE} />
+      <meta property="og:description" content={NAME_DESCRIPTION} />
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:title" content={TITLE} />
-      <meta property="twitter:description" content={TITLE} />
+      <meta property="twitter:description" content={NAME_DESCRIPTION} />
       <meta property="twitter:image" content='static/img/logo-d.png' />
       <meta property="twitter:url" content="https://apksafety.com/" />
       {/* <meta name="theme-color" content="#192433" /> */}
