@@ -29,13 +29,6 @@ class ContentFormView extends React.Component {
     }
     render() {
         let { slide } = this.props.dataInit
-        let str = `png?w=170&fakeurl=1`
-        if (str.indexOf('?') != -1) {
-            str = str.substring(0, str.indexOf("?"));
-        }
-        console.log('matches>>>>', str);
-
-
         return (
             <React.Fragment>
                 <SlideFormView slide={slide} />
