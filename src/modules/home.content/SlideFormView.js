@@ -12,11 +12,11 @@ class SlideFormView extends React.Component {
     componentDidMount() {
         setTimeout(() => {
             window.onload = function () {
-                $.getScript(`/static/js/jquery.flexslider-min.js?v=${Config.build_version}`, function () { }, true);
-                $.getScript(`/static/js/index.js?v=${Config.build_version}`, function () { }, true)
+                $.getScript(`/static/js/jquery.flexslider-min.js?v=${Config.build_version}`, () => {
+                    $.getScript(`/static/js/index.js?v=${Config.build_version}`, function () { }, true)
+                });
             }();
         })
-        console.log('componentDidMount');
     }
     render() {
         let { data, data2, start, end, list_dots, dots_default, isLoad } = this.state
