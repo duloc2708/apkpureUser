@@ -18,8 +18,8 @@ export default class SiteDocument extends Document {
       <html>
         <Head>
           <link rel='preload stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
-    
-       {/* <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" /> */}
+
+          {/* <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" /> */}
           {/* <link rel="preload stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
                <link rel="preload stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" /> */}
           {/* <link rel="preload stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" /> */}
@@ -58,8 +58,6 @@ export default class SiteDocument extends Document {
               var s = document.getElementsByTagName('script')[0];
               s.parentNode.insertBefore(wf, s);
           })();`}} /> */}
-
-
           <script defer src={`/static/js/main.js?v=${Config.build_version}`} />
           <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9N8KPK"

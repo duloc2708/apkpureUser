@@ -43,11 +43,12 @@ $(document).ready(function() {
             if (!container.is(e.target) && container.has(e.target).length === 0) {
                 if ($('body').hasClass('mobile-nav-active')) {
                     $('body').removeClass('mobile-nav-active');
-                    $('#mobile-nav-toggle i').toggleClass('lnr-menu');
+                    $('#mobile-nav-toggle i').removeClass('lnr-cross');
+                    $(this).addClass('lnr-cross');   
                     $('#mobile-body-overly').fadeOut();
                 }
             }else{
-                $('#mobile-nav-toggle i').addClass('lnr-cross');
+                
             }
         });    
 
