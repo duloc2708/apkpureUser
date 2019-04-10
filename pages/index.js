@@ -53,12 +53,30 @@ const Index = (props) => (
 )
 Index.getInitialProps = async function (context) {
   // const { id } = context.query
-  // const res = await axios(`${Config.API_URL}articles/get_blog_by_section`, { params: { type: 'slide' } })
-  // const slide = await res.data.Data
-  // console.log(`Fetched show a: ${show.name}`)
+  const res = await axios(`${Config.API_URL}articles/get_blog_by_section`, { params: { type: 'home' } })
+  const home = await res.data.Data
+  let homeTemp = home
+  let slide = homeTemp.slice(0, 4).map(item => {
+    return item
+  })
+  let block1 = homeTemp.filter(x => x.type == 'game_action')
+  block1 = block1.slice(0, 9).map(item => {
+    return item
+  })
+  let block2 = homeTemp.filter(x => x.type == 'game_role_playing')
+  block2 = block2.slice(0, 9).map(item => {
+    return item
+  })
+  let block3 = homeTemp.filter(x => x.type != 'game_action' && x.type != 'game_role_playing')
+  block3 = block3.slice(0, 9).map(item => {
+    return item
+  })
   return {
     dataInit: {
-      slide: []
+      slide: slide,
+      block1: block1,
+      block2: block2,
+      block3: block3
     }
   }
 }

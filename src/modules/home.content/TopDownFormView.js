@@ -5,25 +5,8 @@ class TopDownFormView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [
-                { id: 0, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 1, title: 'Arena Brawls APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 2, title: 'Magic Rampage APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' },
-                { id: 3, title: 'Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'https://api.apksafety.com/images/image-not-found.jpg' }
-            ]
+            data: this.props.data
         }
-    }
-    componentDidMount() {
-        getBlogBySection('top_down').then(Response => {
-            let { Data } = Response
-            this.setState({ data: Data })
-            // var myscript = document.createElement('script');
-            // myscript.setAttribute('src', '/static/js/main.js');
-            // var div = document.getElementById('target');
-            // div.appendChild(myscript);
-        })
-
-
     }
     render() {
         let { data } = this.state

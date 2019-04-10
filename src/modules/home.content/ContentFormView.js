@@ -21,7 +21,6 @@ class ContentFormView extends React.Component {
     componentDidMount() {
         window.onload = function () {
             $.getScript(`/static/js/owl.carousel.min.js?v=${Config.build_version}`, function () { }, true);
-            $.getScript(`/static/js/jquery.flexslider-min.js?v=${Config.build_version}`, function () { }, true);
             $.getScript(`/static/js/jquery.matchHeight-min.js?v=${Config.build_version}`, function () { }, true);
         }();
     }
@@ -29,15 +28,14 @@ class ContentFormView extends React.Component {
         return (path.match(/(?:.+..+[^\/]+$)/ig) != null) ? path.split('.').slice(-1) : 'null';
     }
     render() {
-        let { slide } = this.props.dataInit
+        let { slide, block1, block2, block3 } = this.props.dataInit
         return (
             <React.Fragment>
                 <SlideFormView slide={slide} />
-                <GameHotFormView />
                 <LazyLoadComponent>
-                    <TopDownFormView />
-                    <FeaturedGame />
-                    {/* <FeaturedApp /> */}
+                    <GameHotFormView data={block1} />
+                    <TopDownFormView data={block2} />
+                    <FeaturedGame data={block3} />
                     <ListTypeGame />
                 </LazyLoadComponent>
             </React.Fragment>

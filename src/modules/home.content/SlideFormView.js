@@ -4,30 +4,19 @@ import LazyImage from 'common/component/LazyImage'
 class SlideFormView extends React.Component {
     constructor(props) {
         super(props);
+        let { slide } = this.props
         this.state = {
-            data: [],
-            data2: [
-                { id: -1, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'static/img/no-image2.jpg' },
-                // { id: -2, title: 'Citytopia: Build your Dream City APK', type_name: 'Game action', type: '', thumbnail: '', title_slug: '', atr4: 'static/img/no-image2.jpg' }
-            ],
-            isLoad: false
+            data: slide
         }
     }
     componentDidMount() {
-        getBlogBySection('slide').then(Response => {
-            let { Data } = Response
-            this.setState({ data: Data })
-        })
-    }
-    componentWillMount() {
-        this.setState({ isLoad: false })
-    }
-    componentDidUpdate() {
         setTimeout(() => {
             window.onload = function () {
+                $.getScript(`/static/js/jquery.flexslider-min.js?v=${Config.build_version}`, function () { }, true);
                 $.getScript(`/static/js/index.js?v=${Config.build_version}`, function () { }, true)
             }();
         })
+        console.log('componentDidMount');
     }
     render() {
         let { data, data2, start, end, list_dots, dots_default, isLoad } = this.state
@@ -52,7 +41,6 @@ class SlideFormView extends React.Component {
                                                             <LazyImage image={{ src: Config.getImageIndex(arrSlide[0], 631, 355), alt: item, width: 0, height: 0 }} />
                                                         </a>
                                                     </Link>
-                                                    {/* <img src="https://image.winudf.com/v2/image1/Y29tLnhpbmdqb3lzLmZ1cmllcy5ncF9iYW5uZXJfMTU1NDI4OTUxNl8wODM/banner.jpg?w=850&fakeurl=1" alt="demo" title="demo" /> */}
                                                 </li>
                                             )
                                         })
