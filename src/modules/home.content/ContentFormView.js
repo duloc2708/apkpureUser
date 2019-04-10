@@ -32,8 +32,8 @@ class ContentFormView extends React.Component {
         return (
             <React.Fragment>
                 <SlideFormView slide={slide} />
+                <GameHotFormView data={block1} />
                 <LazyLoadComponent>
-                    <GameHotFormView data={block1} />
                     <TopDownFormView data={block2} />
                     <FeaturedGame data={block3} />
                     <ListTypeGame />
