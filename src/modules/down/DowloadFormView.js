@@ -32,7 +32,7 @@ class DowloadFormView extends React.Component {
 
         // lấy link apkpure
         setTimeout(() => {
-            const { atr10 } = this.props.data            
+            const { atr10 } = this.props.data
             if (atr10) {
                 const link = document.createElement('a');
                 const href = atr10
@@ -59,7 +59,7 @@ class DowloadFormView extends React.Component {
                         </div>
                         <p>Your link are ready</p>
                         <div className="download__time__btn">
-                            <a id="link_down" type="button" class="btn btn-success">
+                            <a target="_blank" id="link_down" type="button" class="btn btn-success">
                                 Download APK
                               </a>
                             {/* <button type="button"  className="btn btn-success">Download APK</button> */}
