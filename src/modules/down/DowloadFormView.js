@@ -39,6 +39,7 @@ class DowloadFormView extends React.Component {
                 link.href = atr10
                 document.getElementById("link_down").href = href
                 link.setAttribute('download', 'download'); //or any other extension
+                link.setAttribute("target", "_blank");
                 document.body.appendChild(link);
                 link.click();
             }
