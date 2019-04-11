@@ -32,17 +32,17 @@ class DowloadFormView extends React.Component {
 
         // lấy link apkpure
         setTimeout(() => {
-            const { atr10 } = this.props.data
-            if (atr10) {
+            const { url_down } = this.props.data            
+            if (url_down) {
                 const link = document.createElement('a');
-                const href = atr10
+                const href = url_down
                 link.href = href
                 document.getElementById("link_down").href = href
                 link.setAttribute('download', 'download'); //or any other extension
                 document.body.appendChild(link);
                 link.click();
             }
-        }, 3000)
+        }, 0)
     }
     render() {
         const { title } = this.props.data
