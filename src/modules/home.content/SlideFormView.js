@@ -29,7 +29,7 @@ class SlideFormView extends React.Component {
                                 <ul className="slides">
                                     {
                                         data.map((item, i) => {
-                                            let { id, title, type_name, type, thumbnail, title_slug, atr4, atr7 } = item
+                                            let { id, title, type_name, type, thumbnail, title_slug, atr4, atr7, atr11 } = item
                                             let arrSlide = []
                                             if (atr7) {
                                                 arrSlide = atr7.split(',')
@@ -38,7 +38,7 @@ class SlideFormView extends React.Component {
                                                 <li key={`slide_${id}`}>
                                                     <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                                         <a>
-                                                            <LazyImage image={{ src: Config.getImageIndex(arrSlide[0], 631, 355), alt: item, width: 0, height: 0 }} />
+                                                            <LazyImage image={{ src: Config.getImageIndex(atr11, 0, 0), alt: item, width: 0, height: 0 }} />
                                                         </a>
                                                     </Link>
                                                 </li>
