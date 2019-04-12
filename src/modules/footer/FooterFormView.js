@@ -18,7 +18,6 @@ class FooterFormView extends React.Component {
         let { data } = this.state
         return (
             <footer className="footer-area">
-                <img className="pattern-right" src={`${Config.API_DOMAIN_CURRENT}/img/pattern-right.png`} alt="" />
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-2  col-md-6 col-sm-6">
