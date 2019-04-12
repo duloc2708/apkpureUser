@@ -1,143 +1,132 @@
-var slideWrapper = $(".main-slider"),
-    iframes = slideWrapper.find('.embed-player'),
-    lazyImages = slideWrapper.find('.slide-image'),
-    lazyCounter = 0;
+(function() {
 
-// POST commands to YouTube or Vimeo API
-function postMessageToPlayer(player, command){
-  if (player == null || command == null) return;
-  player.contentWindow.postMessage(JSON.stringify(command), "*");
-}
+  function init(item) {
+    var items = item.querySelectorAll('li'),
+        current = 0,
+        autoUpdate = true,
+        timeTrans = 4000;
+        
+    //create nav
+    var nav = document.createElement('nav');
+    nav.className = 'nav_arrows';
 
-// When the slide is changing
-function playPauseVideo(slick, control){
-  var currentSlide, slideType, startTime, player, video;
+    //create button prev
+    var prevbtn = document.createElement('button');
+    prevbtn.className = 'prev';
+    prevbtn.setAttribute('aria-label', 'Prev');
 
-  currentSlide = slick.find(".slick-current");
-  slideType = currentSlide.attr("class").split(" ")[1];
-  player = currentSlide.find("iframe").get(0);
-  startTime = currentSlide.data("video-start");
+    //create button next
+    var nextbtn = document.createElement('button');
+    nextbtn.className = 'next';
+    nextbtn.setAttribute('aria-label', 'Next');
 
-  if (slideType === "vimeo") {
-    switch (control) {
-      case "play":
-        if ((startTime != null && startTime > 0 ) && !currentSlide.hasClass('started')) {
-          currentSlide.addClass('started');
-          postMessageToPlayer(player, {
-            "method": "setCurrentTime",
-            "value" : startTime
-          });
-        }
-        postMessageToPlayer(player, {
-          "method": "play",
-          "value" : 1
-        });
-        break;
-      case "pause":
-        postMessageToPlayer(player, {
-          "method": "pause",
-          "value": 1
-        });
-        break;
+    //create counter
+    var counter = document.createElement('div');
+    counter.className = 'counter';
+    counter.innerHTML = "<span>1</span><span>"+items.length+"</span>";
+
+    if (items.length > 1) {
+      nav.appendChild(prevbtn);
+      nav.appendChild(counter);
+      nav.appendChild(nextbtn);
+      item.appendChild(nav);
     }
-  } else if (slideType === "youtube") {
-    switch (control) {
-      case "play":
-        postMessageToPlayer(player, {
-          "event": "command",
-          "func": "mute"
-        });
-        postMessageToPlayer(player, {
-          "event": "command",
-          "func": "playVideo"
-        });
-        break;
-      case "pause":
-        postMessageToPlayer(player, {
-          "event": "command",
-          "func": "pauseVideo"
-        });
-        break;
-    }
-  } else if (slideType === "video") {
-    video = currentSlide.children("video").get(0);
-    if (video != null) {
-      if (control === "play"){
-        video.play();
+
+    items[current].className = "current";
+    if (items.length > 1) items[items.length-1].className = "prev_slide";
+
+    var navigate = function(dir) {
+      items[current].className = "";
+
+      if (dir === 'right') {
+        current = current < items.length-1 ? current + 1 : 0;
       } else {
-        video.pause();
+        current = current > 0 ? current - 1 : items.length-1;
       }
+
+      var nextCurrent = current < items.length-1 ? current + 1 : 0,
+        prevCurrent = current > 0 ? current - 1 : items.length-1;
+
+      items[current].className = "current";
+      items[prevCurrent].className = "prev_slide";
+      items[nextCurrent].className = "";
+
+      //update counter
+      counter.firstChild.textContent = current + 1;
     }
+    
+    item.addEventListener('mouseenter', function() {
+      autoUpdate = false;
+    });
+
+    item.addEventListener('mouseleave', function() {
+      autoUpdate = true;
+    });
+
+    setInterval(function() {
+      if (autoUpdate) navigate('right');
+    },timeTrans);
+    
+    prevbtn.addEventListener('click', function() {
+      navigate('left');
+    });
+
+    nextbtn.addEventListener('click', function() {
+      navigate('right');
+    });
+
+    //keyboard navigation
+    document.addEventListener('keydown', function(ev) {
+      var keyCode = ev.keyCode || ev.which;
+      switch (keyCode) {
+        case 37:
+          navigate('left');
+          break;
+        case 39:
+          navigate('right');
+          break;
+      }
+    });
+
+    // swipe navigation
+    // from http://stackoverflow.com/a/23230280
+    item.addEventListener('touchstart', handleTouchStart, false);        
+    item.addEventListener('touchmove', handleTouchMove, false);
+    var xDown = null;
+    var yDown = null;
+    function handleTouchStart(evt) {
+      xDown = evt.touches[0].clientX;
+      yDown = evt.touches[0].clientY;
+    };
+    function handleTouchMove(evt) {
+      if ( ! xDown || ! yDown ) {
+        return;
+      }
+
+      var xUp = evt.touches[0].clientX;
+      var yUp = evt.touches[0].clientY;
+
+      var xDiff = xDown - xUp;
+      var yDiff = yDown - yUp;
+
+      if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+          /* left swipe */
+          navigate('right');
+        } else {
+          navigate('left');
+        }
+      } 
+      /* reset values */
+      xDown = null;
+      yDown = null;
+    };
+
+
   }
-}
 
-// Resize player
-function resizePlayer(iframes, ratio) {
-  if (!iframes[0]) return;
-  var win = $(".main-slider"),
-      width = win.width(),
-      playerWidth,
-      height = win.height(),
-      playerHeight,
-      ratio = ratio || 16/9;
-
-  iframes.each(function(){
-    var current = $(this);
-    if (width / ratio < height) {
-      playerWidth = Math.ceil(height * ratio);
-      current.width(playerWidth).height(height).css({
-        left: (width - playerWidth) / 2,
-         top: 0
-        });
-    } else {
-      playerHeight = Math.ceil(width / ratio);
-      current.width(width).height(playerHeight).css({
-        left: 0,
-        top: (height - playerHeight) / 2
-      });
-    }
-  });
-}
-
-// DOM Ready
-$(function() {
-  // Initialize
-  slideWrapper.on("init", function(slick){
-    slick = $(slick.currentTarget);
-    setTimeout(function(){
-      playPauseVideo(slick,"play");
-    }, 1000);
-    resizePlayer(iframes, 16/9);
-  });
-  slideWrapper.on("beforeChange", function(event, slick) {
-    slick = $(slick.$slider);
-    playPauseVideo(slick,"pause");
-  });
-  slideWrapper.on("afterChange", function(event, slick) {
-    slick = $(slick.$slider);
-    playPauseVideo(slick,"play");
-  });
-  slideWrapper.on("lazyLoaded", function(event, slick, image, imageSource) {
-    lazyCounter++;
-    if (lazyCounter === lazyImages.length){
-      lazyImages.addClass('show');
-      // slideWrapper.slick("slickPlay");
-    }
+  [].slice.call(document.querySelectorAll('.cd-slider')).forEach( function(item) {
+    init(item);
   });
 
-  //start the slider
-  slideWrapper.slick({
-    // fade:true,
-    autoplaySpeed:4000,
-    lazyLoad:"progressive",
-    speed:600,
-    arrows:false,
-    dots:true,
-    cssEase:"cubic-bezier(0.87, 0.03, 0.41, 0.9)"
-  });
-});
-
-// Resize event
-$(window).on("resize.slickVideoPlayer", function(){  
-  resizePlayer(iframes, 16/9);
-});
+})();

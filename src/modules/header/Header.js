@@ -53,8 +53,8 @@ class Header extends React.Component {
                         ref="search"
                         id="search"
                       />
-                      <button onClick={() => this._onSearch()} type="submit" class="searchButton">
-                        <i class="fa fa-search"></i>
+                      <button onClick={() => this._onSearch()} type="submit" className="searchButton">
+                        <i className="fa fa-search"></i>
                       </button>
                     </div>
                   </div>
