@@ -39,30 +39,6 @@ class FooterFormView extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-2  col-md-6 col-sm-6">
-                            <div className="single-footer-widget">
-                                <h4>Top Android Apps</h4>
-                                <ul className="menu-list">
-                                    <li><a href="#">WIFI WPS WPA TESTER</a></li>
-                                    <li><a href="#">WPS connect</a></li>
-                                    <li><a href="#">Wordpress</a></li>
-                                    <li><a href="#">XPOSED IMEI changer</a></li>
-                                    <li><a href="#">WhatsApp Messenger</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-lg-2  col-md-6 col-sm-6">
-                            <div className="single-footer-widget">
-                                <h4>Top Android Games </h4>
-                                <ul className="menu-list">
-                                    <li><a href="#">clash of Clans</a></li>
-                                    <li><a href="#">Asphalt 8: Airborne</a></li>
-                                    <li><a href="#">Clash of Kings</a></li>
-                                    <li><a href="#">Case Clicker</a></li>
-                                    <li><a href="#">Mesgram</a></li>
-                                </ul>
-                            </div>
-                        </div>
                         <div className="col-lg-6  col-md-6 col-sm-6">
                             <div className="single-footer-widget">
                                 <h4>Newsletter</h4>
