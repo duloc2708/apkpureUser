@@ -37,14 +37,13 @@ class SlideFormView extends React.Component {
                                                 }
                                                 return (
                                                     <li key={`slide_${id}`}>
-                                                        <div className="image" style={{ "background-image": `url(${Config.getImageIndex(atr11, 0, 0)}` }}></div>
 
-                                                        {/* <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
                                                             <a>
-
-                                                                <LazyImage image={{ src: Config.getImageIndex(atr11, 0, 0), alt: item, width: 0, height: 0 }} />
+                                                                <div className="image" style={{ "background-image": `url(${Config.getImageIndex(atr11, 0, 0)}` }}></div>
+                                                                {/* <LazyImage image={{ src: Config.getImageIndex(atr11, 0, 0), alt: item, width: 0, height: 0 }} /> */}
                                                             </a>
-                                                        </Link> */}
+                                                        </Link>
                                                     </li>
                                                 )
                                             })
