@@ -25,7 +25,7 @@ Download.getInitialProps = async function (context) {
 
   // lấy link từ apk nhâp
   const { name, mineType, title } = context.query
-  const res = await axios(`${Config.API_URL}articles/get_link_apk`, { params: { title_slug: name } })
+  const res = await axios(`${Config.API_URL}post/get_link_apk`, { params: { title_slug: name } })
   const { Data } = await res.data
   return { data: Data || '' }
 }

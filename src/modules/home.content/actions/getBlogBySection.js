@@ -1,7 +1,7 @@
 
 export default (type = '') => {
     return new Promise((resolve, rejects) => {
-        axios(`${Config.API_URL}articles/get_blog_by_section`,
+        axios(`${Config.API_URL}post/get_post_by_section`,
             { params: { type: type } })
             .then(res => {
                 let { data } = res

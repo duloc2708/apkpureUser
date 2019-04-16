@@ -8,18 +8,18 @@ if (typeof window !== 'undefined') {
 }
 const Type = (props) => (
     <Layout>
-        <BlogFormView />
+        <BlogFormView data={props.dataInit} />
     </Layout>
 )
 
 Type.getInitialProps = async function (context) {
-    const { id } = context.query
-    // const res = await axios(`https://api.tvmaze.com/shows/${id}`)
-    // const show = await res.data
-
-    // console.log(`Fetched show a: ${show.name}`)
-
-    return { show: {} }
+    const res = await axios(`${Config.API_URL}blogs/get_data_user`)
+    const data = await res.data.Data
+    return {
+        dataInit: {
+            data: data
+        }
+    }
 }
 
 export default Type

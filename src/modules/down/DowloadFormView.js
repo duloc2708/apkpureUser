@@ -21,7 +21,7 @@ class DowloadFormView extends React.Component {
         // setTimeout(() => {
         //     const { name, mineType } = this.props.data
         //     const link = document.createElement('a');
-        //     const href = `${Config.API_DOWNLOAD_FILE}articles/getfileapk?namefile=${name}&mineType=${mineType}`
+        //     const href = `${Config.API_DOWNLOAD_FILE}post/getfileapk?namefile=${name}&mineType=${mineType}`
         //     link.href = href
         //     document.getElementById("link_down").href = href
         //     link.setAttribute('download', 'download'); //or any other extension

@@ -57,7 +57,7 @@ app.prepare()
       res.status(200).sendFile('robots.txt', options)
     ));
     server.get('/sitemap.xml', (req, res) => (
-      request.get(`https://api.apksafety.com/api/articles/sitemapListType`, function (errData, responseList) {
+      request.get(`https://api.apksafety.com/api/post/sitemapListType`, function (errData, responseList) {
         let { Data } = JSON.parse(responseList.body, true)
         let listURL = [
           { url: `/blog`, changefreq: 'weekly', priority: 0.5 },
@@ -65,7 +65,7 @@ app.prepare()
         Data.map(item => {
           listURL.push({ url: `/${item.code}`, changefreq: 'daily', priority: 0.5 })
         })
-        request.get(`https://api.apksafety.com/api/articles/sitemapPost`, function (errData, responsePost) {
+        request.get(`https://api.apksafety.com/api/post/sitemapPost`, function (errData, responsePost) {
           let { Data } = JSON.parse(responsePost.body, true)
           Data.map(item => {
             listURL.push({ url: `/${item.type}/${item.title_slug}`, changefreq: 'daily', priority: 0.5 })

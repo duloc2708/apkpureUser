@@ -53,7 +53,7 @@ const Index = (props) => (
 )
 Index.getInitialProps = async function (context) {
   // const { id } = context.query
-  const res = await axios(`${Config.API_URL}articles/get_blog_by_section`, { params: { type: 'home' } })
+  const res = await axios(`${Config.API_URL}post/get_post_by_section`, { params: { type: 'home' } })
   const home = await res.data.Data
   let homeTemp = home
   let slide = homeTemp.slice(0, 4).map(item => {
