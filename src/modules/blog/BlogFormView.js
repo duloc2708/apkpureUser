@@ -1,5 +1,7 @@
 import Link from 'next/link'
 let { initGA, logPageView } = Config
+import LazyImage from 'common/component/LazyImage'
+
 class BlogFormView extends React.Component {
     constructor(props) {
         super(props);
@@ -36,11 +38,16 @@ class BlogFormView extends React.Component {
                                             <div className="col-lg-4 col-md-6" key={`blog_${id}`}>
                                                 <div className="item_blog">
                                                     <figure>
-                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
-                                                            <LazyImage image={{ src: Config.getImageIndex(thumbnail, 0, 0), alt: title, width: 0, height: 0 }} />
+                                                        <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}>
+                                                            <a>
+                                                                <LazyImage image={{ src: Config.getImageIndex(thumbnail, 300, 250), alt: title, width: 300, height: 250 }} />
+                                                            </a>
                                                         </Link>
                                                     </figure>
-                                                    <span>{title}</span>
+                                                    <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}>
+                                                        <span href="#">{title}</span>
+                                                    </Link>
+                                                    {/* <span>{title}</span> */}
                                                 </div>
                                             </div>
 

@@ -65,6 +65,9 @@ class Header extends React.Component {
                 <li>
                   <Link as={`/blog`} href={`/blog`}><a>Blog</a></Link>
                 </li>
+                <li>
+                  <Link as={`/video`} href={`/video`}><a>Video</a></Link>
+                </li>
                 <li><a href="/">Contact</a></li>
               </ul>
             </nav>

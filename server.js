@@ -112,9 +112,13 @@ app.prepare()
           const queryParams = { id: req.params.id }
           app.render(req, res, actualPage, queryParams)
         })
+        server.get(`/blog-detail/:id`, (req, res) => {
+          const actualPage = '/blog-detail'
+          const queryParams = { id: req.params.id }
+          app.render(req, res, actualPage, queryParams)
+        })
 
         server.get(`/${item}`, (req, res) => {
-          console.log('type>>>>>>>');
           const actualPage = '/type'
           const queryParams = { id: 900 }
           app.render(req, res, actualPage, queryParams)

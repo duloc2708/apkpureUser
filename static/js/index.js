@@ -12,11 +12,6 @@ function MatchHeight() {
   ;
 }
 
-$('.flexslider').flexslider({
-  animation: "slide",
-  controlNav: false
-});
-
 $(".slideVideo").owlCarousel({
   autoplay: true,
   lazyLoad: true,
@@ -49,3 +44,7 @@ $(".slideVideo").owlCarousel({
   }
 });
 
+$('.flexslider').flexslider({
+  animation: "slide",
+  controlNav: false
+});

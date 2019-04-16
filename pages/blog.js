@@ -16,9 +16,7 @@ Type.getInitialProps = async function (context) {
     const res = await axios(`${Config.API_URL}blogs/get_data_user`)
     const data = await res.data.Data
     return {
-        dataInit: {
-            data: data
-        }
+        dataInit: data
     }
 }
 
