@@ -12,7 +12,7 @@ class DetailFormView extends React.Component {
     }
     componentDidMount() {
         let { data } = this.props
-        let dataTemp = data        
+        let dataTemp = data
         dataTemp.view = parseInt(dataTemp.view) + 1
         updateView(dataTemp)
         // if (!window.GA_INITIALIZED) {
@@ -34,8 +34,8 @@ class DetailFormView extends React.Component {
         }
         return (
             <React.Fragment>
-                <section className="popular-post-area pt-120">
-                    <div className="container">
+                <section className="popular-post-area pt-120 page__blog__detail">
+                    <div className="container page__blog__detail__bg">
                         <div className="row">
                             <div className="box">
                                 <div className="box__title bread-crumbs">

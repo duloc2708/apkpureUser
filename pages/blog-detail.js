@@ -63,24 +63,24 @@ const BlogDetail = (props) => (
       <meta httpEquiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       {/* <title>Đài truyền hình Hàn Quốc làm tin hội nghị thượng đỉnh như thế nào? | Tinhte.vn</title> */}
-      <title>{props.data.atr8}</title>
+      <title>{props.data.title}</title>
       <link rel="apple-touch-icon" href='static/img/logo-d.png' />
       {/* <link rel="alternate" type="application/rss+xml" title="RSS của Tinhte.vn" href="https://tinhte.vn/rss/" /> */}
       {/* <link rel="next" href="threads/dai-truyen-hinh-han-quoc-lam-tin-hoi-nghi-thuong-dinh-nhu-the-nao.2920754/page-2" /> */}
-      <link rel="canonical" href={props.data.atr8} />
-      <meta name="description" content={props.data.atr9} />
+      <link rel="canonical" href={props.data.title} />
+      <meta name="description" content={props.data.desciption} />
       {/* <meta property="author" content="kevin_pump" /> */}
       {/* <meta property="article:author" content="https://facebook.com/10208889536421702" /> */}
       <meta property="og:site_name" content="Apksafety.com" />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content={props.data.atr8} />
-      <meta property="og:title" content={props.data.atr8} />
-      <meta property="og:description" content={props.data.atr9} />
+      <meta property="og:url" content={props.data.title} />
+      <meta property="og:title" content={props.data.title} />
+      <meta property="og:description" content={props.data.desciption} />
       {/* <meta property="fb:app_id" content="145923738846814" /> */}
       <meta property="twitter:card" content="summary" />
-      <meta property="twitter:title" content={props.data.atr8} />
-      <meta property="twitter:description" content={props.data.atr9} />
-      <meta property="twitter:url" content={props.data.atr8} />
+      <meta property="twitter:title" content={props.data.title} />
+      <meta property="twitter:description" content={props.data.desciption} />
+      <meta property="twitter:url" content={props.data.title} />
       <meta property="og:image" content={Config.getImageIndex(props.data.thumbnail, 300, 250)} />
       <meta property="twitter:image" content={Config.getImageIndex(props.data.thumbnail, 300, 250)} />
       <meta property="og:image:width" content="2048" />
@@ -112,8 +112,11 @@ const BlogDetail = (props) => (
 
 BlogDetail.getInitialProps = async function (context) {
   const { id } = context.query
-  
-  const res = await axios(`${Config.API_URL}post/get_post_detail`, { params: { title_slug: id } })
+  console.log('>>>>>>>>>>id', id);
+
+  const res = await axios(`${Config.API_URL}video/get_video_detail`, { params: { title_slug: id } })
+  console.log('>>>>>>>>>> res.data',  res.data);
+
   const { Data } = await res.data
   return { data: Data && Data[0] || {} }
 }
