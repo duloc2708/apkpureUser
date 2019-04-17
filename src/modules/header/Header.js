@@ -63,10 +63,7 @@ class Header extends React.Component {
                   <a href="/">Home</a>
                 </li>
                 <li>
-                  <Link as={`/blog`} href={`/blog`}><a>Blog</a></Link>
-                </li>
-                <li>
-                  <Link as={`/video`} href={`/video`}><a>Video</a></Link>
+                  <Link as={`/blog`} href={`/blog`}><a>Collection</a></Link>
                 </li>
                 <li><a href="/">Contact</a></li>
               </ul>

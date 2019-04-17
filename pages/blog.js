@@ -6,18 +6,19 @@ if (typeof window !== 'undefined') {
     window.$ = $;
     window.jQuery = $;
 }
-const Type = (props) => (
+const Blog = (props) => (
     <Layout>
         <BlogFormView data={props.dataInit} />
     </Layout>
 )
 
-Type.getInitialProps = async function (context) {
-    const res = await axios(`${Config.API_URL}blogs/get_data_user`)
+Blog.getInitialProps = async function (context) {
+    const res = await axios(`${Config.API_URL}video/video_by_section`)
+
     const data = await res.data.Data
     return {
         dataInit: data
     }
 }
 
-export default Type
+export default Blog

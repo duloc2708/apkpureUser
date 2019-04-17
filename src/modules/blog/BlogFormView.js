@@ -1,10 +1,15 @@
 import Link from 'next/link'
 let { initGA, logPageView } = Config
 import LazyImage from 'common/component/LazyImage'
-
+import RecentUploads from './RecentUploads'
+import MostVideo from './MostVideo'
+import TopGame from './TopGame'
 class BlogFormView extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            data: this.props.data
+        }
     }
     componentDidMount() {
         if (!window.GA_INITIALIZED) {
@@ -20,42 +25,27 @@ class BlogFormView extends React.Component {
 
     }
     render() {
-        const { data } = this.props
+        let { data } = this.state
         return (
-            <section className="popular-post-area pt-120">
+            <section className=" wrap__section page__video">
                 <div className="container">
                     <div className="row">
-                        <div className="title d-flex flex-column col-lg-12">
-                            <h4>blog</h4>
-                            <span></span>
-                        </div>
-                        <div className="col-lg-12 blog">
-                            <div className="row">
-                                {
-                                    data.map((item, i) => {
-                                        let { id, title, type_name, type, thumbnail, title_slug } = item
-                                        return (
-                                            <div className="col-lg-4 col-md-6" key={`blog_${id}`}>
-                                                <div className="item_blog">
-                                                    <figure>
-                                                        <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}>
-                                                            <a>
-                                                                <LazyImage image={{ src: Config.getImageIndex(thumbnail, 300, 250), alt: title, width: 300, height: 250 }} />
-                                                            </a>
-                                                        </Link>
-                                                    </figure>
-                                                    <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}>
-                                                        <span href="#">{title}</span>
-                                                    </Link>
-                                                    {/* <span>{title}</span> */}
-                                                </div>
-                                            </div>
-
-                                        )
-                                    })
-                                }
+                        <div className="col-md-8">
+                            <div className="banner_videoPr">
+                                <a href="#">
+                                    <img src={`${Config.API_LOCAL_IMAGE}img/video/banner.jpg`} />
+                                </a>
                             </div>
+
+                            <RecentUploads data={data} />
+                            <div className="banner_videoPr">
+                                <a href="#">
+                                    <img src={`${Config.API_LOCAL_IMAGE}img/video/banner.jpg`} />
+                                </a>
+                            </div>
+                            <MostVideo data={data} />
                         </div>
+                        <TopGame data={data} />
                     </div>
                 </div>
             </section>
