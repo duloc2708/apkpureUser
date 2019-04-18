@@ -38,12 +38,9 @@ class DowloadFormView extends React.Component {
 
         getlink(this.props.data).then(res => {
             const { Data } = res.data
-            let { url_down } = Data
-            console.log('url_down>>>>>>>', url_down);
-            
+            console.log('data>>>>>>>', Data);
             const link = document.createElement('a');
-            link.href = url_down
-            document.getElementById("link_down").href = url_down
+            document.getElementById("link_down").href = Data
             link.setAttribute('download', 'download'); //or any other extension
             document.body.appendChild(link);
             link.click();
@@ -106,7 +103,7 @@ class DowloadFormView extends React.Component {
                         <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                         <h2>{time}s</h2>
                         <div className="download__time__btn">
-                            <a type="button" id="link_down" className="btn btn-success">Download APK</a>
+                            <a type="button" className="btn btn-success">Download APK</a>
                         </div>
                     </div>
                 </section>
