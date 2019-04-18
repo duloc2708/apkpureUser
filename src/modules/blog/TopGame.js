@@ -18,8 +18,6 @@ class TopGame extends React.Component {
     }
     render() {
         const { data } = this.state
-        console.log('data>', data);
-
         return (
             <div className="col-md-4 col-sm-12">
                 <div className="side__bar__seach">
