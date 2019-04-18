@@ -56,9 +56,7 @@ Index.getInitialProps = async function (context) {
   const res = await axios(`${Config.API_URL}post/get_post_by_section`, { params: { type: 'home' } })
   const home = await res.data.Data
   let homeTemp = home
-  let slide = homeTemp.slice(0, 4).map(item => {
-    return item
-  })
+  let slide = homeTemp.filter(x => x.slide == 'true')  
   let block1 = homeTemp.filter(x => x.type == 'game_action')
   block1 = block1.slice(0, 9).map(item => {
     return item
