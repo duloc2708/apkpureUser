@@ -107,7 +107,10 @@ class DowloadFormView extends React.Component {
                         <h3>Downloading {title}</h3>
                         <p>Your link are ready</p>
                         <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                        <h2>{time}s</h2>
+                        {time == 0 ? '' :
+                            <h2>{time}s</h2>
+                        }
+
                         <div className="download__time__btn">
                             <a type="button" id="link_down" className="btn btn-success">Download APK</a>
                         </div>
