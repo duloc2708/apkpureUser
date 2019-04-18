@@ -40,13 +40,16 @@ class DowloadFormView extends React.Component {
             const { Data } = res.data
             let { url_down } = Data
             console.log('url_down>>>>>>>', url_down);
-            
+
             const link = document.createElement('a');
             link.href = url_down
             document.getElementById("link_down").href = url_down
             link.setAttribute('download', 'download'); //or any other extension
             document.body.appendChild(link);
             link.click();
+            this.setState({
+                time: 0
+            });
         })
     }
 
