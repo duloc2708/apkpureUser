@@ -1,8 +1,7 @@
 import { getBlogBySection } from 'modules/home.content/actions/'
 import Link from 'next/link'
 import LazyImage from 'common/component/LazyImage'
-
-class FeaturedGame extends React.Component {
+class NewGameFormView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,7 +13,7 @@ class FeaturedGame extends React.Component {
         return (
             <section className="newGame popular-post-area gamehot wrap_bg">
                 <div className="title flex-column col-lg-12" data-aos="fade-up">
-                    <h4>FEATURED GAMES</h4>
+                    <h4>NEW GAME</h4>
                 </div>
                 <ul className="gamehot__list" data-aos="fade-up">
                     {
@@ -48,8 +47,7 @@ class FeaturedGame extends React.Component {
                 </ul>
             </section>
 
-
         )
     }
 }
-export default FeaturedGame
+export default NewGameFormView

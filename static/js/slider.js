@@ -20,14 +20,10 @@
     nextbtn.className = 'next';
     nextbtn.setAttribute('aria-label', 'Next');
 
-    //create counter
-    var counter = document.createElement('div');
-    counter.className = 'counter';
-    counter.innerHTML = "<span>1</span><span>"+items.length+"</span>";
+    
 
     if (items.length > 1) {
       nav.appendChild(prevbtn);
-      nav.appendChild(counter);
       nav.appendChild(nextbtn);
       item.appendChild(nav);
     }
@@ -51,8 +47,6 @@
       items[prevCurrent].className = "prev_slide";
       items[nextCurrent].className = "";
 
-      //update counter
-      counter.firstChild.textContent = current + 1;
     }
     
     item.addEventListener('mouseenter', function() {

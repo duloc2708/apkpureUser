@@ -38,7 +38,8 @@ class GameHotFormView extends React.Component {
                                                     <dd className="gamehot__title">
                                                         <div>
                                                             <p>
-                                                                <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a href="#">{title}</a></Link>                                                    </p>
+                                                                <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a href="#">{title}</a></Link>     
+                                                                                                               </p>
                                                             <span>Hành động</span>
                                                         </div>
                                                     </dd>

@@ -1,9 +1,8 @@
 import SlideFormView from 'modules/home.content/SlideFormView.js'
-import GameHotFormView from 'modules/home.content/GameHotFormView.js'
+import SectionOne from 'modules/home.content/SectionOne.js'
 // import VideoFormView from 'modules/home.content/VideoFormView.js'
 // import VideoMobileFormView from 'modules/home.content/VideoMobileFormView.js'
 import ListTypeGame from 'modules/home.content/ListTypeGame.js'
-import TopDownFormView from 'modules/home.content/TopDownFormView.js'
 import FeaturedGame from 'modules/home.content/FeaturedGame.js'
 // import FeaturedApp from 'modules/home.content/FeaturedApp.js'
 // import SlideMobileFormView from 'modules/home.content/SlideMobileFormView.js'
@@ -28,14 +27,12 @@ class ContentFormView extends React.Component {
         return (path.match(/(?:.+..+[^\/]+$)/ig) != null) ? path.split('.').slice(-1) : 'null';
     }
     render() {
-        let { slide, block1, block2, block3 } = this.props.dataInit
+        let { slide, block1, block2, block3, dataCollection } = this.props.dataInit
         return (
             <React.Fragment>
                 <SlideFormView slide={slide} />
-                <GameHotFormView data={block1} />
+                <SectionOne data={block1} data2={block2} data3={block3} dataCollection={dataCollection} />
                 <LazyLoadComponent>
-                    <TopDownFormView data={block2} />
-                    <FeaturedGame data={block3} />
                     <ListTypeGame />
                 </LazyLoadComponent>
             </React.Fragment>

@@ -2,8 +2,9 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import ReactGA from 'react-ga';
 import carousel from '../static/css/owl.carousel.min.css';
-import animate from '../static/css/animate.min.css';
-import css from '../static/css/style.css';
+import aos from '../static/css/aos.css';
+import css from '../static/css/style.css'
+
 
 export default class SiteDocument extends Document {
   componentDidMount() {
@@ -17,14 +18,15 @@ export default class SiteDocument extends Document {
     return (
       <html>
         <Head>
-          <link rel='preload stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
 
+          <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+          <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'></link>
           {/* <link rel="preload stylesheet" href={`/static/styles/font-awesome.min.css?v=${Config.build_version}`} as="style" /> */}
           {/* <link rel="preload stylesheet" href={`/static/styles/animate.min.css?v=${Config.build_version}`} as="style" />
                <link rel="preload stylesheet" href={`/static/styles/owl.carousel.min.css?v=${Config.build_version}`} as="style" /> */}
           {/* <link rel="preload stylesheet" href={`/static/styles/style.css?v=${Config.build_version}`} as="style" /> */}
           <style dangerouslySetInnerHTML={{ __html: carousel }} />
-          <style dangerouslySetInnerHTML={{ __html: animate }} />
+          <style dangerouslySetInnerHTML={{ __html: aos }} />
           <style dangerouslySetInnerHTML={{ __html: css }} />
           {styleTags}
           <link rel="shortcut icon" href={`${Config.API_LOCAL_IMAGE}img/fav.ico`} />
@@ -58,7 +60,11 @@ export default class SiteDocument extends Document {
               var s = document.getElementsByTagName('script')[0];
               s.parentNode.insertBefore(wf, s);
           })();`}} /> */}
-          <script defer src={`/static/js/main.js?v=${Config.build_version}`} />
+          {/* <script defer src={`/static/js/main.js?v=${Config.build_version}`} /> */}
+
+          <script src="/static/js/aos.js"></script>
+          <script src="/static/js/main.js"></script>
+
           <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9N8KPK"
               height="0" width="0" style={{ "display": "none", "visibility": "hidden" }} ></iframe>
