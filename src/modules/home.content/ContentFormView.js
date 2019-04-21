@@ -21,7 +21,6 @@ class ContentFormView extends React.Component {
         window.onload = function () {
             $.getScript(`/static/js/owl.carousel.min.js?v=${Config.build_version}`, function () { }, true);
             $.getScript(`/static/js/jquery.matchHeight-min.js?v=${Config.build_version}`, function () { }, true);
-            $.getScript(`/static/js/main.js?v=${Config.build_version}`, function () { }, true);
 
         }();
     }
