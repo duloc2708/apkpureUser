@@ -29,7 +29,6 @@ class Header extends React.Component {
 
     });
     window.onload = function () {
-      $.getScript(`/static/js/main.js?v=${Config.build_version}`, function () { }, true);
 
     }();
   }

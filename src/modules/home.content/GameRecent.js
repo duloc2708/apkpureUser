@@ -27,7 +27,7 @@ class GameRecent extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="title d-flex flex-column col-lg-12">
-
+                            <h4>GAME RECENT</h4>
                         </div>
                         <ul className="gamehot__list">
                             {
