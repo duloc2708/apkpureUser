@@ -63,7 +63,6 @@ export default class SiteDocument extends Document {
           {/* <script defer src={`/static/js/main.js?v=${Config.build_version}`} /> */}
 
           <script src="/static/js/aos.js"></script>
-          <script src="/static/js/main.js"></script>
 
           <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9N8KPK"
