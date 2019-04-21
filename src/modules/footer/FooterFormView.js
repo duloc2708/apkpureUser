@@ -17,7 +17,7 @@ class FooterFormView extends React.Component {
     render() {
         let { data } = this.state
         return (
-            <footer className="footer-area" data-aos="fade-up">
+            <footer className="footer-area" >
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-2  col-md-6 col-sm-6">

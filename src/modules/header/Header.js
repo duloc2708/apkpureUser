@@ -32,11 +32,9 @@ class Header extends React.Component {
   _loadHome() {
     window.location.reload()
   }
-  render() {
-    console.log('Header');
-    
+  render() {    
     return (
-      <header id="header" data-aos="zoom-out">
+      <header id="header">
         <div className="container-fluid">
           <div className="row align-items-center justify-content-between d-flex">
             <div id="logo">

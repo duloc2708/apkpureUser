@@ -17,7 +17,12 @@ class BlogFormView extends React.Component {
             window.GA_INITIALIZED = true
         }
         logPageView();
-
+        setTimeout(() => {
+            window.onload = function () {
+                $.getScript(`/static/js/aos.js?v=${Config.build_version}`, () => {
+                });
+            }();
+        })
    
     }
 
