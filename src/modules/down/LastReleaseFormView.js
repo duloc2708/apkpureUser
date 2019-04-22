@@ -28,18 +28,18 @@ class LastReleaseFormView extends React.Component {
                     <ul>
                         {
                             data.map((item, i) => {
-                                let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
+                                let { id, title, url, type_name, type, thumbnail, title_slug, atr4 } = item
                                 return (
                                     <li key={`last_${id}`} className="item">
                                         <div className="row">
                                             <div className="col-md-7 col-sm-7">
-                                                <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                     <a className="img-item" title={title}>
                                                         <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                                     </a>
                                                 </Link>
                                                 <div className="info">
-                                                    <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
+                                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a>{title}</a></Link>
                                                     <div className="new-chap author">
                                                         <a href="#" className="search_author"> {type_name} </a>
                                                     </div>
@@ -53,7 +53,7 @@ class LastReleaseFormView extends React.Component {
                                             </div>
                                             <div className="col-md-2 col-sm-2">
                                                 <div className="btn-download">
-                                                    <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                         <a>
                                                             <i className="fa fa-download" aria-hidden="true"></i>
                                                         </a>

@@ -64,12 +64,12 @@ class SearchFormView extends React.Component {
                                     <div className="row">
                                         {
                                             data.map((item, i) => {
-                                                let { title, thumbnail, title_slug, type, type_name } = item
+                                                let { title, thumbnail,url, title_slug, type, type_name } = item
                                                 return (
                                                     <div key={`search_${i}`} className="col-md-4">
                                                         <dl className="search-dl">
                                                             <dt>
-                                                                <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                                <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                                     <a>
                                                                         <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                                                     </a>
@@ -78,7 +78,7 @@ class SearchFormView extends React.Component {
                                                             </dt>
                                                             <dd>
                                                                 <p className="search-title">
-                                                                    <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                                         <a >
                                                                             {title}
                                                                         </a>
@@ -91,7 +91,7 @@ class SearchFormView extends React.Component {
                                                                 <p>Type:  <a href="#">{type_name}</a>
                                                                 </p>
                                                                 <p>
-                                                                    <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                                         <a className="more-down">
                                                                             Read more
                                                                       </a>

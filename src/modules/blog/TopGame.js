@@ -25,19 +25,19 @@ class TopGame extends React.Component {
                     <ul className="contain__seach">
                         {
                             data.map((item, i) => {
-                                let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
+                                let { id, title, url, type_name, type, thumbnail, title_slug, atr4 } = item
                                 return (
                                     <li>
                                         <dl>
                                             <dt>
-                                                <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                     <a title={title}>
                                                         <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                                     </a>
                                                 </Link>
                                             </dt>
                                             <dd className="title-dd">
-                                                <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                     <a>{title}</a>
                                                 </Link>
                                             </dd>

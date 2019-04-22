@@ -31,20 +31,20 @@ class TopGameSearch extends React.Component {
                     <h4 className="title__search">Top Game</h4>
                     <ul className="contain__seach">
                         {data.map((item, i) => {
-                            let { createdAt, atr6, id, title, type_name, type, thumbnail, title_slug } = item
+                            let { createdAt, atr6, url, id, title, type_name, type, thumbnail, title_slug } = item
                             var date = moment(createdAt).format('YYYY-MM-DD');
                             return (
                                 <li key={`top_${i}`}>
                                     <dl>
                                         <dt>
-                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                            <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                 <a>
                                                     <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                                 </a>
                                             </Link>
                                         </dt>
                                         <dd className="title-dd">
-                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a href="#">{title}</a></Link>
+                                            <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a href="#">{title}</a></Link>
                                         </dd>
                                         <dd>{atr6}</dd>
                                         <dd>{date}</dd>

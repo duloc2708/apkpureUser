@@ -27,16 +27,16 @@ class HotUpdateFormView extends React.Component {
                 <div className="section-content">
                     {
                         data.map((item, i) => {
-                            let { id, title, type_name, type, thumbnail, title_slug, atr4 } = item
+                            let { id, url, title, type_name, type, thumbnail, title_slug, atr4 } = item
                             return (
                                 <div key={id} className="items">
-                                    <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                         <a className="favicon" title={title}>
                                             <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                         </a>
                                     </Link>
                                     <div className="name">
-                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a>{title}</a></Link>
+                                        <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a>{title}</a></Link>
                                     </div>
                                     <div className=" author">
                                         <a href="#" className="_search_author"> {type_name} </a>
@@ -45,7 +45,7 @@ class HotUpdateFormView extends React.Component {
                                         {/* <a>4.3 </a> */}
                                     </div>
                                     <div className="btn-download">
-                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a > <i className="fa fa-download" aria-hidden="true"></i></a></Link>
+                                        <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a > <i className="fa fa-download" aria-hidden="true"></i></a></Link>
                                     </div>
                                 </div>
 

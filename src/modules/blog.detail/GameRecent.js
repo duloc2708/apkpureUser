@@ -27,14 +27,14 @@ class GameRecent extends React.Component {
                 </div>
                 {
                     data.map((item, i) => {
-                        let { thumbnail, atr6, atr3, type, title, title_slug } = item
+                        let { thumbnail, atr6, url,  atr3, type, title, title_slug } = item
                         return (
                             <div className="video__description">
                                 <div className="row">
                                     <div className="col-md-8">
                                         <div className="wrap__content_listgame">
 
-                                            <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                            <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                 <a >
                                                     <h4>{title}</h4>
                                                 </a>
@@ -50,7 +50,7 @@ class GameRecent extends React.Component {
                                             <li>
                                                 <dl>
                                                     <dt>
-                                                        <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                        <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                             <a >
                                                                 <img src={Config.getImageIndex(thumbnail, 0, 0)} alt="" className="cast img-responsive" />
                                                             </a>

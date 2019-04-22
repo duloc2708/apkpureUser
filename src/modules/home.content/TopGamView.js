@@ -19,19 +19,19 @@ class TopGamView extends React.Component {
                     <ul className="contain__seach" data-aos="fade-up">
                         {
                             data.map((item, i) => {
-                                let { id, title, type_name, type, thumbnail, title_slug } = item
+                                let { id, title, url, type_name, type, thumbnail, title_slug } = item
                                 return (
                                     <li>
                                         <dl>
                                             <dt>
-                                                <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}>
+                                                <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
                                                     <a>
                                                         <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                                     </a>
                                                 </Link>
                                             </dt>
                                             <dd className="title-dd">
-                                                <Link as={`/${type}/${title_slug}`} href={`/post?id=${title_slug}`}><a href="#">{title}</a></Link>
+                                                <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a href="#">{title}</a></Link>
                                             </dd>
                                             <dd>2.3.1</dd>
                                             <dd>2019-03-07</dd>
