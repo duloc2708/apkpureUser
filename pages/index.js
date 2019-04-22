@@ -62,15 +62,15 @@ Index.getInitialProps = async function (context) {
   let homeTemp = home
   let slide = homeTemp.filter(x => x.slide == 'true')
   let block1 = homeTemp.filter(x => x.type == 'game_action')
-  block1 = block1.slice(0, 9).map(item => {
+  block1 = block1.slice(0, 10).map(item => {
     return item
   })
   let block2 = homeTemp.filter(x => x.type == 'game_role_playing')
-  block2 = block2.slice(0, 9).map(item => {
+  block2 = block2.slice(0, 10).map(item => {
     return item
   })
   let block3 = homeTemp.filter(x => x.type != 'game_action' && x.type != 'game_role_playing')
-  block3 = block3.slice(0, 14).map(item => {
+  block3 = block3.slice(0, 6).map(item => {
     return item
   })
   return {
