@@ -1,6 +1,8 @@
 import { getBlogBySection } from 'modules/home.content/actions/'
 import Link from 'next/link'
 import LazyImage from 'common/component/LazyImage'
+import ListTypeGame from './ListTypeGame'
+
 class TopGamView extends React.Component {
     constructor(props) {
         super(props);
@@ -45,6 +47,7 @@ class TopGamView extends React.Component {
                 <div className="advertise_wrap" data-aos="fade-down">
                     <a href="#"><img src="/static/img/siderbar/banner.jpg" /></a>
                 </div>
+                <ListTypeGame />
             </div>
 
 
