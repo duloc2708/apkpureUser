@@ -60,7 +60,7 @@ class SearchFormView extends React.Component {
                                         </a>
                                     </div>
                                 </div>
-                                <div className="search__content">
+                                <div className="search__content wrap_bg">
                                     <div className="row">
                                         {
                                             data.map((item, i) => {

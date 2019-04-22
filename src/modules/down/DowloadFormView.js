@@ -118,12 +118,14 @@ class DowloadFormView extends React.Component {
                 <section className="popular-post-area">
                     <div className="container">
                         <div className="row">
-                            <div className="title d-flex flex-column col-lg-12">
-                                <h4>Download</h4>
-                                <span></span>
+                            <div class="wrap_bg">
+                                <div className="title d-flex flex-column col-lg-12">
+                                    <h4>Download</h4>
+                                    <span></span>
+                                </div>
+                                <HotUpdateFormView />
+                                <LastReleaseFormView />
                             </div>
-                            <HotUpdateFormView />
-                            <LastReleaseFormView />
                         </div>
                     </div>
                 </section>

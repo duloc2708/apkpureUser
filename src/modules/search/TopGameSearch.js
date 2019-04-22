@@ -27,7 +27,7 @@ class TopGameSearch extends React.Component {
         let { data } = this.state
         return (
             <div className="col-md-4 col-sm-12">
-                <div className="side__bar__seach">
+                <div className="side__bar__seach wrap_bg">
                     <h4 className="title__search">Top Game</h4>
                     <ul className="contain__seach">
                         {data.map((item, i) => {
