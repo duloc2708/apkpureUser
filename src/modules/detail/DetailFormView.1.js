@@ -133,7 +133,7 @@ class DetailFormView extends React.Component {
                   </div>
                 </div>
                 {/* Start gamepopular */}
-                <section className="popular-post-area gamehot pt-40 animated fadeInDown delay-1s">
+                <section className="popular-post-area gamehot pt-40 animated ">
                   <div className="container">
                     <div className="row">
                       <div className="title d-flex flex-column col-lg-12">

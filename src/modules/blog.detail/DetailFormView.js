@@ -3,9 +3,10 @@ import Link from 'next/link'
 let { initGA, logPageView } = Config
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { updateView } from 'modules/detail/actions/'
-import TopGame from 'modules/blog/TopGame'
 import GameRecent from './GameRecent'
+import TopGamView from 'modules/home.content/TopGamView'
 
+import GameBottom from './GameBottom'
 
 class DetailFormView extends React.Component {
     constructor(props) {
@@ -26,11 +27,13 @@ class DetailFormView extends React.Component {
                         <div className="col-lg-12">
                             <div className="row">
                                 <GameRecent title={title} link={link} />
-                                <TopGame />
+                                <TopGamView />
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <GameBottom />
             </React.Fragment>
         )
     }

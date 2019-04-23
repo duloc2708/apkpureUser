@@ -21,7 +21,7 @@ class SlideFormView extends React.Component {
     render() {
         let { data, data2, start, end, list_dots, dots_default, isLoad } = this.state
         return (
-            <section className="wrap__slider animated fadeInDown delay-1s">
+            <section className="wrap__slider animated ">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-9">
