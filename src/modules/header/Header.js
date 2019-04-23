@@ -55,7 +55,7 @@ class Header extends React.Component {
                         placeholder="Seach?"
                       />
                       <button
-                        href="https://apksafety.com/search?q="
+                       onClick={()=>this._onSearch()}
                         type="submit"
                         className="searchButton"
                       >

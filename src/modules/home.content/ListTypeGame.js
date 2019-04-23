@@ -19,10 +19,10 @@ class ListTypeGame extends React.Component {
         let { data } = this.state
         return (
             <div className="category__game wrap_bg">
-                <div className="title" data-aos="fade-up">
+                <div className="title" >
                     <h4 className="title__search">Category Games</h4>
                 </div>
-                <ul className="index-category index-category-b cicon" data-aos="fade-up">
+                <ul className="index-category index-category-b cicon" >
                     {
                         data.map((item, i) => {
                             if (i <= 19) {

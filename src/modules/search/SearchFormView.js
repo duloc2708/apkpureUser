@@ -1,7 +1,7 @@
 import { getDataBySearch } from 'modules/search/actions/'
 import Link from 'next/link'
 import LazyImage from 'common/component/LazyImage'
-import TopGameSearch from 'modules/search/TopGameSearch.js'
+import TopGamView from 'modules/home.content/TopGamView'
 
 class SearchFormView extends React.Component {
     constructor(props) {
@@ -108,7 +108,7 @@ class SearchFormView extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <TopGameSearch />
+                            <TopGamView />
                         </div>
                     </div>
                 </div>

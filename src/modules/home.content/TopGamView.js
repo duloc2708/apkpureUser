@@ -7,18 +7,24 @@ class TopGamView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: this.props.data
+            data: []
         }
+    }
+    componentDidMount() {
+        getBlogBySection('game_new').then(Response => {
+            let { Data } = Response
+            this.setState({ data: Data })
+        })
     }
     render() {
         let { data } = this.state
         return (
-            <div className="col-lg-4 col-sm-12">
+            <div className="col-md-4 col-sm-12">
                 <div className="side__bar__seach wrap_bg">
-                    <div className="title" data-aos="fade-up">
+                    <div className="title" >
                         <h4 className="title__search">Top Game</h4>
                     </div>
-                    <ul className="contain__seach" data-aos="fade-up">
+                    <ul className="contain__seach" >
                         {
                             data.map((item, i) => {
                                 let { id, title, url, type_name, type, thumbnail, title_slug } = item
@@ -44,7 +50,7 @@ class TopGamView extends React.Component {
                         }
                     </ul>
                 </div>
-                <div className="advertise_wrap" data-aos="fade-down">
+                <div className="advertise_wrap">
                     <a href="#"><img src="/static/img/siderbar/banner.jpg" /></a>
                 </div>
                 <ListTypeGame />

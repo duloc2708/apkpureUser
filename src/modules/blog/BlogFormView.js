@@ -4,6 +4,8 @@ import LazyImage from 'common/component/LazyImage'
 import RecentUploads from './RecentUploads'
 import MostVideo from './MostVideo'
 import TopGame from './TopGame'
+import TopGamView from 'modules/home.content/TopGamView'
+
 class BlogFormView extends React.Component {
     constructor(props) {
         super(props);
@@ -23,7 +25,7 @@ class BlogFormView extends React.Component {
                 });
             }();
         })
-   
+
     }
 
 
@@ -34,24 +36,25 @@ class BlogFormView extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8">
-                            <div className="banner_videoPr">
+                            <div className="banner_videoPr" >
                                 <a href="#">
                                     <img src={`${Config.API_LOCAL_IMAGE}img/video/banner.jpg`} />
                                 </a>
                             </div>
-
                             <RecentUploads data={data} />
-                            <div className="banner_videoPr">
+                            <div className="banner_videoPr" >
                                 <a href="#">
                                     <img src={`${Config.API_LOCAL_IMAGE}img/video/banner.jpg`} />
                                 </a>
                             </div>
                             <MostVideo data={data} />
+
                         </div>
-                        <TopGame data={data} />
+                        <TopGamView />
                     </div>
                 </div>
             </section>
+
         )
     }
 }

@@ -4,6 +4,8 @@ import LazyImage from 'common/component/LazyImage'
 import RecentUploads from './RecentUploads'
 import MostVideo from './MostVideo'
 import TopGame from './TopGame'
+import TopGamView from 'modules/home.content/TopGamView'
+
 class BlogFormView extends React.Component {
     constructor(props) {
         super(props);
@@ -17,7 +19,12 @@ class BlogFormView extends React.Component {
             window.GA_INITIALIZED = true
         }
         logPageView();
-
+        setTimeout(() => {
+            window.onload = function () {
+                $.getScript(`/static/js/aos.js?v=${Config.build_version}`, () => {
+                });
+            }();
+        })
    
     }
 
@@ -25,7 +32,7 @@ class BlogFormView extends React.Component {
     render() {
         let { data } = this.state
         return (
-            <section className=" wrap__section page__video">
+            <section className="wrap__section page__video wrap_bg">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8">
@@ -43,7 +50,7 @@ class BlogFormView extends React.Component {
                             </div>
                             <MostVideo data={data} />
                         </div>
-                        <TopGame data={data} />
+                        <TopGamView />
                     </div>
                 </div>
             </section>

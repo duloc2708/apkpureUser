@@ -3,6 +3,7 @@ import Link from 'next/link'
 import HotUpdateFormView from 'modules/down/HotUpdateFormView'
 import LastReleaseFormView from 'modules/down/LastReleaseFormView'
 import { getlink } from 'modules/down/actions'
+import TopGamView from 'modules/home.content/TopGamView'
 
 let { initGA, logPageView } = Config
 class DowloadFormView extends React.Component {
@@ -118,7 +119,7 @@ class DowloadFormView extends React.Component {
                 <section className="popular-post-area">
                     <div className="container">
                         <div className="row">
-                            <div class="wrap_bg">
+                            <div class="col-md-8 wrap_bg">
                                 <div className="title d-flex flex-column col-lg-12">
                                     <h4>Download</h4>
                                     <span></span>
@@ -126,6 +127,7 @@ class DowloadFormView extends React.Component {
                                 <HotUpdateFormView />
                                 <LastReleaseFormView />
                             </div>
+                            <TopGamView />
                         </div>
                     </div>
                 </section>
