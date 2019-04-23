@@ -22,7 +22,7 @@ class ListTypeGame extends React.Component {
                 <div className="title" >
                     <h4 className="title__search">Category Games</h4>
                 </div>
-                <ul className="index-category index-category-b cicon" >
+                <ul className="index-category index-category-b cicon">
                     {
                         data.map((item, i) => {
                             if (i <= 19) {

@@ -41,7 +41,7 @@ class Header extends React.Component {
         <div className="container-fluid">
           <div className="row align-items-center justify-content-between d-flex">
             <div id="logo">
-              <a href="/"><img src={`${Config.API_DOMAIN_CURRENT}/img/logo-d2-min.png`} alt="logo" title="logo" /></a>
+              <a href="/"><img src={`${Config.API_DOMAIN_CURRENT}/img/logo-d.png`} alt="logo" title="logo" /></a>
 
             </div>
             <nav id="nav-menu-container">
