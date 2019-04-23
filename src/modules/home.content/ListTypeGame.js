@@ -25,16 +25,17 @@ class ListTypeGame extends React.Component {
                 <ul className="index-category index-category-b cicon" data-aos="fade-up">
                     {
                         data.map((item, i) => {
-                            return (
-                                <li key={i}>
-                                    <Link as={`/${item.code}`} href={`/type`}>
-                                        <a>
-                                            <i className="adventure">
-                                            </i>{item.name}</a>
-                                    </Link>
-                                </li>
-                            )
-
+                            if (i <= 19) {
+                                return (
+                                    <li key={i}>
+                                        <Link as={`/${item.code}`} href={`/type`}>
+                                            <a>
+                                                <i className="adventure">
+                                                </i>{item.name}</a>
+                                        </Link>
+                                    </li>
+                                )
+                            }
                         })
                     }
                 </ul>
