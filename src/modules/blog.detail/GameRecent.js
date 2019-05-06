@@ -12,13 +12,13 @@ class GameRecent extends React.Component {
     }
     componentDidMount() {
         let { listgame } = this.props
-        if(listgame){
+        if (listgame) {
             getListGame(listgame).then(Response => {
                 let { Data } = Response
                 this.setState({ data: Data })
             })
         }
-      
+
     }
     render() {
         const { data } = this.state
@@ -26,7 +26,8 @@ class GameRecent extends React.Component {
             <React.Fragment>
                 {
                     data.map((item, i) => {
-                        let { thumbnail, atr6, url, atr3, type, title, title_slug } = item
+                        let { thumbnail, atr6, url, atr2, atr3, type, title, title_slug } = item
+                        url = url || atr2
                         return (
                             <div className="video__description">
                                 <div className="row">
