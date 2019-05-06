@@ -19,19 +19,6 @@ const next = {
 
 module.exports = {
     env: {
-        test: {
-            presets: [
-                [
-                    'env',
-                    {
-                        targets: {
-                            node: 'current'
-                        },
-                        modules: 'commonjs'
-                    }
-                ]
-            ]
-        },
         production: next,
         development: next
     }
