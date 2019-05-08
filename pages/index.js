@@ -2,6 +2,7 @@ import ContentFormView from 'modules/home.content/ContentFormView.js'
 import Layout from 'modules/layouts/Main';
 import Head from 'next/head';
 import $ from 'jquery';
+import lodash from 'lodash'
 if (typeof window !== 'undefined') {
   window.$ = $;
   window.jQuery = $;
@@ -61,7 +62,7 @@ Index.getInitialProps = async function (context) {
 
   let homeTemp = home
   let slide = homeTemp.filter(x => x.slide == 'true')
-  let block1 = homeTemp.filter(x => x.type == 'game_action')
+  let block1 = lodash.sortBy(homeTemp, 'createdAt')
   block1 = block1.slice(0, 10).map(item => {
     return item
   })
