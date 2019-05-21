@@ -26,6 +26,9 @@ class TopGame extends React.Component {
                         {
                             data.map((item, i) => {
                                 let { id, title, url, type_name, type, thumbnail, title_slug, atr4 } = item
+                                if (type.indexOf(',') != -1) {
+                                    type = type.split(',', 2)[0]
+                                }
                                 return (
                                     <li>
                                         <dl>

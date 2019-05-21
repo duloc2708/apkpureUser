@@ -65,6 +65,9 @@ class SearchFormView extends React.Component {
                                         {
                                             data.map((item, i) => {
                                                 let { title, thumbnail,url, title_slug, type, type_name } = item
+                                                if (type.indexOf(',') != -1) {
+                                                    type = type.split(',', 2)[0]
+                                                }
                                                 return (
                                                     <div key={`search_${i}`} className="col-md-4">
                                                         <dl className="search-dl">

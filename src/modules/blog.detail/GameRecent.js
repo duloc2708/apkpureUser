@@ -28,6 +28,9 @@ class GameRecent extends React.Component {
                     data.map((item, i) => {
                         let { thumbnail, atr2, atr6, url, atr3, type, title, title_slug } = item
                         url = url || atr2
+                        if (type.indexOf(',') != -1) {
+                            type = type.split(',', 2)[0]
+                        }
                         return (
                             <div className="video__description">
                                 <div className="row">

@@ -35,6 +35,9 @@ class SlideFormView extends React.Component {
                                                 if (atr7) {
                                                     arrSlide = atr7.split(',')
                                                 }
+                                                if (type.indexOf(',') != -1) {
+                                                    type = type.split(',', 2)[0]
+                                                }
                                                 return (
                                                     <li key={`slide_${id}`}>
 

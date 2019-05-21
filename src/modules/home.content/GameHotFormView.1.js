@@ -23,6 +23,9 @@ class GameHotFormView extends React.Component {
                                 {
                                     data.map((item, i) => {
                                         let { id, title, type_name, type, thumbnail, title_slug } = item
+                                        if (type.indexOf(',') != -1) {
+                                            type = type.split(',', 2)[0]
+                                        }
                                         return (
                                             <li key={`i_${id}`} className="gamehot__list__items">
                                                 <dl>

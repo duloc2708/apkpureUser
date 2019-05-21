@@ -29,6 +29,9 @@ class GameBottom extends React.Component {
                                 let imgData = ''
                                 atr7 = atr7.split(',')
                                 imgData = atr7 && atr7[0] || ''
+                                if (type.indexOf(',') != -1) {
+                                    type = type.split(',', 2)[0]
+                                }
                                 if (i <= 2) {
                                     return (
                                         <div className="col-md-4">
