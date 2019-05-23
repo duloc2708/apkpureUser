@@ -47,7 +47,7 @@ class CollectionFormView extends React.Component {
                                                         <div className="box__content__info">
                                                             <h3 className="box__content__title">{title}</h3>
                                                         </div>
-                                                        {/* <p className="box__content__desc">These are some great free games that you can play without an internet connection but you may not know. Have a try!</p> */}
+                                                        <p className="box__content__desc">{title}</p>
                                                     </div>
                                                 </a>
                                             </Link>
