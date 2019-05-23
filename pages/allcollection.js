@@ -1,6 +1,6 @@
 import Layout from 'modules/layouts/Main';
 import Head from 'next/head';
-import TypeFormView from 'modules/type/TypeFormView.js'
+import CollectionFormView from 'modules/allcollection/CollectionFormView.js'
 import $ from 'jquery';
 if (typeof window !== 'undefined') {
     window.$ = $;
@@ -26,7 +26,7 @@ const {
     ORG_SITENAME,
     ORG_IMAGE
 } = Config
-const Type = (props) => (
+const Allcollection = (props) => (
     <Layout>
         <Head>
             <meta charSet="utf-8" />
@@ -48,17 +48,16 @@ const Type = (props) => (
             <meta property="twitter:url" content="https://apksafety.com/" />
             {/* <meta name="theme-color" content="#192433" /> */}
         </Head>
-        <TypeFormView data={props.dataInit} />
+        <CollectionFormView data={props.dataInit} />
     </Layout>
 )
-Type.getInitialProps = async function (context) {
-    const { id } = context.query
-    const res = await axios(`${Config.API_URL}post/get_data_by_type?type=${id}`)
+Allcollection.getInitialProps = async function (context) {
+    const res = await axios(`${Config.API_URL}video/video_by_section`)
     const data = await res.data.Data
     return {
         dataInit: data
     }
 }
 
-export default Type
+export default Allcollection
 

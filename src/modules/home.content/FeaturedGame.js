@@ -19,7 +19,7 @@ class FeaturedGame extends React.Component {
                 <ul className="gamehot__list" data-aos="fade-up">
                     {
                         data.map((item, i) => {
-                            let { id, title,url, type_name, type, thumbnail, title_slug } = item
+                            let { id, title, url, type_name, type, thumbnail, title_slug } = item
                             if (type.indexOf(',') != -1) {
                                 type = type.split(',', 2)[0]
                             }
@@ -35,8 +35,11 @@ class FeaturedGame extends React.Component {
                                         <dd className="gamehot__title">
                                             <div>
                                                 <p>
-                                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a href="#">{title}</a></Link>                                                    </p>
-                                                <span>Hành động</span>
+                                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a href="#">{title}</a></Link>
+                                                </p>
+                                                <Link as={`/${type}`} href={`/type?id=${type}`}>
+                                                    <span>{type_name}</span>
+                                                </Link>
                                             </div>
                                         </dd>
                                         <dd className="gamehot__buttom">

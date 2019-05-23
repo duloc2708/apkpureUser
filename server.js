@@ -120,10 +120,13 @@ app.prepare()
 
         server.get(`/${item}`, (req, res) => {
           const actualPage = '/type'
-          const queryParams = { id: 900 }
+          const queryParams = { id: item }
           app.render(req, res, actualPage, queryParams)
         })
-
+        server.get(`/allcollection`, (req, res) => {
+          const actualPage = '/allcollection'
+          app.render(req, res, actualPage, {})
+        })
       })
       server.get('*', (req, res) => {
         // res.setHeader("Cache-Control", "must-revalidate,public, max-age=31557600");

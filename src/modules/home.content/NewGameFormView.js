@@ -30,12 +30,16 @@ class NewGameFormView extends React.Component {
                                                 <a>
                                                     <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                                 </a>
-                                            </Link>                                                </dt>
+                                            </Link>
+                                        </dt>
                                         <dd className="gamehot__title">
                                             <div>
                                                 <p>
-                                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a href="#">{title}</a></Link>                                                    </p>
-                                                <span>Hành động</span>
+                                                    <Link as={`/${type}/${url}`} href={`/post?id=${url}`}><a href="#">{title}</a></Link>
+                                                </p>
+                                                <Link as={`/${type}`} href={`/type?id=${type}`}>
+                                                    <span>{type_name}</span>
+                                                </Link>
                                             </div>
                                         </dd>
                                         <dd className="gamehot__buttom">

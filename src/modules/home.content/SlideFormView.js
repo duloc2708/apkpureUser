@@ -81,8 +81,8 @@ class SlideFormView extends React.Component {
                                     </dt>
                                     <div className="wrap_list_apksafety">
                                         <dd className="title-dd">
-                                            <a className="dl-ref" title="APKPure APK" href="#">APKSafety
-                                            <span className="vname">3.5.5</span>
+                                            <a className="dl-ref" title="APKPure APK" href="#">
+                                            Download APK
                                             </a>
                                         </dd>
                                         <dd className="star-dd">

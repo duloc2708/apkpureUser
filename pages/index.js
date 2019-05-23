@@ -58,7 +58,10 @@ Index.getInitialProps = async function (context) {
   const res2 = await axios(`${Config.API_URL}video/video_by_section`)
 
   const home = await res.data.Data
-  const dataCollection = await res2.data.Data
+  let dataCollection = await res2.data.Data
+  dataCollection = dataCollection.slice(0, 6).map(item => {
+    return item
+  })
 
   let homeTemp = home
   let slide = homeTemp.filter(x => x.slide == 'true')
