@@ -28,7 +28,7 @@ class CollectionFormView extends React.Component {
                             <li className="breadcrumb-item active" aria-current="page">all collection</li>
                         </ol>
                     </nav>
-                    <React.Fragment>
+                    <div className="row">
                         {
                             data.map((item, i) => {
                                 let { id, title, type_name, type, thumbnail, title_slug } = item
@@ -36,28 +36,28 @@ class CollectionFormView extends React.Component {
                                     thumbnail = Config.getImageIndex(thumbnail, 0, 0)
                                 }
                                 return (
-                                    <div key={`all_collection_${i}`} className="row">
-                                        <div className="col-lg-4 col-sm-6 items__all__collection" >
-                                            <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}>
-                                                <a href="#" title={title}>
-                                                    <div className="pictures__game">
-                                                        <img width="300px" src={thumbnail} alt="new game" />
-                                                    </div>
-                                                    <div className="box__content">
-                                                        <div className="box__content__info">
-                                                            <h3 className="box__content__title">{title}</h3>
-                                                        </div>
-                                                        <p className="box__content__desc">{title}</p>
-                                                    </div>
-                                                </a>
-                                            </Link>
 
-                                        </div>
+                                    <div key={`all_collection_${i}`} className="col-lg-4 col-sm-6 items__all__collection" >
+                                        <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}>
+                                            <a href="#" title={title}>
+                                                <div className="pictures__game">
+                                                    <img width="300px" src={thumbnail} alt="new game" />
+                                                </div>
+                                                <div className="box__content">
+                                                    <div className="box__content__info">
+                                                        <h3 className="box__content__title">{title}</h3>
+                                                    </div>
+                                                    <p className="box__content__desc">{title}</p>
+                                                </div>
+                                            </a>
+                                        </Link>
+
                                     </div>
+
                                 )
                             })
                         }
-                    </React.Fragment>
+                    </div>
 
                 </div>
                 {/* <div className="paging" >

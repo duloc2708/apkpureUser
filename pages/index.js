@@ -54,6 +54,26 @@ const Index = (props) => (
 )
 Index.getInitialProps = async function (context) {
   // const { id } = context.query
+
+  // const url = 'http://108.61.201.242:8940/api/main/authenticate';
+  // // The data we are going to send in our request
+  // let data = {
+  //   "email": "admin@kolabs.co",
+  //   "password": 123456,
+  //   "IsAgent": true
+  // }
+  // // The parameters we are gonna pass to the fetch function
+  // let fetchData = {
+  //   headers: {
+  //     'Content-Type': 'application/json; charset=utf-8'
+  //   }
+  // }
+  // axios.post(url, data, fetchData)
+  //   .then(function () {
+  //     // Handle response you get from the server
+  //   });
+
+
   const res = await axios(`${Config.API_URL}post/get_post_by_section`, { params: { type: 'home' } })
   const res2 = await axios(`${Config.API_URL}video/video_by_section`)
 

@@ -31,9 +31,7 @@ class TypeFormView extends React.Component {
                             <ul className="wrap__list__game">
                                 {
                                     data.map((item, i) => {
-                                        let { id, title, url, type_name, type, thumbnail, title_slug, atr6 } = item
-                                        console.log('item>>>',item);
-                                        
+                                        let { id, title, url, type_name, type, thumbnail, title_slug, atr6 } = item                                        
                                         return (
                                             <li key={`type_${id}`} >
                                                 <div className="sale-info">
