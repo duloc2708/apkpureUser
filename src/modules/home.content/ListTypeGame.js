@@ -28,7 +28,7 @@ class ListTypeGame extends React.Component {
                             if (i <= 19) {
                                 return (
                                     <li key={i}>
-                                        <Link as={`/${item.code}`} href={`/type`}>
+                                        <Link as={`/${item.code}`} href={`/type?id=${item.code}`}>
                                             <a>
                                                 <i className="adventure">
                                                 </i>{item.name}</a>
