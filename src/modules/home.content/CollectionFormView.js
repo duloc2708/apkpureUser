@@ -25,7 +25,7 @@ class CollectionFormView extends React.Component {
                                         thumbnail = Config.getImageIndex(thumbnail, 0, 0)
                                     }
                                     return (
-                                        <div className="col-lg-6 col-md-6" data-aos="fade-up">
+                                        <div key={`coll_${i}`} className="col-lg-6 col-md-6" data-aos="fade-up">
                                             <div className="featuredGame__list__inner">
                                                 <p className="featuredGame__list__mask">
                                                     <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}>

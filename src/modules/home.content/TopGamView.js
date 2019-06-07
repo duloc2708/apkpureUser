@@ -32,7 +32,7 @@ class TopGamView extends React.Component {
                                     type = type.split(',', 2)[0]
                                 }
                                 return (
-                                    <li>
+                                    <li key={`top_game${i}`}>
                                         <dl>
                                             <dt>
                                                 <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>

@@ -45,7 +45,7 @@ class FooterFormView extends React.Component {
                                 <div className="d-flex flex-row" id="mc_embed_signup">
                                     <form className="navbar-form" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01" method="get">
                                         <div className="input-group add-on align-items-center d-flex">
-                                            <input className="form-control" name="EMAIL" placeholder="Your email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" required type="email" />
+                                            <input className="form-control" name="EMAIL" placeholder="Your email address"  required type="email" />
                                             <div className="input-group-btn">
                                                 <button className="genric-btn"><span className="lnr lnr-arrow-right" /></button>
                                             </div>
