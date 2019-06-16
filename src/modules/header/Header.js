@@ -55,7 +55,7 @@ class Header extends React.Component {
                         placeholder="Seach?"
                       />
                       <button
-                       onClick={()=>this._onSearch()}
+                        onClick={() => this._onSearch()}
                         type="submit"
                         className="searchButton"
                       >
@@ -68,11 +68,15 @@ class Header extends React.Component {
                   <a href="/">Home</a>
                 </li>
                 <li>
+                  <a href="/apk-download">APK Download</a>
+                </li>
+                <li>
                   <a href="/blog">Collection</a>
                 </li>
                 <li>
                   <a href="#">Contact</a>
                 </li>
+
               </ul>
             </nav>
             {/* #nav-menu-container */}

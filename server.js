@@ -127,6 +127,10 @@ app.prepare()
           const actualPage = '/allcollection'
           app.render(req, res, actualPage, {})
         })
+        server.get(`/apk-download`, (req, res) => {
+          const actualPage = '/apk-download'
+          app.render(req, res, actualPage, {})
+        })
       })
       server.get('*', (req, res) => {
         // res.setHeader("Cache-Control", "must-revalidate,public, max-age=31557600");

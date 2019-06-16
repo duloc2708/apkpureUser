@@ -9,17 +9,8 @@ class NewGameFormView extends React.Component {
         }
     }
     componentDidMount() {
-        console.log('>>>>>');
-        let idGame = 'com.rovio.angrybirdsrio'
-        axios(`https://apps.evozi.com/apk-downloader/?id=${idGame}`)
-            .then(res => {
-                console.log('res>>>',res);
-                
-            })
-            .catch(err => {
-                console.log('err>>>',err);
+      
 
-            })
     }
     render() {
         let { data } = this.state

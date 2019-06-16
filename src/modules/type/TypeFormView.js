@@ -31,25 +31,35 @@ class TypeFormView extends React.Component {
                             <ul className="wrap__list__game">
                                 {
                                     data.map((item, i) => {
-                                        let { id, title, url, type_name, type, thumbnail, title_slug, atr6 } = item                                        
+                                        let { id, title, url, type_name, type, thumbnail, title_slug, atr6 } = item
                                         return (
                                             <li key={`type_${id}`} >
                                                 <div className="sale-info">
-                                                    <a href="#" title="GeoExpert - Spain Geography">
+                                                    <a title="GeoExpert - Spain Geography">
                                                         <div className="app-icon">
-                                                            <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
-                                                                <a href="#">
-                                                                    <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
-                                                                </a>
-                                                            </Link>
+                                                            <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
                                                         </div>
                                                         <div className="app-text">
-                                                            <p className="title">{title}</p>
+                                                            <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
+                                                                <a>
+                                                                    <p >{title}</p>
+                                                                </a>
+                                                            </Link>
+
                                                             <p>version</p>
                                                             <p className="developer">{atr6}</p>
                                                         </div>
                                                     </a>
+                                                    <div className="button_down">
+                                                        <Link as={`/download?name=${title_slug}`} href={`/download?name=${title_slug}&title=${title}`}>
+                                                            <a target="_blank" className=" da" title="Download PUBG MOBILE latest version xapk"
+                                                            //href={`${Config.API_DOWNLOAD_FILE}post/getfileapk?namefile=${title_slug}&mineType=${atr3}`}
+                                                            > <span>Download</span>
+                                                            </a>
+                                                        </Link>
+                                                    </div>
                                                 </div>
+
                                             </li>
                                         )
                                     })
