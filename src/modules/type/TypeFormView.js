@@ -14,6 +14,9 @@ class TypeFormView extends React.Component {
             initGA()
             window.GA_INITIALIZED = true
         }
+        window.onload = function () {
+            $.getScript(`/static/js/index.js?v=${Config.build_version}`, function () { }, true);
+        }();
     }
     render() {
         let { data } = this.state
