@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 //Match title height
 function MatchHeight() {
-  $('.match, .page__all__collection .items__all__collection')
+  $('.match, .page__all__collection .items__all__collection,.wrap__list__game li')
     .matchHeight({})
   ;
 }

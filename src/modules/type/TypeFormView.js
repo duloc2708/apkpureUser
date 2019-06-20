@@ -35,21 +35,19 @@ class TypeFormView extends React.Component {
                                         return (
                                             <li key={`type_${id}`} >
                                                 <div className="sale-info">
-                                                    <a title="GeoExpert - Spain Geography">
-                                                        <div className="app-icon">
-                                                            <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
-                                                        </div>
-                                                        <div className="app-text">
-                                                            <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
-                                                                <a>
-                                                                    <p >{title}</p>
-                                                                </a>
-                                                            </Link>
+                                                    <div className="app-icon">
+                                                        <LazyImage image={{ src: Config.getImageIndex(thumbnail, 80, 75), alt: title, width: 80, height: 75 }} />
+                                                    </div>
+                                                    <div className="app-text">
+                                                        <Link as={`/${type}/${url}`} href={`/post?id=${url}`}>
+                                                            <a>
+                                                                <p >{title}</p>
+                                                            </a>
+                                                        </Link>
 
-                                                            <p>version</p>
-                                                            <p className="developer">{atr6}</p>
-                                                        </div>
-                                                    </a>
+                                                        <p>version</p>
+                                                        <p className="developer">{atr6}</p>
+                                                    </div>
                                                     <div className="button_down">
                                                         <Link as={`/download?name=${title_slug}`} href={`/download?name=${title_slug}&title=${title}`}>
                                                             <a target="_blank" className=" da" title="Download PUBG MOBILE latest version xapk"

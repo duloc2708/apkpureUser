@@ -9,7 +9,28 @@ class NewGameFormView extends React.Component {
         }
     }
     componentDidMount() {
-      
+        // axios.post(`http://61.28.230.226:3001/api/test/getlink`, { "id": "com.rovio.angrybirdsrio" })
+        //     .then(function (response) {
+        //         let { data } = response.data
+        //         axios({
+        //             method: 'post',
+        //             url: `https://api-apk.evozi.com/download`,
+        //             data: data,
+        //             config: { headers: { 'Content-Type': 'multipart/form-data' } }
+        //         })
+        //             .then(function (response2) {
+        //                 //handle success
+        //                 console.log(response2);
+        //             })
+        //             .catch(function (response2) {
+        //                 //handle error
+        //                 console.log(response2);
+        //             });
+        //     })
+        //     .catch(function (response) {
+        //         //handle error
+        //         console.log(response);
+        //     });
 
     }
     render() {
