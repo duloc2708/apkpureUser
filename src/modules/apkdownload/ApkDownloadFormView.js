@@ -73,9 +73,9 @@ class ApkDownloadFormView extends React.Component {
             }
         })
     }
-    _testSocket() {
-        axios.post('http://localhost:1337/api/socket/sendmessage', { message: 'hi world' });
-    }
+    // _testSocket() {
+    //     axios.post('http://localhost:1337/api/socket/sendmessage', { message: 'hi world' });
+    // }
     render() {
         let { data, isSearch } = this.state
         return (
@@ -114,9 +114,6 @@ class ApkDownloadFormView extends React.Component {
                     </div> */}
                 </div>
                 <div className="button_download">
-                    <a onClick={() => this._testSocket()} className="button_download_top">
-                        test socket
-              </a>
                     <a onClick={() => this._getAPK()} className="button_download_top">
                         Generate Download Link
               </a>
