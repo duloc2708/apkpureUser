@@ -62,7 +62,6 @@ class ApkDownloadFormView extends React.Component {
         this.setState({ isSearch: true })
         getFileApk(id).then((response) => {
             let { Data } = response.data
-            console.log('data>>>', Data);
             if (Data.status == 'error') {
                 if (Data.data.indexOf('Invalid URL / Package Name') != -1) {
                     this.setState({ textValidate: 'Invalid URL / Package Name', isSearch: false })

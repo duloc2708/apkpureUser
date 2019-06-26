@@ -46,7 +46,7 @@ class CollectionFormView extends React.Component {
                         </div>
                     </div>
                 </div>
-                <p className="see_more"><a href="#">Read more</a></p>
+                <p className="see_more"><a href="/blog">Read more</a></p>
 
             </section>
 
