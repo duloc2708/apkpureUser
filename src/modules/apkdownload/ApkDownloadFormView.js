@@ -3,8 +3,21 @@ let { initGA, logPageView } = Config
 import TopGamView from 'modules/home.content/TopGamView'
 import LazyImage from 'common/component/LazyImage'
 import { getFileApk } from 'modules/apkdownload/actions/'
-
+// import openSocket from "socket.io-client";
+// const socket = openSocket("http://localhost:1337/",  {'transports': ['websocket', 'polling']});
 class ApkDownloadFormView extends React.Component {
+    connectMessage(cb) {
+        // listen for any messages coming through
+        // of type 'chat' and then trigger the
+        // callback function with said message
+        // socket.on('connect', function () {
+        //     socket.on('code', function (data) {
+        //         // $("#messages").text(data.message);
+        //         console.log('Sails responded: ', data.message);
+        //     })
+
+        // })
+    }
     constructor(props) {
         super(props);
         this.state = {
@@ -19,6 +32,7 @@ class ApkDownloadFormView extends React.Component {
             initGA()
             window.GA_INITIALIZED = true
         }
+        this.connectMessage()
     }
     _getAPK() {
         let url = this.refs.inputfile.value
@@ -48,7 +62,7 @@ class ApkDownloadFormView extends React.Component {
         this.setState({ isSearch: true })
         getFileApk(id).then((response) => {
             let { Data } = response.data
-            console.log('data>>>',Data);
+            console.log('data>>>', Data);
             if (Data.status == 'error') {
                 if (Data.data.indexOf('Invalid URL / Package Name') != -1) {
                     this.setState({ textValidate: 'Invalid URL / Package Name', isSearch: false })
@@ -59,6 +73,9 @@ class ApkDownloadFormView extends React.Component {
                 this.setState({ data: Data, isSearch: false })
             }
         })
+    }
+    _testSocket() {
+        axios.post('http://localhost:1337/api/socket/sendmessage', { message: 'hi world' });
     }
     render() {
         let { data, isSearch } = this.state
@@ -98,6 +115,9 @@ class ApkDownloadFormView extends React.Component {
                     </div> */}
                 </div>
                 <div className="button_download">
+                    <a onClick={() => this._testSocket()} className="button_download_top">
+                        test socket
+              </a>
                     <a onClick={() => this._getAPK()} className="button_download_top">
                         Generate Download Link
               </a>

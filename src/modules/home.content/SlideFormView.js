@@ -96,7 +96,7 @@ class SlideFormView extends React.Component {
                                         </dd>
                                     </div>
                                     <div className="down">
-                                        <a className="bottomDown" dl-ref="home" title="Tải về apk phiên bản mới nhất" href="#">Tải về APK<span className="fsize">(<span>11.1 MB</span>)</span></a>
+                                        <a className="bottomDown" dl-ref="home" title="Tải về apk phiên bản mới nhất" href="#">Download APK</a>
                                     </div>
                                 </dl>
 
