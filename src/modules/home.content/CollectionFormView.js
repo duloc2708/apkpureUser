@@ -27,14 +27,12 @@ class CollectionFormView extends React.Component {
                                     return (
                                         <div key={`coll_${i}`} className="col-lg-6 col-md-6" data-aos="fade-up">
                                             <div className="featuredGame__list__inner">
-                                                <p className="featuredGame__list__mask">
                                                     <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}>
                                                         <a>
                                                             <LazyImage image={{ src: thumbnail, alt: title, width: 0, height: 200 }} />
 
                                                         </a>
                                                     </Link>
-                                                </p>
                                                 <h4 className="featuredGame__list__caption">
                                                     <Link as={`/${'blog-detail'}/${title_slug}`} href={`/blog-detail?id=${title_slug}`}><a href="#">{title}</a></Link>
                                                 </h4>

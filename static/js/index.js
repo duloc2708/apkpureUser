@@ -48,8 +48,8 @@ AOS.init({
   duration: 1200,
 })
 
-$('.flexslider').flexslider({
-  animation: "slide",
-  controlNav: false
-});
+// $('.flexslider').flexslider({
+//   animation: "slide",
+//   controlNav: false
+// });
 
