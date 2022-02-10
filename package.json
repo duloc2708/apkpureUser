@@ -38,7 +38,7 @@
     "moment-timezone": "^0.5.23",
     "next": "^8.0.3",
     "next-seo": "^1.11.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "pixrem": "^5.0.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^3.0.0",
